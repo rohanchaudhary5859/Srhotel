@@ -14,7 +14,9 @@
     
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -90,73 +92,200 @@
     </section>
     <!-- END section -->
 
-    <section class="section visit-section">
-      <div class="container">
+    <section class="section explore-section">
+      <div class="explore-container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="heading" data-aos="fade-right">You Can Visit</h2>
+            <h2 class="explore-heading" data-aos="fade-right">You Can Explore</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right">
-            <a href="restaurant.html"><img src="img/img_1.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="restaurant.html">Food &amp; Wines</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-half"></span>
-              <span class="ion-android-star-outline"></span>
+        <div class="swiper explore-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide explore-slide">
+              <div class="explore-item">
+                <a href="restaurant.html">
+                  <img src="img/img_1.jpg" alt="Food & Wines" class="explore-img">
+                </a>
+                <h3><a href="restaurant.html">Food &amp; Wines</a></h3>
+              </div>
             </div>
-            <span class="reviews-count float-right">
-              3,239 reviews
-            </span>
-          </div>
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="100">
-            <a href="restaurant.html"><img src="img/img_2.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="restaurant.html">Resort &amp; Spa</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-half"></span>
-              <span class="ion-android-star-outline"></span>
+            <div class="swiper-slide explore-slide">
+              <div class="explore-item">
+                <a href="restaurant.html">
+                  <img src="img/img_2.jpg" alt="Resort & Spa" class="explore-img">
+                </a>
+                <h3><a href="restaurant.html">Resort &amp; Spa</a></h3>
+              </div>
             </div>
-            <span class="reviews-count float-right">
-              4,921 reviews
-            </span>
-          </div>
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="200">
-            <a href="hotel.html"><img src="img/img_4.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="hotel.html">Hotel Rooms</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-outline"></span>
+            <div class="swiper-slide explore-slide">
+              <div class="explore-item">
+                <a href="hotel.html">
+                  <img src="img/img_4.jpg" alt="Hotel Rooms" class="explore-img">
+                </a>
+                <h3><a href="hotel.html">Hotel Rooms</a></h3>
+              </div>
             </div>
-            <span class="reviews-count float-right">
-              2,112 reviews
-            </span>
-          </div>
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="300">
-            <a href="yacht.html"><img src="img/img_5.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="yacht.html">Yacht Club</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-outline"></span>
+            <div class="swiper-slide explore-slide">
+              <div class="explore-item">
+                <a href="yacht.html">
+                  <img src="img/img_5.jpg" alt="Yacht Club" class="explore-img">
+                </a>
+                <h3><a href="yacht.html">Yacht Club</a></h3>
+              </div>
             </div>
-            <span class="reviews-count float-right">
-              6,421 reviews
-            </span>
           </div>
         </div>
       </div>
     </section>
+    
+    
+   <style>
+/* General Section Styling */
+.explore-section {
+  padding: 50px 0;
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+}
+
+.explore-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Swiper Container */
+.explore-swiper {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 1s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.explore-slide {
+  flex: 0 0 auto;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.42, 0, 0.58, 1), opacity 0.6s;
+}
+
+.explore-slide .explore-item {
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.explore-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.explore-slide-active .explore-img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.explore-slide-active {
+  transform: translateY(-10px) scale(1.03);
+  opacity: 1;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+
+/* Modern Pagination Styling */
+.swiper-pagination-bullet {
+  background-color: #ddd;
+  opacity: 0.9;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #007bff;
+  transform: scale(1.2);
+}
+
+/* Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
+  color: #007bff;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 490px) {
+  .explore-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .explore-slide .explore-item {
+    padding: 8px;
+  }
+
+  .explore-img {
+    border-radius: 6px;
+  }
+}
+
+</style>
+
+<script>
+  const exploreSwiper = new Swiper('.explore-swiper', {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    effect: 'slide',
+    centeredSlides: true,
+    slidesPerView: 1,
+    speed: 1000,
+    breakpoints: {
+      490: {
+        slidesPerView: 1, // One slide for screens ≤ 490px
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2, // Two slides for tablets
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3, // Three slides for desktops
+        spaceBetween: 40,
+      },
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true, // Modern clickable bullets
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+
     <!-- END section -->
 
     <section class="section slider-section">

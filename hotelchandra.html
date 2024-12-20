@@ -261,22 +261,59 @@
 
 @media (max-width: 480px) {
   .welcome-section {
-    padding: 40px 10px;
+    padding: 20px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;   /* Center align elements */
+    text-align: center;    /* Align text in the center */
+    gap: 20px;             /* Adjust gap for better spacing */
+  }
+
+  .welcome-content {
+    padding: 0 15px; /* Add padding to ensure text doesn't touch screen edges */
   }
 
   .welcome-content h1 {
-    font-size: 2rem;
+    font-size: 1.8rem; /* Reduce heading size for smaller screens */
+    line-height: 2rem; /* Improve readability */
+    margin-bottom: 15px;
   }
 
   .welcome-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Smaller secondary heading size */
+    margin-bottom: 10px;
+  }
+
+  .welcome-content p {
+    font-size: 0.9rem; /* Adjust text size for readability */
+    line-height: 1.5;  /* Tighter line spacing */
+    margin-bottom: 15px;
+  }
+
+  .welcome-image img {
+    max-width: 90%; /* Ensure image scales to fit the screen */
+    border-radius: 8px; /* Maintain rounded corners */
+    margin-bottom: 15px; /* Add spacing below the image */
   }
 
   .features {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Stack features vertically */
+    gap: 15px;             /* Adjust gap for better spacing */
+  }
+
+  .feature-item {
+    font-size: 0.95rem; /* Slightly smaller text size for features */
+    padding: 8px 12px; /* Adjust padding */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for a cleaner look */
+  }
+
+  .feature-item span {
+    font-size: 1.3rem; /* Reduce icon size */
   }
 }
+
 
 </style>
   <section class="room-showcase">

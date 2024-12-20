@@ -435,47 +435,221 @@
     </section>
     <!-- END section -->
     
-    <section class="section blog-post-entry bg-pattern">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-md-8">
-            <h2 class="heading" data-aos="fade-up">Recent Blog Post</h2>
-            <p class="lead" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolor, iusto doloremque quo odio repudiandae sunt eveniet? Enim facilis laborum voluptate id porro, culpa maiores quis, blanditiis laboriosam alias. Sed.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="media media-custom d-block mb-4">
-              <a href="#" class="mb-4 d-block"><img src="img/img_1.jpg" alt="Image placeholder" class="img-fluid"></a>
-              <div class="media-body">
-                <span class="meta-post">February 26, 2018</span>
-                <h2 class="mt-0 mb-3"><a href="#">Five Reasons to Stay at SR Hotels Resort</a></h2>
+    <section class="room-showcase">
+      <h1>Our Stay</h1>
+      <div class="item-carousel">
+          <!-- Item cards -->
+          <div class="item-card">
+              <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+              <div class="item-details">
+                  <h3>Deluxe</h3>
+                  <p>
+                      Rooms are cozy and pleasant, providing comfort and a restful stay.
+                  </p>
+                  <div class="amenities">
+                      <span>🛜 Wi-Fi</span>
+                      <span>🍽️ Dinner</span>
+                      <span>🧹 Housekeeping</span>
+                      <span>🚗 Parking</span>
+                  </div>
+                  <button class="book-now-btn">Book Now</button>
               </div>
-            </div>
-
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
-            <div class="media media-custom d-block mb-4">
-              <a href="#" class="mb-4 d-block"><img src="img/img_2.jpg" alt="Image placeholder" class="img-fluid"></a>
-              <div class="media-body">
-                <span class="meta-post">February 26, 2018</span>
-                <h2 class="mt-0 mb-3"><a href="#">Five Reasons to Stay at SR Hotels Resort</a></h2>
+          <div class="item-card">
+              <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+              <div class="item-details">
+                  <h3>Deluxe</h3>
+                  <p>
+                      Rooms are cozy and pleasant, providing comfort and a restful stay.
+                  </p>
+                  <div class="amenities">
+                      <span>🛜 Wi-Fi</span>
+                      <span>🍽️ Dinner</span>
+                      <span>🧹 Housekeeping</span>
+                      <span>🚗 Parking</span>
+                  </div>
+                  <button class="book-now-btn">Book Now</button>
               </div>
-            </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
-            <div class="media media-custom d-block mb-4">
-              <a href="#" class="mb-4 d-block"><img src="img/img_3.jpg" alt="Image placeholder" class="img-fluid"></a>
-              <div class="media-body">
-                <span class="meta-post">February 26, 2018</span>
-                <h2 class="mt-0 mb-3"><a href="#">Five Reasons to Stay at SR Hotels Resort</a></h2>
+          <div class="item-card">
+              <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+              <div class="item-details">
+                  <h3>Deluxe</h3>
+                  <p>
+                      Rooms are cozy and pleasant, providing comfort and a restful stay.
+                  </p>
+                  <div class="amenities">
+                      <span>🛜 Wi-Fi</span>
+                      <span>🍽️ Dinner</span>
+                      <span>🧹 Housekeeping</span>
+                      <span>🚗 Parking</span>
+                  </div>
+                  <button class="book-now-btn">Book Now</button>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </section>
+    
+  </section>
+  
+  
+  <style>
+  /* Slider Container */
+  .carousel-container {
+      width: 100%;
+      overflow: hidden; /* Hide content outside the slider */
+      position: relative;
+      border-radius: 12px; /* Rounded corners for the container */
+  }
+  
+  /* Slider Wrapper */
+  .carousel-wrapper {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth easing */
+      gap: 10px;
+  }
+  
+  /* Slide Styles */
+  .carousel-item {
+      min-width: 100%; /* Full width per slide */
+      box-sizing: border-box;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      transform: scale(0.98);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .carousel-item:hover {
+      transform: scale(1); /* Slight scale-up on hover */
+  }
+  
+  /* Section Styling */
+  .room-showcase {
+      padding: 80px 20px;
+      text-align: center;
+      border-radius: 12px;
+  }
+  
+  /* Item Showcase */
+  .item-carousel {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto; /* Horizontal scrolling for mobile */
+      scroll-behavior: smooth;
+      padding: 20px 0;
+  }
+  
+  .item-card {
+      flex: 0 0 calc(33.33% - 20px); /* 3 cards per row */
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .item-card:hover {
+      transform: translateY(-10px); /* Slight lift effect */
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hide Scrollbar */
+  .item-carousel::-webkit-scrollbar {
+      display: none;
+  }
+  
+  /* Item Image */
+  .item-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+  }
+  
+  .item-image:hover {
+      transform: scale(1.05); /* Zoom effect on image hover */
+  }
+  
+  /* Item Details */
+  .item-details {
+      padding: 20px;
+      text-align: left;
+  }
+  
+  /* Book Button */
+  .book-now-btn {
+      background: linear-gradient(to right, #ff4081, #ff1a75);
+      color: #fff;
+      font-size: 1.1em;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .book-now-btn:hover {
+      background: linear-gradient(to right, #d81b60, #b1124a);
+      transform: translateY(-6px); /* More noticeable lift */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Left and Right Navigation Buttons */
+  .carousel-container::before, .carousel-container::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5em;
+      cursor: pointer;
+      z-index: 10;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .carousel-container::before {
+      left: 10px;
+  }
+  
+  .carousel-container::after {
+      right: 10px;
+  }
+  
+  .carousel-container::before:hover, .carousel-container::after:hover {
+      background-color: rgba(0, 0, 0, 0.8); /* Darker hover effect */
+      transform: translateY(-50%) scale(1.1); /* Slight scale effect */
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+      .item-card {
+          flex: 0 0 calc(50% - 10px); /* 2 cards per row */
+      }
+  
+      .item-image {
+          height: 150px;
+      }
+  }
+  
+  @media screen and (max-width: 480px) {
+      .item-card {
+          flex: 0 0 calc(100% - 10px); /* 1 card per row */
+      }
+  
+      .item-image {
+          height: 120px;
+      }
+  }
+  
+  </style>
+  
     <!-- END section -->
     <section class="section testimonial-section">
       <div class="container">

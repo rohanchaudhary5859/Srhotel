@@ -81,14 +81,14 @@
 <section class="hero-section">
   <div class="hero-overlay"></div> <!-- Overlay div for light/dark effect -->
   <div class="hero-content">
-    <h1>Hotel Chandra <span class="highlight">Palace</span></h1>
+    <h1>Hotel Red <span class="highlight">Rose</span></h1>
   </div>
 </section>
 
 <style>
   /* Hero Section Styles */
   .hero-section {
-    background-image: url('background.jpg'); /* Replace with actual image URL */
+    background-image: url('redrose.jpg'); /* Replace with actual image URL */
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -155,13 +155,13 @@
   <div class="container">
     <!-- Image on the Left -->
     <div class="welcome-image">
-      <img src="IMG_4889-1024x683.jpg" alt="Hotel Reception">
+      <img src="IMG_3443-1024x683.jpg" alt="Hotel Reception">
     </div>
 
     <!-- Content on the Right -->
     <div class="welcome-content">
       <h2>Welcome to Hotel</h2>
-      <h1>Discover the timeless elegance of Chandra Palace.</h1>
+      <h1>Discover the timeless elegance of Hotel Red Rose.</h1>
       <p>
         Nestled in the heart of Ahmedabad, Chandra Palace offers a luxurious and unforgettable experience. With its
         rich heritage and modern amenities, our hotel is the perfect choice for both business and leisure travelers.
@@ -179,7 +179,7 @@
   </div>
 </section>
 <style>
-  /* Welcome Section Styles */
+ /* Welcome Section Styles */
 .welcome-section {
   background: #fdf9f3; /* Light cream background */
   padding: 60px 20px;
@@ -271,6 +271,11 @@
   margin-right: 10px;
 }
 
+/* Hide pink h2 (letter rose) when navbar is open */
+.navbar-open .welcome-content h2 {
+  display: none; /* Hides the h2 element when navbar is open */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .container {
@@ -344,6 +349,13 @@
 
 
 </style>
+<script>
+    // JavaScript to toggle the navbar-open class on body when the navbar is toggled
+document.querySelector('.navbar-toggle').addEventListener('click', function () {
+  document.body.classList.toggle('navbar-open'); // Add/remove 'navbar-open' class on the body
+});
+
+</script>
   <section class="room-showcase">
     <h1>Our Stay</h1>
     <div class="item-carousel">
@@ -830,14 +842,14 @@
 <section class="gallery-section">
   <h2 class="gallery-title">Featured Rooms</h2>
   <div class="gallery-grid">
-    <div class="gallery-item"><img src="IMG_4875-600x540.jpg" alt="Room 1"></div>
-    <div class="gallery-item"><img src="IMG_4879-600x540.jpg" alt="Room 2"></div>
-    <div class="gallery-item"><img src="IMG_4883-600x540.jpg" alt="Room 3"></div>
-    <div class="gallery-item"><img src="IMG_4885-600x540.jpg" alt="Room 4"></div>
-    <div class="gallery-item"><img src="IMG_4889-1-600x540.jpg" alt="Room 5"></div>
-    <div class="gallery-item"><img src="IMG_4893-600x540.jpg" alt="Room 6"></div>
-    <div class="gallery-item"><img src="IMG_4896-600x540.jpg" alt="Room 7"></div>
-    <div class="gallery-item"><img src="IMG_4912-600x540.jpg" alt="Room 8"></div>
+    <div class="gallery-item"><img src="hotelrose\IMG_3445-600x540.jpg" alt="Room 1"></div>
+    <div class="gallery-item"><img src="hotelrose\IMG_3458-600x540.jpg" alt="Room 2"></div>
+    <div class="gallery-item"><img src="hotelrose\IMG_3463-1-600x540.jpg" alt="Room 3"></div>
+    <div class="gallery-item"><img src="hotelrose\IMG_3463-600x540.jpg" alt="Room 4"></div>
+    <div class="gallery-item"><img src="hotelrose\IMG_3469-600x540.jpg" alt="Room 5"></div>
+    <div class="gallery-item"><img src="hotelrose\IMG_3482-600x540.jpg" alt="Room 6"></div>
+    <div class="gallery-item"><img src="hotelrose\IMG_3487-600x540.jpg" alt="Room 7"></div>
+    <div class="gallery-item"><img src="hotelrose\IMG_3494-600x540.jpg" alt="Room 8"></div>
   </div>
 </section>
 
@@ -939,54 +951,50 @@
 </style>
 
 <section class="connect-section">
-  <div class="container">
-    <!-- Left Section: Map -->
-    <div class="map-container">
-      <iframe
-        src="https://maps.google.com/maps?q=Hotel%20Chandra%20Palace,%20Ahmedabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        width="100%"
-        height="400"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
-
-    <!-- Right Section: Contact Info Cards -->
-    <div class="contact-info">
-      <!-- Phone -->
-      <div class="contact-card">
-        <div class="icon">
-          <i class="fas fa-phone-alt" style="color: #e91e63;"></i>
-        </div>
-        <div class="details">
-          <p>+91 96014 73204</p>
-        </div>
+    <div class="container">
+      <!-- Left Section: Map -->
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7347.4033730839!2d72.620946!3d22.961211!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e88b17e1f5e1b%3A0xf9f9e1224cb388aa!2sHotel%20Red%20Rose!5e0!3m2!1sen!2sin!4v1734683858417!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-
-      <!-- Email -->
-      <div class="contact-card">
-        <div class="icon">
-          <i class="fas fa-envelope" style="color: #e91e63;"></i>
+  
+      <!-- Right Section: Contact Info Cards -->
+      <div class="contact-info">
+        <!-- Phone -->
+        <div class="contact-card">
+          <div class="icon">
+            <i class="fas fa-phone-alt" style="color: #e91e63;"></i>
+          </div>
+          <div class="details">
+            <p>+91 07227 857166</p>
+          </div>
         </div>
-        <div class="details">
-          <p>Info@srgoup.com</p>
+  
+        <!-- Email -->
+        <div class="contact-card">
+          <div class="icon">
+            <i class="fas fa-envelope" style="color: #e91e63;"></i>
+          </div>
+          <div class="details">
+            <p>Info@srgoup.com</p>
+          </div>
         </div>
-      </div>
-
-      <!-- Location -->
-      <div class="contact-card">
-        <div class="icon">
-          <i class="fas fa-map-marker-alt" style="color: #e91e63;"></i>
-        </div>
-        <div class="details">
-          <p>2nd Floor, Swastik Complex,<br> Ahmedabad</p>
+  
+        <!-- Location -->
+        <div class="contact-card">
+          <div class="icon">
+            <i class="fas fa-map-marker-alt" style="color: #e91e63;"></i>
+          </div>
+          <div class="details">
+            <p>SANKHESHWAR IND.PARK-2,<br>
+              OPP. GUJRAT OFFSET OPP.MIDCO,<br>
+              NR. VATVA RAILWAY BRIDGE VATVA<br>
+              GIDC, Ahmedabad, Gujarat 382445</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
+  
 <style>
 /* General Section Styles */
 .connect-section {

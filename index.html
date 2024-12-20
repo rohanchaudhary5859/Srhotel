@@ -43,7 +43,7 @@
                     <div class="col-md-6">
                       <ul class="list-unstyled menu">
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="hotelchandra.html">Hotels</a></li>
+                        <li><a href="hotellist.html">Hotels</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -332,18 +332,24 @@
 @media (max-width: 490px) {
   .explore-heading {
     font-size: 2.2rem;
+    text-align: center; /* Ensure the heading is centered */
   }
 
   .explore-description {
     font-size: 1rem;
+    margin: 0 auto; /* Center description horizontally */
+    text-align: center; /* Ensure text alignment is centered */
   }
 
   .explore-item {
     padding: 10px;
+    margin: 0 auto; /* Center the items horizontally */
   }
 
   .explore-img {
     border-radius: 10px;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
   }
 
   .swiper-button-next,
@@ -351,6 +357,12 @@
     width: 40px;
     height: 40px;
     font-size: 18px;
+    margin: 0 auto; /* Ensure buttons are centered in their container */
+  }
+
+  .swiper-wrapper {
+    gap: 10px; /* Adjust gap for better fit */
+    justify-content: center; /* Ensure proper centering of slides */
   }
 }
 
@@ -435,11 +447,43 @@
     </section>
     <!-- END section -->
     
-    <section class="room-showcase">
-      <h1>Our Stay</h1>
+    <section class="room-showcase" data-aos="fade-up" >
+      <h1 class="header_stat">Our Stay</h1>
       <div class="item-carousel">
           <!-- Item cards -->
-          <div class="item-card">
+          <div class="item-card" data-aos="fade-right">
+              <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+              <div class="item-details">
+                  <h3>Deluxe</h3>
+                  <p>
+                      Rooms are cozy and pleasant, providing comfort and a restful stay.
+                  </p>
+                  <div class="amenities">
+                      <span>🛜 Wi-Fi</span>
+                      <span>🍽️ Dinner</span>
+                      <span>🧹 Housekeeping</span>
+                      <span>🚗 Parking</span>
+                  </div>
+                  <button class="book-now-btn">Book Now</button>
+              </div>
+          </div>
+          <div class="item-card" data-aos="fade-up">
+              <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+              <div class="item-details">
+                  <h3>Deluxe</h3>
+                  <p>
+                      Rooms are cozy and pleasant, providing comfort and a restful stay.
+                  </p>
+                  <div class="amenities">
+                      <span>🛜 Wi-Fi</span>
+                      <span>🍽️ Dinner</span>
+                      <span>🧹 Housekeeping</span>
+                      <span>🚗 Parking</span>
+                  </div>
+                  <button class="book-now-btn">Book Now</button>
+              </div>
+          </div>
+          <div class="item-card" data-aos="fade-left">
               <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
               <div class="item-details">
                   <h3>Deluxe</h3>
@@ -456,43 +500,45 @@
               </div>
           </div>
           <div class="item-card">
-              <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
-              <div class="item-details">
-                  <h3>Deluxe</h3>
-                  <p>
-                      Rooms are cozy and pleasant, providing comfort and a restful stay.
-                  </p>
-                  <div class="amenities">
-                      <span>🛜 Wi-Fi</span>
-                      <span>🍽️ Dinner</span>
-                      <span>🧹 Housekeeping</span>
-                      <span>🚗 Parking</span>
-                  </div>
-                  <button class="book-now-btn">Book Now</button>
+            <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+            <div class="item-details">
+                <h3>Deluxe</h3>
+                <p>
+                    Rooms are cozy and pleasant, providing comfort and a restful stay.
+                </p>
+                <div class="amenities">
+                    <span>🛜 Wi-Fi</span>
+                    <span>🍽️ Dinner</span>
+                    <span>🧹 Housekeeping</span>
+                    <span>🚗 Parking</span>
+                </div>
+                <button class="book-now-btn">Book Now</button>
+            </div>
+        </div>
+        <div class="item-card">
+          <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+          <div class="item-details">
+              <h3>Deluxe</h3>
+              <p>
+                  Rooms are cozy and pleasant, providing comfort and a restful stay.
+              </p>
+              <div class="amenities">
+                  <span>🛜 Wi-Fi</span>
+                  <span>🍽️ Dinner</span>
+                  <span>🧹 Housekeeping</span>
+                  <span>🚗 Parking</span>
               </div>
-          </div>
-          <div class="item-card">
-              <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
-              <div class="item-details">
-                  <h3>Deluxe</h3>
-                  <p>
-                      Rooms are cozy and pleasant, providing comfort and a restful stay.
-                  </p>
-                  <div class="amenities">
-                      <span>🛜 Wi-Fi</span>
-                      <span>🍽️ Dinner</span>
-                      <span>🧹 Housekeeping</span>
-                      <span>🚗 Parking</span>
-                  </div>
-                  <button class="book-now-btn">Book Now</button>
-              </div>
+              <button class="book-now-btn">Book Now</button>
           </div>
       </div>
+      </div>
+      
     
   </section>
   
   
   <style>
+   
   /* Slider Container */
   .carousel-container {
       width: 100%;

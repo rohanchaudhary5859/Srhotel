@@ -41,8 +41,7 @@
                     <div class="col-md-6">
                       <ul class="list-unstyled menu">
                         <li><a href="index.html">Home</a></li>
-                                               <li class="active"><a href="hotellist.html">Hotel</a></li>
-
+                        <li class="active"><a href="hotellist.html">Hotel</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -81,14 +80,14 @@
 <section class="hero-section">
   <div class="hero-overlay"></div> <!-- Overlay div for light/dark effect -->
   <div class="hero-content">
-    <h1>Hotel Chandra <span class="highlight">Palace</span></h1>
+    <h1>Hotel TGS <span class="highlight">(The Grand Shivay)</span></h1>
   </div>
 </section>
 
 <style>
   /* Hero Section Styles */
   .hero-section {
-    background-image: url('background.jpg'); /* Replace with actual image URL */
+    background-image: url('tgs.jpg'); /* Replace with actual image URL */
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -155,13 +154,13 @@
   <div class="container">
     <!-- Image on the Left -->
     <div class="welcome-image">
-      <img src="IMG_4889-1024x683.jpg" alt="Hotel Reception">
+      <img src="thegrand.jpg" alt="Hotel Reception">
     </div>
 
     <!-- Content on the Right -->
     <div class="welcome-content">
       <h2>Welcome to Hotel</h2>
-      <h1>Discover the timeless elegance of Chandra Palace.</h1>
+      <h1>Discover the timeless elegance of Hotel TGS.</h1>
       <p>
         Nestled in the heart of Ahmedabad, Chandra Palace offers a luxurious and unforgettable experience. With its
         rich heritage and modern amenities, our hotel is the perfect choice for both business and leisure travelers.
@@ -179,7 +178,7 @@
   </div>
 </section>
 <style>
-  /* Welcome Section Styles */
+ /* Welcome Section Styles */
 .welcome-section {
   background: #fdf9f3; /* Light cream background */
   padding: 60px 20px;
@@ -271,6 +270,11 @@
   margin-right: 10px;
 }
 
+/* Hide pink h2 (letter rose) when navbar is open */
+.navbar-open .welcome-content h2 {
+  display: none; /* Hides the h2 element when navbar is open */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .container {
@@ -344,6 +348,13 @@
 
 
 </style>
+<script>
+    // JavaScript to toggle the navbar-open class on body when the navbar is toggled
+document.querySelector('.navbar-toggle').addEventListener('click', function () {
+  document.body.classList.toggle('navbar-open'); // Add/remove 'navbar-open' class on the body
+});
+
+</script>
   <section class="room-showcase">
     <h1>Our Stay</h1>
     <div class="item-carousel">
@@ -830,14 +841,14 @@
 <section class="gallery-section">
   <h2 class="gallery-title">Featured Rooms</h2>
   <div class="gallery-grid">
-    <div class="gallery-item"><img src="IMG_4875-600x540.jpg" alt="Room 1"></div>
-    <div class="gallery-item"><img src="IMG_4879-600x540.jpg" alt="Room 2"></div>
-    <div class="gallery-item"><img src="IMG_4883-600x540.jpg" alt="Room 3"></div>
-    <div class="gallery-item"><img src="IMG_4885-600x540.jpg" alt="Room 4"></div>
-    <div class="gallery-item"><img src="IMG_4889-1-600x540.jpg" alt="Room 5"></div>
-    <div class="gallery-item"><img src="IMG_4893-600x540.jpg" alt="Room 6"></div>
-    <div class="gallery-item"><img src="IMG_4896-600x540.jpg" alt="Room 7"></div>
-    <div class="gallery-item"><img src="IMG_4912-600x540.jpg" alt="Room 8"></div>
+    <div class="gallery-item"><img src="tgs\IMG_6217-1-600x540.jpg" alt="Room 1"></div>
+    <div class="gallery-item"><img src="tgs\IMG_6219-1-600x540.jpg" alt="Room 2"></div>
+    <div class="gallery-item"><img src="tgs\IMG_6225-1-600x540.jpg" alt="Room 3"></div>
+    <div class="gallery-item"><img src="tgs\IMG_6236-1-600x540.jpg" alt="Room 4"></div>
+    <div class="gallery-item"><img src="tgs\IMG_6240-1-600x540.jpg" alt="Room 5"></div>
+    <div class="gallery-item"><img src="tgs\IMG_6243-1-600x540.jpg" alt="Room 6"></div>
+    <div class="gallery-item"><img src="tgs\IMG_6245-1-600x540.jpg" alt="Room 7"></div>
+    <div class="gallery-item"><img src="tgs\WhatsApp-Image-2024-04-01-at-13.17.46_e809395a-600x540.jpg" alt="Room 8"></div>
   </div>
 </section>
 
@@ -939,54 +950,51 @@
 </style>
 
 <section class="connect-section">
-  <div class="container">
-    <!-- Left Section: Map -->
-    <div class="map-container">
-      <iframe
-        src="https://maps.google.com/maps?q=Hotel%20Chandra%20Palace,%20Ahmedabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        width="100%"
-        height="400"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
-
-    <!-- Right Section: Contact Info Cards -->
-    <div class="contact-info">
-      <!-- Phone -->
-      <div class="contact-card">
-        <div class="icon">
-          <i class="fas fa-phone-alt" style="color: #e91e63;"></i>
-        </div>
-        <div class="details">
-          <p>+91 96014 73204</p>
-        </div>
+    <div class="container">
+      <!-- Left Section: Map -->
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7339.077439767593!2d72.662112!3d23.113976000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e817dc34a435d%3A0xc86e2fea55d21716!2sHotel%20The%20Grand%20Shivay!5e0!3m2!1sen!2sin!4v1734692176359!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-
-      <!-- Email -->
-      <div class="contact-card">
-        <div class="icon">
-          <i class="fas fa-envelope" style="color: #e91e63;"></i>
+  
+      <!-- Right Section: Contact Info Cards -->
+      <div class="contact-info">
+        <!-- Phone -->
+        <div class="contact-card">
+          <div class="icon">
+            <i class="fas fa-phone-alt" style="color: #e91e63;"></i>
+          </div>
+          <div class="details">
+            <p>+91 7383414100</p>
+          </div>
         </div>
-        <div class="details">
-          <p>Info@srgoup.com</p>
+  
+        <!-- Email -->
+        <div class="contact-card">
+          <div class="icon">
+            <i class="fas fa-envelope" style="color: #e91e63;"></i>
+          </div>
+          <div class="details">
+            <p>tgssrhote@gmail.com</p>
+          </div>
         </div>
-      </div>
-
-      <!-- Location -->
-      <div class="contact-card">
-        <div class="icon">
-          <i class="fas fa-map-marker-alt" style="color: #e91e63;"></i>
-        </div>
-        <div class="details">
-          <p>2nd Floor, Swastik Complex,<br> Ahmedabad</p>
+  
+        <!-- Location -->
+        <div class="contact-card">
+          <div class="icon">
+            <i class="fas fa-map-marker-alt" style="color: #e91e63;"></i>
+          </div>
+          <div class="details">
+            <p>3rd floor, Syphon Gardenia,<br>
+              Sardar Patel Ring Rd, opp. Lubi pump,<br>
+              Airport Road, Nana Chiloda, Ahmedabad,<br>
+              Gujarat 382330</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
+  
+  
 <style>
 /* General Section Styles */
 .connect-section {

@@ -42,7 +42,169 @@
                     <div class="col-md-6">
                       <ul class="list-unstyled menu">
                         <li><a href="index.html">Home</a></li>
-                                               <li><a href="hotellist.html">Hotels</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle">Hotels</a>
+                          <ul class="dropdown-menu">
+                            <li class="submenu">
+                              <a href="hotellist.html">Ahmedabad</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="hotelchandra.html">Hotel Chandra Palace</a></li>
+                                <li><a href="hotelrose.html">Hotel Red Rose</a></li>
+                                <li><a href="HotelTGS.html">Hotel TGS</a></li>
+                                <li><a href="SrRoom.html">Hotel Sr Vatava</a></li>
+                                <li><a href="hoteltgr.html">The Grand Radhey</a></li>
+                                <li><a href="hotelkalyani.jpg">Hotel Kalyan Place</a></li>
+                                <li><a href="HotelSRLaxmi.html">Hotel SR Laxmi Place</a></li>
+                                <li><a href="HotelKingsway.html">Hotel Kingsway</a></li>
+                                <li><a href="HotelSRRatheyinn.html">Hotel SR Rathey Inn</a></li>
+                              </ul>
+                            </li>
+                            <li class="submenu">
+                              <a href="#">Anand</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="hotel3.html">Hotel 3</a></li>
+                                <li><a href="hotel4.html">Hotel 4</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="city3.html">City 3</a></li>
+                            <li><a href="city4.html">City 4</a></li>
+                          </ul>
+                        </li>
+                        
+                        <style>
+                       /* Base Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  text-decoration: none;
+  padding: 12px 20px;
+  color: #333;  /* Dark text */
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12px;  /* Smaller font size */
+  background-color: #fff;  /* White background */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  box-shadow: none;
+}
+
+.dropdown-toggle:hover {
+  background-color: #f9f9f9;  /* Subtle gray on hover */
+  color: #2c3e50;  /* Darker text on hover */
+  transform: translateY(-2px);  /* Slight lift on hover */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;  /* White background for the menu */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  top: 100%;
+  border-radius: 8px;
+}
+
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-menu li a {
+  display: block;
+  text-decoration: none;
+  color: #000000;  /* Dark text color */
+  padding: 12px 20px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 12px;  /* Smaller font size */
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;  /* Light gray background on hover */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Submenus - Open to the right */
+.submenu {
+  position: relative;
+}
+
+.submenu .dropdown-menu {
+  left: 100%; /* Open to the right of the parent */
+  top: 0;
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+.submenu:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.submenu .dropdown-menu li a {
+  padding-left: 30px;  /* Indentation for submenus */
+  font-weight: 500;
+  font-size: 12px;  /* Smaller font size */
+}
+
+.submenu .dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Modern hover effect for dropdown toggle */
+.dropdown-toggle:hover {
+  background-color: #f9f9f9;
+  color: #2c3e50;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    min-width: 100%;
+  }
+
+  .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    background-color: #fff;
+  }
+
+  .submenu .dropdown-menu {
+    left: 0;
+    top: 0;
+  }
+
+  .submenu .dropdown-menu li a {
+    padding: 12px;
+    font-size: 12px;  /* Smaller font size for mobile */
+  }
+}
+
+                        </style>
+                        
 
                         <li><a href="about.html">About</a></li>
                         <li><a href="Testimonials.html">Testimonials</a></li>
@@ -108,12 +270,12 @@
               <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
                 <img src="630a0024b2ad11e9be6b0242ac140005.avif" alt="Hotel Chandra Palace" class="img-fluid">  
                 <div class="hotel-details p-3">  
-                  <h2 class="hotel-name text-primary" style="font-size: 1.7rem; font-weight: 600;"><a href="hotelchandra.html">Hotel Chandra Palace</a></h2>  
-                  <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
+                  <h2 class="hotel-name text-primary" style="font-size: 1.7rem; font-weight: 600;"><a href="MotelHappyHome.html">Hotel Chandra Palace</a></h2>  
+                  <p class="hotel-location text-muted" style="font-size: 1.25rem;">Anand, Gujarat</p>  
                   <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
                   <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
                   <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>  
-                  <a href="hotelchandra.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
+                  <a href="MotelHappyHome.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
                 </div>  
               </div>  
             </div>  
@@ -123,12 +285,12 @@
               <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
               <img src="IMG_3443-1024x683.jpg" alt="Hotel Red Rose" class="img-fluid" >  
               <div class="hotel-details p-3">  
-                <h2 class="hotel-name text-primary" style="font-size: 1.7rem; font-weight: 600;"><a href="hotelrose.html">Hotel Red <br>Rose</a></h2>  
-                <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
+                <h2 class="hotel-name text-primary" style="font-size: 1.7rem; font-weight: 600;"><a href="HotelSrLaxm.html">Hotel Sr <br>Laxmi</a></h2>  
+                <p class="hotel-location text-muted" style="font-size: 1.25rem;">Anand, Gujarat</p>  
                 <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐⭐</p>  
                 <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
                 <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-                <a href="hotelrose.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
+                <a href="HotelSrLaxm.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
               </div>  
             </div>  
           </div>  
@@ -150,12 +312,12 @@
               <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
               <img src="tgr.jpg" alt="Hotel Chandra Palace" class="img-fluid" >  
               <div class="hotel-details p-3">  
-                <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="hoteltgr.html">Hotel The Grand Radhey</a></h2>  
+                <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="hoteltgsanand.html">Hotel TGS (Anand)</a></h2>  
                 <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
                 <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
                 <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
                 <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-                <a href="hoteltgr.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
+                <a href="hoteltgsanand.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
               </div>  
             </div>  
           </div>  
@@ -185,221 +347,9 @@
                 <a href="HotelKingsway.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
               </div>  
             </div>  
-          </div>  
-          <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-              <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-              <img src="laxmi.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-              <div class="hotel-details p-3">  
-                <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="HotelSRLaxmi.html">Hotel SR <br>Laxmi</a></h2>  
-               <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-                <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-                <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-                <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-                <a href="HotelSRLaxmi.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-              </div>  
-            </div>  
-          </div>   
-          <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-              <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-              <img src="radheyinn.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-              <div class="hotel-details p-3">  
-                <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="HotelSRRatheyinn.html">Hotel Sr Rathey inn</a></h2>  
-               <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-                <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-                <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-                <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-                <a href="HotelSRRatheyinn.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-              </div>  
-            </div>  
           </div> 
-          <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-              <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 8px;">  
-              <img src="srhotel.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-              <div class="hotel-details p-3">  
-                <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="SrRoom.html">Hotel Sr 
-                  <br>Vatava</a></h2>  
-               <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-                <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-                <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-                <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-                <a href="SrRoom.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-              </div>  
-            </div>  
           </div> 
-          <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="200">  
-            <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-            <img src="IMG_3443-1024x683.jpg" alt="Hotel Red Rose" class="img-fluid" >  
-            <div class="hotel-details p-3">  
-              <h2 class="hotel-name text-primary" style="font-size: 1.7rem; font-weight: 600;"><a href="MotelHappyHome.html">Motel Happy <br>Home</a></h2>  
-              <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-              <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐⭐</p>  
-              <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-              <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-              <a href="MotelHappyHome.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-            </div>  
-          </div>  
-        </div>  
-  
-        <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="300">  
-            <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-            <img src="thegrand.jpg" alt="Mountain Retreat" class="img-fluid" >  
-            <div class="hotel-details p-3">  
-              <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="HotelSrLaxm.html">Hotel Sr Laxmi</a></h2>  
-             <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-              <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-              <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-              <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-              <a href="HotelSrLaxm.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-            </div>  
-          </div>  
-        </div>  
-        <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-            <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-            <img src="tgr.jpg" alt="Hotel Chandra Palace" class="img-fluid" >  
-            <div class="hotel-details p-3">  
-              <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="hoteltgsanand.html">Hotel Tgs(Anand)</a></h2>  
-              <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-              <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-              <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-              <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-              <a href="hoteltgsanand.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-            </div>  
-          </div>  
-        </div>  
-        <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-            <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-            <img src="hotelkalyani.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-            <div class="hotel-details p-3">  
-              <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="Hotelsrroom.html">Hotel Sr Room</a></h2>  
-             <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-              <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-              <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-              <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-              <a href="Hotelsrroom.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-            </div>  
-          </div>  
-        </div>  
-        
-        <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-            <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-            <img src="kingsway.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-            <div class="hotel-details p-3">  
-              <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="Hotelsrregency.html">Hotel Sr Regency</a></h2>  
-             <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-              <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-              <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-              <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-              <a href="Hotelsrregency.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-            </div>  
-          </div>  
-        </div>  
-        
-        <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-          <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-          <img src="laxmi.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-          <div class="hotel-details p-3">  
-            <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="HotelSanvaria.html">Hotel Sanvaria <br> Regency</a></h2>  
-           <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-            <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-            <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-            <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-            <a href="HotelSanvaria.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-          </div>  
-        </div>  
-      </div>  
-      <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-        <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-        <img src="laxmi.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-        <div class="hotel-details p-3">  
-          <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="hotelkrishnaPlace.html">Hotel Krishna <br> Place</a></h2>  
-         <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-          <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-          <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-          <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-          <a href="hotelkrishnaPlace.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-        </div>  
-      </div>  
-    </div>  
-    <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-      <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-      <img src="laxmi.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-      <div class="hotel-details p-3">  
-        <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="HotelSRRathey.html">Hotel SR <br>Rathey</a></h2>  
-       <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-        <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-        <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-        <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-        <a href="HotelSRRathey.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-      </div>  
-    </div>  
-  </div>  
-  <div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-    <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-    <img src="laxmi.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-    <div class="hotel-details p-3">  
-      <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="hotelsrRadhika.html">Hotel Sr <br>Radhika</a></h2>  
-     <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-      <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-      <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-      <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-      <a href="hotelsrRadhika.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-    </div>  
-  </div>  
-</div> 
-<div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-  <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-  <img src="laxmi.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-  <div class="hotel-details p-3">  
-    <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="hoteltgrbecharaji.html">Hotel TGR <br>(Becharaji)</a></h2>  
-   <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-    <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-    <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-    <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-    <a href="hoteltgrbecharaji.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-  </div>  
-</div>  
-</div>  
-<div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-  <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-  <img src="laxmi.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-  <div class="hotel-details p-3">  
-    <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="HotelKrishna.html">Hotel Krishna</a></h2>  
-   <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-    <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-    <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-    <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-    <a href="HotelKrishna.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-  </div>  
-</div>  
-</div> 
-<div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-  <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-  <img src="laxmi.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-  <div class="hotel-details p-3">  
-    <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="HotelSrRadheysurat.html">Hotel Sr Radhey</a></h2>  
-   <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-    <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-    <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-    <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-    <a href="HotelSrRadheysurat.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-  </div>  
-</div>  
-</div> 
-<div class="col-lg-4 col-md-6 col-sm-12 hotel-card" data-aos="slide-up" data-aos-delay="100">  
-  <div class="hotel-card-content d-block mb-4" style="overflow: hidden; gap: 10px;">  
-  <img src="laxmi.jpg" alt="Hotel Chandra Palace" class="img-fluid">  
-  <div class="hotel-details p-3">  
-    <h2 class="hotel-name text-primary" style="font-size: 1.9rem; font-weight: 600;"><a href="TheGrandRatheyborsad.html">The Grand Rathey</a></h2>  
-   <p class="hotel-location text-muted" style="font-size: 1.25rem;">Ahmedabad, Gujarat</p>  
-    <p class="hotel-rating text-warning" style="font-size: 1.6rem;">⭐⭐⭐⭐☆</p>  
-    <p class="hotel-price text-success" style="font-size: 1.5rem;">Price: ₹2,500/night</p>  
-    <p class="hotel-description" style="font-size: 1.0rem;">Discover ultimate relaxation and unmatched luxury amidst the serene surroundings of our exclusive mountain</p>
-    <a href="TheGrandRatheyborsad.html" class="btn btn-primary btn-sm mt-3">View Details</a>  
-  </div>  
-</div>  
-</div> 
-
-      </div>
+          </div>
         </div>  
       </div>  
     </section>

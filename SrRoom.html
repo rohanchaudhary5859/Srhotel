@@ -82,7 +82,8 @@
 <section class="hero-section">
   <div class="hero-overlay"></div> <!-- Overlay div for light/dark effect -->
   <div class="hero-content">
-    <h1>Hotel TGS <span class="highlight">(The Grand Shivay)</span></h1>
+    <h1>Sr Rooms <span class="highlight">(Vatva)
+    </span></h1>
   </div>
 </section>
 
@@ -90,7 +91,7 @@
   /* Hero Section Styles */
    /* Hero Section Styles */
     .hero-section {
-      background-image: url('tgs.jpg'); /* Replace with actual image URL */
+      background-image: url('backgroundsrrooms.jpg'); /* Replace with actual image URL */
       background-size: cover;
       background-position: center;
       height: 400px;
@@ -158,15 +159,15 @@
   <div class="container">
     <!-- Image on the Left -->
     <div class="welcome-image">
-      <img src="thegrand.jpg" alt="Hotel Reception">
+      <img src="srhotel.jpg" alt="Hotel Reception">
     </div>
 
     <!-- Content on the Right -->
     <div class="welcome-content">
       <h2>Welcome to Hotel</h2>
-      <h1>Discover the timeless elegance of Hotel TGS.</h1>
+      <h1>Discover the timeless elegance of Hotel SR Laxmi</h1>
       <p>
-        Nestled in the heart of Ahmedabad, Chandra Palace offers a luxurious and unforgettable experience. With its
+        Nestled in the heart of Ahmedabad, Hotel SR Laxmi offers a luxurious and unforgettable experience. With its
         rich heritage and modern amenities, our hotel is the perfect choice for both business and leisure travelers.
       </p>
       <p>Warmth and Luxury in Ahmedabad</p>
@@ -845,14 +846,14 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 <section class="gallery-section">
   <h2 class="gallery-title">Featured Rooms</h2>
   <div class="gallery-grid">
-    <div class="gallery-item"><img src="tgs\IMG_6217-1-600x540.jpg" alt="Room 1"></div>
-    <div class="gallery-item"><img src="tgs\IMG_6219-1-600x540.jpg" alt="Room 2"></div>
-    <div class="gallery-item"><img src="tgs\IMG_6225-1-600x540.jpg" alt="Room 3"></div>
-    <div class="gallery-item"><img src="tgs\IMG_6236-1-600x540.jpg" alt="Room 4"></div>
-    <div class="gallery-item"><img src="tgs\IMG_6240-1-600x540.jpg" alt="Room 5"></div>
-    <div class="gallery-item"><img src="tgs\IMG_6243-1-600x540.jpg" alt="Room 6"></div>
-    <div class="gallery-item"><img src="tgs\IMG_6245-1-600x540.jpg" alt="Room 7"></div>
-    <div class="gallery-item"><img src="tgs\WhatsApp-Image-2024-04-01-at-13.17.46_e809395a-600x540.jpg" alt="Room 8"></div>
+    <div class="gallery-item"><img src="laxmi\JCV_7568-600x540.jpg" alt="Room 1"></div>
+    <div class="gallery-item"><img src="laxmi\JCV_7581-1-600x540.jpg" alt="Room 2"></div>
+    <div class="gallery-item"><img src="laxmi\JCV_7590-1-600x540.jpg" alt="Room 3"></div>
+    <div class="gallery-item"><img src="laxmi\JCV_7590-600x540.jpg" alt="Room 4"></div>
+    <div class="gallery-item"><img src="laxmi\JCV_7599-600x540.jpg" alt="Room 5"></div>
+    <div class="gallery-item"><img src="laxmi\JCV_7671-600x540.jpg" alt="Room 6"></div>
+    <div class="gallery-item"><img src="laxmi\JCV_7781-600x540.jpg" alt="Room 7"></div>
+    <div class="gallery-item"><img src="laxmi\JCV_7794-600x540.jpg" alt="Room 8"></div>
   </div>
 </section>
 
@@ -999,134 +1000,178 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 </section>
 
 <style>
-/* General Section Styling */
+/* General Section Styles */
 .connect-section {
-    background-color: #fef9f6;
-    padding: 50px 20px;
-    font-family: 'Poppins', sans-serif;
-  }
+background-color: #fef9f6;
+padding: 60px 20px;
+font-family: 'Poppins', sans-serif;
+}
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+.container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 50px;
+align-items: stretch; /* Ensures equal height for children */
+}
 
-  /* Map Container Styling */
-  .map-container {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-  }
+/* Map Container */
+.map-container {
+flex: 1;
+min-width: 400px;
+max-width: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #ffffff;
+border-radius: 20px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+padding: 15px;
+}
 
-  .map-container iframe {
-    width: 100%;
-    height: 400px;
-    border: 0;
-    border-radius: 10px;
-  }
+.map-container iframe {
+width: 100%;
+height: 100%;
+border-radius: 15px;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+border: none;
+transition: transform 0.3s ease;
+}
 
-  /* Contact Info Styling */
-  .contact-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    min-width: 300px;
-    max-width: 500px;
-    background: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  }
+.map-container iframe:hover {
+transform: scale(1.02);
+}
 
-  .contact-card {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px 20px;
-    background: #fef9f6;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
+/* Contact Info */
+.contact-info {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-between; /* Spread the cards evenly */
+gap: 30px;
+min-width: 300px;
+max-width: 600px;
+background-color: #ffffff;
+border-radius: 20px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+padding: 25px;
+}
 
-  .contact-card:hover {
-    background: #ffeef3;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
+/* Contact Cards */
+.contact-card {
+display: flex;
+align-items: center;
+gap: 20px;
+background-color: #fff;
+border-radius: 15px;
+padding: 20px;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+border: 1px solid #ececec;
+cursor: pointer;
+}
 
-  .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    font-size: 1.8rem;
-    color: #e91e63;
-    background: #ffeef3;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  }
+.contact-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+background-color: #fff4f7;
+border-color: #f48fb1;
+}
 
-  .details p {
-    margin: 0;
-    font-size: 1rem;
-    color: #555;
-    font-weight: 500;
-  }
+/* Icon Styling */
+.icon {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2.4rem;
+color: #ff4081;
+width: 70px;
+height: 70px;
+background-color: #ffeef3;
+border-radius: 50%;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-    }
+.icon:hover {
+transform: scale(1.1);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-    .map-container {
-      width: 100%;
-    }
+/* Text Styling */
+.details p {
+margin: 0;
+color: #4a4a4a;
+font-size: 1.2rem;
+font-weight: 500;
+line-height: 1.6;
+}
 
-    .contact-info {
-      width: 100%;
-    }
-  }
+.details .highlight {
+color: #ff4081;
+font-weight: 600;
+}
 
-  @media (max-width: 490px) {
-    .container {
-      flex-direction: column;
-      gap: 20px;
-    }
+/* Responsive Styles */
+@media (max-width: 768px) {
+.container {
+  flex-direction: column;
+  gap: 40px;
+}
 
-    .map-container {
-      display: block;
-      width: 100%;
-    }
+.map-container,
+.contact-info {
+  width: 100%;
+  min-height: 300px; /* Ensure equal height for smaller screens */
+}
 
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      gap: 15px;
-    }
+.map-container iframe {
+  height: 100%;
+}
+}
 
-    .map-container iframe {
-      height: 300px;
-    }
-  }
+@media (max-width: 490px) {
+.container {
+  flex-direction: column;
+  gap: 30px;
+  margin-right: 50px; /* Apply margin-right to the container */
+}
+
+/* Remove background and shadow from map container */
+.map-container {
+  width: 100%;
+  background-color: transparent; /* Remove the background */
+  box-shadow: none; /* Remove the shadow */
+  margin-right: 50px; /* Apply margin-right only for 490px or smaller screens */
+}
+
+.contact-info {
+  width: 100%;
+}
+
+.contact-card {
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.icon {
+  margin: 0 auto;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+}
+
+.details p {
+  font-size: 1rem;
+}
+
+.map-container iframe {
+  height: 250px;
+  margin-right: 40px;
+}
+}
+
 </style>
 
 <footer class="footer-section">

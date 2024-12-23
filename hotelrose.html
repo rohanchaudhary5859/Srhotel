@@ -89,67 +89,68 @@
 
 <style>
   /* Hero Section Styles */
-  .hero-section {
-    background-image: url('redrose.jpg'); /* Replace with actual image URL */
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  /* Overlay for dark/light effect */
-  .hero-overlay {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    z-index: 1;
-  }
-
-  .hero-content {
-    position: relative;
-    text-align: center;
-    color: #fff;
-    z-index: 2; /* Ensures the text is above the overlay */
-  }
-
-  .hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    margin: 0;
-  }
-
-  .hero-content .highlight {
-    color: #ff0080; /* Pink color for 'Palace' */
-  }
-
-  /* Responsive Styles */
-  @media (max-width: 768px) {
     .hero-section {
-      height: 350px;
+      background-image: url('redrose.jpg'); /* Replace with actual image URL */
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1; /* Ensure it's below the toggle menu */
     }
-
+  
+    /* Overlay for dark/light effect */
+    .hero-overlay {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+      z-index: 1; /* Stays under hero content */
+    }
+  
+    .hero-content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      z-index: 2; /* Ensures the text is above the overlay */
+    }
+  
     .hero-content h1 {
-      font-size: 2.5rem; /* Adjust font size */
+      font-size: 3rem;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      margin: 0;
     }
-  }
-
-  @media (max-width: 490px) {
-    .hero-section {
-      height: 300px; /* Reduce height on smaller screens */
+  
+    .hero-content .highlight {
+      color: #ff0080; /* Pink color for 'Palace' */
     }
-
-    .hero-content h1 {
-      font-size: 2rem; /* Adjust font size */
+  
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero-section {
+        height: 350px;
+      }
+  
+      .hero-content h1 {
+        font-size: 2.5rem; /* Adjust font size */
+      }
     }
-  }
+  
+    @media (max-width: 490px) {
+      .hero-section {
+        height: 300px; /* Reduce height on smaller screens */
+      }
+  
+      .hero-content h1 {
+        font-size: 2rem; /* Adjust font size */
+      }
+    }
 </style>
 
 <!-- Welcome Section -->

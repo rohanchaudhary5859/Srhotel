@@ -360,26 +360,25 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 });
 
 </script>
-  <section class="room-showcase">
-    <h1>Our Stay</h1>
+ <section class="room-showcase">
+    <h1 class="ourstay" >Our Stay</h1>
     <div class="item-carousel">
         <!-- Item cards -->
         <div class="item-card">
-            <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
-            <div class="item-details">
-                <h3>Deluxe</h3>
-                <p>
-                    Rooms are cozy and pleasant, providing comfort and a restful stay.
-                </p>
-                <div class="amenities">
-                    <span>🛜 Wi-Fi</span>
-                    <span>🍽️ Dinner</span>
-                    <span>🧹 Housekeeping</span>
-                    <span>🚗 Parking</span>
-                </div>
-                <button class="book-now-btn">Book Now</button>
+          <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+          <div class="item-details">
+              <h3>Deluxe</h3>
+              <p>Rooms are cozy and pleasant, providing comfort and a restful stay.</p>
+              <div class="amenities">
+                <span>🛜 Wi-Fi</span>
+                <span>🍽️ Dinner</span>
+                <span>🧹 Housekeeping</span>
+                <span>🚗 Parking</span>
             </div>
-        </div>
+              <button class="book-now-btn">Book Now</button>
+          </div>
+      </div>
+      
         <div class="item-card">
             <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
             <div class="item-details">
@@ -418,66 +417,128 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 
 
 <style>
-/* Slider Container */
+  .ourstay {
+    font-size: 4.0rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative; /* Required for the pseudo-element */
+}
+
+/* Carousel Container */
 .carousel-container {
     width: 100%;
-    overflow: hidden; /* Hide content outside the slider */
+    overflow: hidden;
     position: relative;
-    border-radius: 12px; /* Rounded corners for the container */
+    border-radius: 16px;
+    background: white;
+    padding: 20px;
+}
+
+/* Amenities */
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.amenities span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    color: #000000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.amenities span:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    color: #126eca;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.amenities i {
+    font-size: 1.2em;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.amenities span:hover i {
+    color: #0056b3;
 }
 
 /* Slider Wrapper */
 .carousel-wrapper {
     display: flex;
-    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth easing */
-    gap: 10px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 1.25rem;
+    align-items: center;
 }
 
 /* Slide Styles */
 .carousel-item {
-    min-width: 100%; /* Full width per slide */
+    min-width: 100%;
     box-sizing: border-box;
     background: #fff;
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
     transform: scale(0.98);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
 }
 
 .carousel-item:hover {
-    transform: scale(1); /* Slight scale-up on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Section Styling */
 .room-showcase {
-    padding: 80px 20px;
+    padding: 4rem 1rem;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff, #f4f4f4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0;
 }
 
 /* Item Showcase */
 .item-carousel {
     display: flex;
-    gap: 20px;
-    overflow-x: auto; /* Horizontal scrolling for mobile */
+    gap: 2rem;
+    overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 20px 0;
+    padding: 1.5rem 1rem;
+    align-items: flex-start;
+    -webkit-overflow-scrolling: touch;
 }
 
 .item-card {
-    flex: 0 0 calc(33.33% - 20px); /* 3 cards per row */
-    background: #fff;
-    border-radius: 12px;
+    flex: 0 0 calc(33.33% - 2rem);
+    background: #ffffff;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .item-card:hover {
-    transform: translateY(-10px); /* Slight lift effect */
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Hide Scrollbar */
@@ -488,94 +549,118 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 /* Item Image */
 .item-image {
     width: 100%;
-    height: 180px;
+    height: 220px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
+    border-bottom: 2px solid #dee2e6;
 }
 
 .item-image:hover {
-    transform: scale(1.05); /* Zoom effect on image hover */
+    transform: scale(1.1);
 }
 
 /* Item Details */
 .item-details {
-    padding: 20px;
+    padding: 1.25rem;
     text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: #495057;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Book Button */
 .book-now-btn {
-    background: linear-gradient(to right, #ff4081, #ff1a75);
+    background: linear-gradient(45deg, #ff5f6d, #ffc371);
     color: #fff;
-    font-size: 1.1em;
-    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 95, 109, 0.2);
+    align-self: center;
+    margin-top: 1.25rem;
 }
 
 .book-now-btn:hover {
-    background: linear-gradient(to right, #d81b60, #b1124a);
-    transform: translateY(-6px); /* More noticeable lift */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #d4505a, #e6a654);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(255, 95, 109, 0.3);
 }
 
 /* Left and Right Navigation Buttons */
-.carousel-container::before, .carousel-container::after {
+.carousel-container::before,
+.carousel-container::after {
     content: '';
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 40px;
-    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.8rem;
     cursor: pointer;
     z-index: 10;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .carousel-container::before {
-    left: 10px;
+    left: 1rem;
 }
 
 .carousel-container::after {
-    right: 10px;
+    right: 1rem;
 }
 
-.carousel-container::before:hover, .carousel-container::after:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Darker hover effect */
-    transform: translateY(-50%) scale(1.1); /* Slight scale effect */
+.carousel-container::before:hover,
+.carousel-container::after:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(-50%) scale(1.1);
 }
 
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .item-card {
-        flex: 0 0 calc(50% - 10px); /* 2 cards per row */
+        flex: 0 0 calc(50% - 1rem);
     }
 
     .item-image {
-        height: 150px;
+        height: 180px;
+    }
+
+    .book-now-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 480px) {
     .item-card {
-        flex: 0 0 calc(100% - 10px); /* 1 card per row */
+        flex: 0 0 calc(100% - 1rem);
     }
 
     .item-image {
-        height: 120px;
+        height: 140px;
+    }
+
+    .book-now-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
 </style>
+
 
 
 <!-- Partners Section -->

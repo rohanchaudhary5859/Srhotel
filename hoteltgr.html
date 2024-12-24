@@ -750,183 +750,214 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 }
 </style>
 
-<section class="place-section">
+<section class="section slider-gallery">
   <div class="container">
-      <div class="place-item">
-          <div class="place-info">
-              <div class="place-header">
-                  <div class="sub-title">Exploring Places</div>
-                  <h2 class="title">Nearby Places</h2>
-              </div>
-              <div class="place-list">
-                  <div class="place-card">
-                      <img src="https://srhotels.in/wp-content/uploads/2024/08/nal-sarovar-bird-sanctuary-ahmedabad-entry-fee-timings-holidays-reviews-header.jpg" alt="Nalsarovar Bird Sanctuary">
-                      <h3>Nalsarovar Bird Sanctuary</h3>
-                      <p>Nalsarovar Bird Sanctuary is a beautiful wetland area located near Ahmedabad. It's a popular spot for birdwatching, attracting migratory birds during the winter season.</p>
-                  </div>
-                  <div class="place-card">
-                      <img src="https://srhotels.in/wp-content/uploads/2024/08/akshardham-temple-ahmedabad-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Baps Akshardham Temple">
-                      <h3>BAPS Akshardham Temple</h3>
-                      <p>BAPS Akshardham Temple is a magnificent Hindu temple complex known for its stunning architecture, sculptures, and gardens. It's a popular tourist destination in Gandhinagar.</p>
-                  </div>
-                  <div class="place-card">
-                      <img src="https://srhotels.in/wp-content/uploads/2024/08/adalaj-stepwell-vav-ahmedabad-2.jpg" alt="Adalaj Stepwell">
-                      <h3>Adalaj Stepwell</h3>
-                      <p>Adalaj Stepwell is a historic and beautifully carved structure in Ahmedabad, depicting scenes from mythology and daily life.</p>
-                  </div>
-                  <div class="place-card">
-                      <img src="https://srhotels.in/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-29-at-15.36.09_0c93b3d8.jpg" alt="Kankaria Lake">
-                      <h3>Kankaria Lake</h3>
-                      <p>Kankaria Lake is an artificial lake in Ahmedabad, offering boating, amusement rides, and picnics with stunning views of the city.</p>
-                  </div>
-              </div>
-          </div>
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-md-8">
+        <h2 class="slider-heading" data-aos="fade-up">A gorgeous place to enjoy your life.</h2>
+        <p class="slider-lead" data-aos="fade-up" data-aos-delay="100">
+          Experience unparalleled hospitality at SR Hotels, where luxury meets comfort. Our world-class amenities, exceptional service, and elegant rooms create the perfect environment for a memorable stay. Whether you're traveling for business or leisure, indulge in the finest dining, relax in serene settings, and enjoy our commitment to making your visit extraordinary.
+        </p>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="slider-container owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="slider-image-item">
+            <img src="pexels-pixabay-260922.jpg" alt="Hotel Exterior View" class="slider-image">
+          </div>
+          <div class="slider-image-item">
+            <img src="pexels-pixabay-260922.jpg" alt="Elegant Room View" class="slider-image">
+          </div>
+          <div class="slider-image-item">
+            <img src="pexels-pixabay-260922.jpg" alt="Dining Area" class="slider-image">
+          </div>
+          <div class="slider-image-item">
+            <img src="pexels-pixabay-260922.jpg" alt="Reception Area" class="slider-image">
+          </div>
+          <div class="slider-image-item">
+            <img src="pexels-pixabay-260922.jpg" alt="Luxurious Amenities" class="slider-image">
+          </div>
+          <div class="slider-image-item">
+            <img src="pexels-pixabay-260922.jpg" alt="Serene Surroundings" class="slider-image">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-
 <style>
-  /* Importing a new font family */
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
-
-  /* General section styling */
-.place-section {
-    padding: 40px 20px;
-    background-color: #f4f4f4;
-    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  .slider-heading{
+    font-size: 2.50rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .slider-lead{
+    font-size: 1.0rem;
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+ /* General Section Styles */
+.section.slider-gallery {
+  padding: 60px 0; /* Reduced padding for compactness */
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Hide any overflow of images */
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+/* Slider Container with improved animation for infinite loop */
+.slider-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px; /* Increased gap between images */
+  animation: slide 40s infinite linear; /* Infinite loop with linear animation */
+  transition: transform 0.8s ease-in-out;
 }
 
-/* Place item layout */
-.place-item {
-    width: 100%;
-    text-align: center;
+/* Infinite Slide Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start from the initial position */
+  }
+  100% {
+    transform: translateX(-100%); /* Slide left by one image */
+  }
 }
 
-.place-info .sub-title {
-    font-size: 4rem;
-    color: #777;
-    margin-bottom: 10px;
-    font-family: 'Playfair Display', serif; /* Apply Playfair Display font for subtitle */
+/* Slider Image Item with larger size */
+.slider-image-item {
+  position: relative;
+  flex-shrink: 0;
+  width: 80%; /* Larger width (adjust as needed) */
+  max-width: 500px; /* Larger max-width for bigger images */
+  overflow: hidden;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: transform 0.4s ease, box-shadow 0.4s ease-in-out;
 }
 
-.place-info .title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 30px;
-    font-family: 'Playfair Display', serif; /* Apply Playfair Display font for title */
+/* Hover Effect for Image Items */
+.slider-image-item:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2); /* Darker, more prominent shadow */
 }
 
-/* Place list */
-.place-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+/* Slider Image with medium size */
+.slider-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Ensures images cover the full container without stretching */
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.place-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease;
+/* Parallax effect: Create a slight shift in image when hovering */
+.slider-image-item:hover .slider-image {
+  transform: scale(1.1); /* Zoom effect */
+  filter: brightness(1.2); /* Increase brightness on hover */
 }
 
-.place-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 5px;
+/* Owl Carousel Styles (if using Owl Carousel) */
+.owl-carousel .owl-nav {
+  display: none;
 }
 
-.place-card h3 {
-    font-size: 20px;
-    color: #333;
-    margin-top: 15px;
-    font-family: 'Roboto', sans-serif; /* Apply Roboto font to place card titles */
+.owl-carousel .owl-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.place-card p {
-    font-size: 14px;
-    color: #555;
-    margin-top: 10px;
-    font-family: 'Roboto', sans-serif; /* Apply Roboto font to card descriptions */
+.owl-carousel .owl-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect for place cards */
-.place-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.owl-carousel .owl-dot.active {
+  background-color: #00d5ff;
+  transform: scale(1.3); /* Active dot becomes larger */
 }
 
-/* Responsive Design */
+/* View More Photos Link */
+.view-more-photos {
+  display: inline-block;
+  font-size: 16px; /* Slightly smaller font */
+  color: #00d5ff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 40px;
+  padding: 12px 25px;
+  border: 2px solid #00d5ff;
+  border-radius: 30px;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+}
+
+.view-more-photos:hover {
+  background-color: #00d5ff;
+  color: #fff;
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Media Queries for Responsive Design */
 @media (max-width: 1024px) {
-    .place-list {
-        justify-content: space-around;
-    }
-    .place-card {
-        width: 220px;
-    }
+  .slider-container {
+    gap: 20px; /* Medium gap for tablets */
+  }
+
+  .view-more-photos {
+    font-size: 14px;
+    padding: 10px 20px; /* Smaller padding for mobile */
+  }
 }
 
 @media (max-width: 768px) {
-    .place-info .title {
-        font-size: 1.8rem;
-    }
+  .slider-heading {
+    font-size: 24px; /* Smaller heading for smaller screens */
+  }
 
-    .place-info .sub-title {
-        font-size: 3.5rem;
-    }
+  .slider-lead {
+    font-size: 14px; /* Adjust subheading size */
+    max-width: 80%;
+  }
 
-    .place-list {
-        justify-content: center;
-    }
+  .slider-container {
+    gap: 15px; /* Reduce gap on mobile */
+  }
 
-    .place-card {
-        width: 45%;
-    }
-
-    .place-card img {
-        height: 160px;
-    }
+  .view-more-photos {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
 
+/* Specific adjustments for 490px screens */
 @media (max-width: 490px) {
-    .place-info .title {
-        font-size: 1.6rem;
-    }
+  .section.slider-gallery {
+    padding: 40px 0; /* Reduced padding for even more compactness */
+  }
 
-    .place-info .sub-title {
-        font-size: 3rem;
-    }
+  .slider-container {
+    gap: 8px; /* Very small gap for tighter fit */
+    flex-direction: column; /* Stack images vertically on 490px screens */
+    justify-content: center;
+  }
 
-    .place-card {
-        width: 100%;
-        padding: 15px;
-    }
+  .slider-image-item {
+    width: 100%; /* Full width of the container */
+    max-width: none; /* Allow images to take the full width */
+  }
 
-    .place-card img {
-        height: 150px;
-    }
-
-    .place-card h3 {
-        font-size: 18px;
-    }
-
-    .place-card p {
-        font-size: 12px;
-    }
+  .view-more-photos {
+    font-size: 14px;
+    padding: 10px 18px; /* Adjust padding for compact look */
+  }
 }
+
 </style>
 <section class="gallery-section">
   <h2 class="gallery-title">Featured Rooms</h2>
@@ -944,6 +975,7 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 
 <style>
 /* Overall Section Styling */
+/* Overall Section Styling */
 .gallery-section {
   padding: 60px 20px;
   text-align: center;
@@ -952,9 +984,10 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 }
 
 .gallery-title {
-  font-size: 32px;
-  color: #d22779; /* Featured pink color */
+  font-size: 3.5rem;
+  color: #ff4081; /* Featured pink color */
   margin-bottom: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1.5px;
@@ -965,9 +998,9 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 .gallery-title::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 200px;
   height: 4px;
-  background-color: #d22779;
+  background-color: #ff4081;
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -1083,8 +1116,9 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 </section>
 <style>
 /* General Section Styling */
-.connect-section {
-    background-color: #fef9f6;
+ /* General Section Styling */
+  .connect-section {
+    background-color: #ffffff;
     padding: 50px 20px;
     font-family: 'Poppins', sans-serif;
   }
@@ -1166,9 +1200,9 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 
   .details p {
     margin: 0;
-    font-size: 1rem;
-    color: #555;
-    font-weight: 500;
+    font-size: 1.70rem;
+    color: #000000;
+    font-weight: 600;
   }
 
   /* Responsive Styling */
@@ -1198,7 +1232,12 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
       display: block;
       width: 100%;
     }
-
+    .details p {
+    margin: 0;
+    font-size: 1.0rem;
+    color: #000000;
+    font-weight: 700;
+  }
     .contact-info {
       display: flex;
       flex-direction: column;

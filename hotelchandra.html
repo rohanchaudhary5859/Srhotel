@@ -933,21 +933,24 @@
 <style>
 /* Overall Section Styling */
 /* Overall Section Styling */
+/* General Section Styling */
+/* General Section Styling */
 .gallery-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
-  background: linear-gradient(to bottom, #ffffff, #f3f4f7);
+  background: linear-gradient(135deg, #ffffff, #f3f4f7);
   font-family: "Arial", sans-serif;
 }
 
+/* Gallery Title Styling */
 .gallery-title {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   color: #ff4081; /* Featured pink color */
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
   position: relative;
   display: inline-block;
 }
@@ -955,71 +958,77 @@
 .gallery-title::after {
   content: "";
   display: block;
-  width: 200px;
+  width: 250px;
   height: 4px;
   background-color: #ff4081;
-  margin: 10px auto 0;
+  margin: 12px auto 0;
   border-radius: 2px;
 }
 
-/* Grid Styling */
+/* Gallery Grid Styling */
 .gallery-grid {
   display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   justify-items: center;
   padding: 0 10px;
 }
 
-/* Individual Items */
+/* Individual Gallery Items */
 .gallery-item {
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   background-color: #ffffff;
 }
 
 .gallery-item:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: scale(1.1);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
   display: block;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .gallery-item:hover img {
-  opacity: 0.95;
+  opacity: 0.9;
+  transform: scale(1.05);
 }
 
 /* Responsive Adjustments */
+
+/* Tablet and Large Devices */
 @media (max-width: 1024px) {
+  .gallery-title {
+    font-size: 32px;
+  }
+
+  .gallery-grid {
+    gap: 25px;
+  }
+}
+
+/* Small Tablets and Medium Devices */
+@media (max-width: 768px) {
   .gallery-title {
     font-size: 28px;
   }
 
   .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 
-@media (max-width: 768px) {
-  .gallery-title {
-    font-size: 24px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* Mobile Devices */
 @media (max-width: 480px) {
   .gallery-title {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .gallery-grid {
@@ -1027,6 +1036,8 @@
     gap: 15px;
   }
 }
+
+
 </style>
 
 <section class="connect-section">
@@ -1045,33 +1056,33 @@
           <i class="fas fa-phone-alt"></i>
         </div>
         <div class="details">
-          <p>+91 7383414100</p>
+          <p>+91 96014 73204</p>
         </div>
       </div>
-
+    
       <!-- Email -->
       <div class="contact-card">
         <div class="icon">
           <i class="fas fa-envelope"></i>
         </div>
         <div class="details">
-          <p>info@srhotel.com</p>
+          <p>info@srgroup.com</p>
         </div>
       </div>
-
+    
       <!-- Location -->
       <div class="contact-card">
         <div class="icon">
           <i class="fas fa-map-marker-alt"></i>
         </div>
         <div class="details">
-          <p>3rd floor, Syphon Gardenia,<br>
-            Sardar Patel Ring Rd, opp. Lubi pump,<br>
-            Airport Road, Nana Chiloda, Ahmedabad,<br>
-            Gujarat 382330</p>
+          <p>2nd Floor, Swastik Complex,<br>
+             Chandkheda, Near Satyamev Hospital,<br>
+             Ahmedabad, Gujarat 382424</p>
         </div>
       </div>
     </div>
+    
   </div>
 </section>
 

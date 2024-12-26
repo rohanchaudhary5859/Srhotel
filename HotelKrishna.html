@@ -944,100 +944,193 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 <style>
 /* Overall Section Styling */
 /* Overall Section Styling */
+/* General Section Styling */
 .gallery-section {
-  padding: 60px 20px;
+  padding: 100px 20px;
   text-align: center;
-  background: linear-gradient(to bottom, #ffffff, #f3f4f7);
-  font-family: "Arial", sans-serif;
+  background-color: #ffffff; /* Clean white background */
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
 }
 
 .gallery-title {
-  font-size: 3.5rem;
-  color: #ff4081; /* Featured pink color */
-  margin-bottom: 40px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 4rem; /* Larger font size for stronger visual presence */
+  color: #3a8ef6; /* Vibrant primary blue */
+  margin-bottom: 50px;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+  font-weight: 800; /* Bold and strong title */
+  letter-spacing: 3px; /* More spaced out for modern aesthetic */
   position: relative;
   display: inline-block;
+  text-shadow: 2px 2px 8px rgba(58, 142, 246, 0.2); /* Soft shadow to enhance the title */
+  transition: all 0.3s ease-in-out;
 }
 
 .gallery-title::after {
   content: "";
   display: block;
-  width: 200px;
-  height: 4px;
-  background-color: #ff4081;
-  margin: 10px auto 0;
-  border-radius: 2px;
+  width: 140px;
+  height: 5px;
+  background: linear-gradient(to right, #3a8ef6, #ff6f61); /* Gradient underline */
+  margin: 20px auto 0;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for title */
+.gallery-title:hover {
+  color: #ff6f61; /* Smooth transition to red */
+  text-shadow: 2px 2px 15px rgba(58, 142, 246, 0.5); /* Stronger text shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.gallery-title:hover::after {
+  width: 160px; /* Expand the underline on hover */
 }
 
 /* Grid Styling */
 .gallery-grid {
   display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row on large screens */
   justify-items: center;
-  padding: 0 10px;
+  padding: 0 20px;
+  margin-top: 50px;
 }
 
-/* Individual Items */
 .gallery-item {
-  border-radius: 15px;
+  position: relative;
+  border-radius: 20px; /* Slightly more rounded edges */
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-  background-color: #ffffff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+  background-color: #ffffff; /* Clean, white background for items */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f1f1f1; /* Subtle light border */
+  cursor: pointer;
+  will-change: transform, box-shadow; /* Optimize performance */
 }
 
 .gallery-item:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-12px) scale(1.08); /* Slight lift and scaling on hover */
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2); /* Larger shadow for more depth */
+  filter: brightness(1.1); /* Slight brightness increase */
 }
 
 .gallery-item img {
   width: 100%;
-  height: auto;
-  display: block;
-  transition: opacity 0.3s ease-in-out;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .gallery-item:hover img {
-  opacity: 0.95;
+  transform: scale(1.1); /* Smooth zoom-in effect on hover */
+  opacity: 0.85; /* Slight fade effect */
+}
+
+/* Icon Overlay */
+.gallery-item-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 15px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-icons {
+  opacity: 1; /* Fade in the icons when hovered */
+}
+
+.gallery-item-icons a {
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(45deg, #3a8ef6, #ff6f61); /* Gradient effect */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Deeper shadow for hover interaction */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item-icons a:hover {
+  transform: scale(1.2); /* Slightly larger on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.gallery-item-icons a i {
+  color: #ffffff;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.gallery-item-icons a:hover i {
+  color: #333333; /* Icon color change on hover */
+}
+
+/* Gradient Hover Effect */
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)); /* Subtle gradient overlay */
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::before {
+  opacity: 1; /* Subtle gradient appears on hover */
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
 @media (max-width: 1024px) {
   .gallery-title {
-    font-size: 28px;
+    font-size: 3rem; /* Adjust title size for mid-size screens */
   }
 
   .gallery-grid {
-    gap: 20px;
+    gap: 25px;
   }
 }
 
 @media (max-width: 768px) {
   .gallery-title {
-    font-size: 24px;
+    font-size: 2.6rem; /* Slightly smaller title for smaller screens */
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   .gallery-title {
-    font-size: 20px;
+    font-size: 2.2rem; /* Smaller title for very small screens */
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
     gap: 15px;
   }
 }
+
 </style>
 
 <section class="connect-section">

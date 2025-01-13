@@ -659,6 +659,7 @@
 }
 
 /* For 490px and below */
+/* For 490px and below */
 @media (max-width: 490px) {
   .hotel-list-section {
     padding: 15px 5px;
@@ -680,25 +681,29 @@
 
   .hotel-card {
     border-radius: 10px;
-    height: 260px; /* Compact height for smaller screens */
+    height: auto; /* Adjust height based on content */
+    padding-bottom: 10px; /* Add padding for better spacing */
   }
 
   .hotel-card img {
-    height: 100px; /* Reduced image height */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 120px; /* Prevent excessive height */
   }
 
   .hotel-details {
     padding: 10px;
     gap: 5px;
+    text-align: left; /* Align text to the left for better readability */
   }
 
   .hotel-name {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 
   .hotel-location,
   .hotel-price {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .hotel-rating {
@@ -706,11 +711,18 @@
   }
 
   .btn-outline-primary {
-    font-size: 0.75rem;
-    padding: 5px 16px;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    width: fit-content; /* Ensure button adjusts to text size */
+    margin-top: 10px; /* Add space above the button */
+  }
+
+  /* Ensure button visibility */
+  .btn-outline-primary:hover {
+    background: #007bff;
+    color: #fff;
   }
 }
-
 
       </style>
       

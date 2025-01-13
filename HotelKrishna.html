@@ -659,261 +659,479 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 </style>
 <div id="booking-modal" class="booking-modal">
   <div class="modal-content">
-      <span class="close-btn" onclick="closeBookingForm()">&times;</span>
-      <h2>Book Your Stay</h2>
-      <form id="booking-form">
-          <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-          </div>
+    <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+    <h2>Book Your Stay</h2>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
 
-          <div class="form-group">
-              <label for="checkin">Check-In Date</label>
-              <input type="date" id="checkin" name="checkin" required>
-          </div>
+      <div class="form-group row">
+        <div class="form-item">
+          <label for="checkin">Check-In Date</label>
+          <input type="date" id="checkin" name="checkin" required>
+        </div>
+        <div class="form-item">
+          <label for="checkout">Check-Out Date</label>
+          <input type="date" id="checkout" name="checkout" required>
+        </div>
+      </div>
 
-          <div class="form-group">
-              <label for="checkout">Check-Out Date</label>
-              <input type="date" id="checkout" name="checkout" required>
-          </div>
+      <div class="form-group">
+        <label for="person-count">Number of Persons</label>
+        <input type="number" id="person-count" name="person-count" min="1" max="10" placeholder="1" required>
+      </div>
 
-          <div class="form-group">
-              <label for="contact">Contact Number</label>
-              <input type="tel" id="contact" name="contact" placeholder="e.g. 9876543210" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
-          </div>
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="contact" placeholder="e.g. 9876543210" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
+      </div>
 
-          <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-          </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+      </div>
 
-          <div class="form-group">
-              <label for="room-type">Room Type</label>
-              <select id="room-type" name="room-type" required>
-                  <option value="deluxe">Deluxe</option>
-                  <option value="super-deluxe">Super Deluxe</option>
-                  <option value="suite">Suite</option>
-              </select>
-          </div>
+      <div class="form-group">
+        <label for="room-type">Room Type</label>
+        <select id="room-type" name="room-type" required>
+          <option value="">Select Room Type</option>
+          <option value="4000">Deluxe - ₹4000/night</option>
+          <option value="6000">Super Deluxe - ₹6000/night</option>
+          <option value="5000">Suite - ₹5000/night</option>
+        </select>
+      </div>
 
-          <button type="submit" class="submit-btn">Confirm Booking</button>
-      </form>
+      <div class="form-group">
+        <label for="total-amount">Total Amount</label>
+        <input type="text" id="total-amount" name="total-amount" readonly value="₹ 0">
+      </div>
+
+      <button type="submit" class="submit-btn">Confirm Booking</button>
+    </form>
   </div>
 </div>
 
 <style>
+/* Root Variables with Modern Color Palette */
 :root {
-    --primary-color: #0073e6;
-    --secondary-color: #005bb5;
-    --accent-color: #e52e71;
-    --neutral-light: rgba(255, 255, 255, 0.85);
-    --neutral-dark: #2d2d2d;
-    --neutral-medium: #444;
-    --background-overlay: rgba(0, 0, 0, 0.8);
-    --hover-shadow: rgba(0, 115, 230, 0.4);
-    --font-primary: 'Inter', sans-serif; /* A clean, modern sans-serif font */
-    --font-secondary: 'Poppins', sans-serif; /* A friendly, rounded font */
+  --primary-color: #0061f2; /* Vibrant Blue */
+  --accent-color: #ff4b5c; /* Soft Coral Red */
+  --neutral-light: #f7f7f7; /* Light Gray */
+  --neutral-dark: #333333; /* Dark Gray */
+  --background-overlay: rgba(0, 0, 0, 0.3); /* Soft overlay for modal */
+  --hover-shadow: rgba(0, 99, 242, 0.3); /* Soft hover shadow */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Lora', serif;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-bold: 700;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --modal-radius: 25px; /* Slightly larger radius for a more rounded look */
+  --btn-radius: 35px; /* More rounded buttons */
+  --input-radius: 20px; /* Slightly more rounded input fields */
+  --btn-gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  --modal-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(240, 240, 240, 0.4));
+  --glass-blur: rgba(255, 255, 255, 0.1); /* Subtle Glassmorphism */
+  --shadow-elevation: 0 8px 30px rgba(0, 99, 242, 0.15);
+  --focus-shadow: 0 0 15px var(--primary-color);
+  background-color: white;
 }
 
-* {
-    font-family: var(--font-primary); /* Set global font */
-}
 
+/* Modal Background with Glassmorphism */
 .booking-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--background-overlay);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 0.3s ease-in-out;
+  display: none;  /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-overlay);
+  backdrop-filter: blur(30px);
+  z-index: 1000;
+  animation: fadeIn 0.8s ease-out;
 }
 
+
+/* Modal Fade In Animation */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.modal-content {
-    background: var(--neutral-light);
-    width: 90%;
-    max-width: 600px;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    position: relative;
-    max-height: 90vh;
-    animation: slideIn 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    backdrop-filter: blur(8px);
-    background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
-}
 
+
+/* Modal Slide In Animation */
 @keyframes slideIn {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
+/* Modal Title */
+/* Modal Content */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  border-radius: var(--modal-radius);
+  background: white;  /* Change background to white */
+  box-shadow: var(--shadow-elevation);
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideIn 0.7s ease-out;
+}
+
+/* Modal Title */
 .modal-content h2 {
-    font-family: var(--font-secondary);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: var(--neutral-dark);
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 1.4;
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  font-weight: var(--font-bold);
+  color: #b50000;  /* Dark black text color */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
 }
 
+/* Modal Title Hover Effect */
+.modal-content h2:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+
+/* Close Button */
 .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.8rem;
-    color: #999;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2.5rem;
+  color: var(--neutral-dark);
+  cursor: pointer;
+  background: var(--neutral-light);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
+/* Close Button Hover */
 .close-btn:hover {
-    color: var(--neutral-dark);
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px var(--hover-shadow);
 }
 
+/* Form Styles */
 .form-group {
-    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-    display: block;
-    font-family: var(--font-primary);
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--neutral-medium);
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
+  font-size: 1.20rem;
+  margin-bottom: 0.5rem;
+  color: var(--neutral-dark);
+  font-weight: var(--font-regular);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
 }
 
+/* Label Hover Effect */
+label:hover {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+/* Input and Select Styles */
 input, select {
-    width: 100%;
-    padding: 12px;
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: border 0.3s, box-shadow 0.3s ease;
-    background: var(--neutral-light);
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-    letter-spacing: 0.5px;
+  width: 100%;
+  padding: 18px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: var(--input-radius);
+  background: #fff; /* White background for inputs */
+  color: var(--neutral-dark);
+  transition: all 0.3s ease;
+  margin-bottom: 1.3rem;
+  font-family: inherit;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for inputs */
+}
+
+/* Input and Select Focus Effect */
+input:focus, select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: var(--focus-shadow);
+}
+
+/* Submit Button with Gradient */
+.submit-btn {
+  padding: 18px;
+  background: var(--btn-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--btn-radius);
+  font-size: 1.3rem;
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  box-shadow: 0 12px 35px rgba(0, 99, 242, 0.1);
+}
+
+/* Submit Button Hover Effect */
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 99, 242, 0.2);
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color)); /* Hover with gradient */
+}
+
+.submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 12px var(--primary-color);
+}
+
+/* Neumorphism Style for Input Fields */
+input, select {
+  background: #e0e5ec; /* Neumorphism background */
+  border-radius: var(--input-radius);
+  box-shadow: inset 8px 8px 18px #a3b1c6, inset -8px -8px 18px #ffffff; /* Inner shadows for neumorphism */
 }
 
 input:focus, select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 8px rgba(0, 115, 230, 0.3);
+  box-shadow: inset 0 0 12px rgba(0, 99, 242, 0.3), 0 0 12px rgba(0, 99, 242, 0.4); /* Enhanced Focus Effect */
 }
 
-.submit-btn {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-family: var(--font-secondary);
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 6px 12px var(--hover-shadow);
-}
-
-.submit-btn:hover {
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px var(--hover-shadow);
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        padding: 20px;
-        max-height: 85vh;
-    }
+  .modal-content {
+    padding: 30px;
+    width: 85%;
+  }
 
-    .modal-content h2 {
-        font-size: 1.8rem;
-    }
+  .modal-content h2 {
+    font-size: 2.2rem;
+  }
 
-    input, select, .submit-btn {
-        font-size: 1rem;
-        padding: 10px;
-    }
+  .form-group {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .submit-btn {
+    font-size: 1.2rem;
+    padding: 16px;
+  }
+
+  .close-btn {
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+    top: 10px;
+    right: 10px;
+  }
 }
 
-@media (max-width: 490px) {
-    .modal-content {
-        width: 100%;
-        padding: 15px;
-        max-height: 80vh;
-    }
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
 
-    .modal-content h2 {
-        font-size: 1.5rem;
-    }
+  .modal-content h2 {
+    font-size: 1.8rem;
+  }
 
-    input, select, .submit-btn {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
+  .form-group {
+    gap: 15px;
+  }
+
+  .submit-btn {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .close-btn {
+    font-size: 1.6rem;
+  }
 }
 
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+ document.addEventListener('DOMContentLoaded', function () {
     const today = new Date().toISOString().split('T')[0];
-    document.getElementById('checkin').setAttribute('min', today);
-
+    const checkinInput = document.getElementById('checkin');
     const checkoutInput = document.getElementById('checkout');
-    document.getElementById('checkin').addEventListener('change', function () {
-        const checkinDate = this.value;
-        checkoutInput.setAttribute('min', checkinDate);
+    const totalAmountInput = document.getElementById('total-amount');
+    const roomTypeInput = document.getElementById('room-type');
+    const confirmPayButton = document.getElementById('confirm-pay-btn');
+
+    // Set the minimum check-in date
+    checkinInput.setAttribute('min', today);
+
+    // Update checkout input when check-in date is changed
+    checkinInput.addEventListener('change', function () {
+        checkoutInput.setAttribute('min', this.value);
+        updateTotalAmount();
     });
+
+    // Trigger price update when checkout date changes
+    checkoutInput.addEventListener('change', updateTotalAmount);
+
+    // Trigger price update when room type changes
+    roomTypeInput.addEventListener('change', updateTotalAmount);
+
+    // Update button text dynamically
+    function updateTotalAmount() {
+        const checkinDate = new Date(checkinInput.value);
+        const checkoutDate = new Date(checkoutInput.value);
+        const roomType = roomTypeInput.options[roomTypeInput.selectedIndex].text;
+
+        if (isNaN(checkinDate.getTime()) || isNaN(checkoutDate.getTime())) {
+            totalAmountInput.value = '';
+            confirmPayButton.textContent = 'Confirm Booking';
+            return;
+        }
+
+        const dayCount = (checkoutDate - checkinDate) / (1000 * 60 * 60 * 24);
+        if (dayCount <= 0) {
+            totalAmountInput.value = 'Invalid Dates';
+            confirmPayButton.textContent = 'Confirm Booking';
+            return;
+        }
+
+        const roomRates = {
+            'Deluxe - ₹4000/night': 4000,
+            'Super Deluxe - ₹6000/night': 6000,
+            'Suite - ₹5000/night': 5000,
+        };
+
+        const baseRate = roomRates[roomType] || 0;
+        const amount = dayCount * baseRate;
+
+        totalAmountInput.value = `₹ ${amount.toLocaleString()}`;
+        confirmPayButton.textContent = `Confirm and Pay ₹${amount.toLocaleString()}`;
+    }
+
+    // Booking form submission handler
+    document.getElementById('booking-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const bookingDetails = {
+            name: formData.get('name'),
+            checkin: formData.get('checkin'),
+            checkout: formData.get('checkout'),
+            contact: formData.get('contact'),
+            email: formData.get('email'),
+            roomType: formData.get('room-type'),
+            totalAmount: formData.get('total-amount').replace('₹ ', '').replace(/,/g, ''),
+        };
+
+        if (bookingDetails.totalAmount === 'Invalid Dates' || !bookingDetails.totalAmount) {
+            alert('Please select valid dates.');
+            return;
+        }
+
+        // Start the payment process
+        startPaymentProcess(bookingDetails);
+    });
+
+    // Function to start the payment process
+    function startPaymentProcess(bookingDetails) {
+        console.log('Starting payment process with details:', bookingDetails);
+        
+        const options = {
+            key: 'rzp_test_tmp4Vd4Skkx2xk', // Replace with your Razorpay API key
+            amount: bookingDetails.totalAmount * 100, // Convert to paisa
+            currency: 'INR',
+            name: 'Hotel Booking',
+            description: `Booking for ${bookingDetails.name}`,
+            handler: function (response) {
+                console.log('Payment successful:', response);
+                bookingDetails.paymentId = response.razorpay_payment_id;
+                alert(`Thank you, ${bookingDetails.name}! Your booking is confirmed. Payment ID: ${response.razorpay_payment_id}`);
+                completeBooking(bookingDetails);
+            },
+            prefill: {
+                name: bookingDetails.name,
+                email: bookingDetails.email,
+                contact: bookingDetails.contact,
+            },
+            theme: {
+                color: '#007BFF',
+            },
+        };
+
+        try {
+            const razorpay = new Razorpay(options);
+            razorpay.open();
+        } catch (error) {
+            console.error('Error opening Razorpay:', error);
+        }
+    }
+
+    // Function to complete the booking and notify the backend
+    function completeBooking(bookingDetails) {
+        fetch('/verify-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(bookingDetails),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.message === 'Booking completed successfully!') {
+                    alert('Booking confirmed and hotel notified.');
+                    document.getElementById('booking-form').reset();
+                    totalAmountInput.value = '';
+                    confirmPayButton.textContent = 'Confirm Booking';
+                } else {
+                    alert('There was an issue completing your booking. Please try again.');
+                }
+            })
+            .catch((error) => console.error('Error:', error));
+    }
+    
 });
 
-function openBookingForm(button) {
-    const modal = document.getElementById('booking-modal');
-    modal.style.display = 'flex';
-    const roomType = button?.dataset?.room || "deluxe";
-    document.getElementById('room-type').value = roomType.toLowerCase();
+// Open and close modal functions
+function openBookingForm() {
+    document.getElementById('booking-modal').style.display = 'flex';
 }
 
 function closeBookingForm() {
-    const modal = document.getElementById('booking-modal');
-    modal.style.display = 'none';
+    document.getElementById('booking-modal').style.display = 'none';
 }
 
-window.onclick = function (event) {
-    const modal = document.getElementById('booking-modal');
-    if (event.target === modal) {
-        closeBookingForm();
-    }
-};
-</script>
+
+  </script>
 
 
 

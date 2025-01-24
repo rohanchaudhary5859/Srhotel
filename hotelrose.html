@@ -995,22 +995,18 @@ input:focus, select:focus {
     const roomTypeInput = document.getElementById('room-type');
     const confirmPayButton = document.getElementById('confirm-pay-btn');
 
-    // Set the minimum check-in date
+    // Set minimum check-in date
     checkinInput.setAttribute('min', today);
 
-    // Update checkout input when check-in date is changed
+    // Update checkout date and total amount
     checkinInput.addEventListener('change', function () {
         checkoutInput.setAttribute('min', this.value);
         updateTotalAmount();
     });
-
-    // Trigger price update when checkout date changes
     checkoutInput.addEventListener('change', updateTotalAmount);
-
-    // Trigger price update when room type changes
     roomTypeInput.addEventListener('change', updateTotalAmount);
 
-    // Update button text dynamically
+    // Update total amount dynamically
     function updateTotalAmount() {
         const checkinDate = new Date(checkinInput.value);
         const checkoutDate = new Date(checkoutInput.value);
@@ -1042,7 +1038,7 @@ input:focus, select:focus {
         confirmPayButton.textContent = `Confirm and Pay ₹${amount.toLocaleString()}`;
     }
 
-    // Booking form submission handler
+    // Form submission and payment integration
     document.getElementById('booking-form').addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -1062,14 +1058,10 @@ input:focus, select:focus {
             return;
         }
 
-        // Start the payment process
         startPaymentProcess(bookingDetails);
     });
 
-    // Function to start the payment process
     function startPaymentProcess(bookingDetails) {
-        console.log('Starting payment process with details:', bookingDetails);
-        
         const options = {
             key: 'rzp_test_tmp4Vd4Skkx2xk', // Replace with your Razorpay API key
             amount: bookingDetails.totalAmount * 100, // Convert to paisa
@@ -1100,7 +1092,6 @@ input:focus, select:focus {
         }
     }
 
-    // Function to complete the booking and notify the backend
     function completeBooking(bookingDetails) {
         fetch('/verify-payment', {
             method: 'POST',
@@ -1122,7 +1113,7 @@ input:focus, select:focus {
     }
 });
 
-// Open and close modal functions
+// Functions for modal open/close
 function openBookingForm() {
     document.getElementById('booking-modal').style.display = 'flex';
 }
@@ -1130,7 +1121,6 @@ function openBookingForm() {
 function closeBookingForm() {
     document.getElementById('booking-modal').style.display = 'none';
 }
-
 
   </script>
 <!-- Partners Section -->

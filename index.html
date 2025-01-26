@@ -324,7 +324,7 @@
         font-family: 'Playfair Display', serif;
         font-size: 4rem;
         margin-bottom: 30px;
-        color: #000000;
+        color: #762981;
         font-weight: bold;
         text-transform: uppercase;
         animation: slideIn 1s ease-out;
@@ -413,7 +413,7 @@
       
       /* Change Color on Hover */
       .experience-item:hover h3 {
-        color: #ff5733;
+        color: #762981;
       }
       
       /* Description inside Experience Item */
@@ -554,7 +554,7 @@
       .section-heading {
         font-size: 42px;
         font-weight: 700;
-        color: #333;
+        color: #762981;
         text-transform: uppercase;
         letter-spacing: 3px;
         margin-bottom: 20px;
@@ -562,7 +562,7 @@
     
       .section-description {
         font-size: 18px;
-        color: #777;
+        color: #000000;
         line-height: 1.8;
         margin-top: 10px;
       }
@@ -773,194 +773,642 @@
   
   
   <style>
-   
-  /* Slider Container */
-  .carousel-container {
-      width: 100%;
-      overflow: hidden; /* Hide content outside the slider */
-      position: relative;
-      border-radius: 12px; /* Rounded corners for the container */
-  }
-  
-  /* Slider Wrapper */
-  .carousel-wrapper {
-      display: flex;
-      transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth easing */
-      gap: 10px;
-  }
-  
-  /* Slide Styles */
-  .carousel-item {
-      min-width: 100%; /* Full width per slide */
-      box-sizing: border-box;
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      transform: scale(0.98);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .carousel-item:hover {
-      transform: scale(1); /* Slight scale-up on hover */
-  }
-  
-  /* Section Styling */
-  .room-showcase {
-      padding: 80px 20px;
-      text-align: center;
-      border-radius: 12px;
-  }
-  
-  /* Item Showcase */
-  .item-carousel {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto; /* Horizontal scrolling for mobile */
-      scroll-behavior: smooth;
-      padding: 20px 0;
-  }
-  
-  .item-card {
-      flex: 0 0 calc(33.33% - 20px); /* 3 cards per row */
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .item-card:hover {
-      transform: translateY(-10px); /* Slight lift effect */
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Hide Scrollbar */
-  .item-carousel::-webkit-scrollbar {
-      display: none;
-  }
-  
-  /* Item Image */
-  .item-image {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-  }
-  
-  .item-image:hover {
-      transform: scale(1.05); /* Zoom effect on image hover */
-  }
-  
-  /* Item Details */
-  .item-details {
-      padding: 20px;
-      text-align: left;
-  }
-  
-  /* Book Button */
-  .book-now-btn {
-      background: linear-gradient(to right, #ff4081, #ff1a75);
-      color: #fff;
-      font-size: 1.1em;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  }
-  
-  .book-now-btn:hover {
-      background: linear-gradient(to right, #d81b60, #b1124a);
-      transform: translateY(-6px); /* More noticeable lift */
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Left and Right Navigation Buttons */
-  .carousel-container::before, .carousel-container::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 1.5em;
-      cursor: pointer;
-      z-index: 10;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .carousel-container::before {
-      left: 10px;
-  }
-  
-  .carousel-container::after {
-      right: 10px;
-  }
-  
-  .carousel-container::before:hover, .carousel-container::after:hover {
-      background-color: rgba(0, 0, 0, 0.8); /* Darker hover effect */
-      transform: translateY(-50%) scale(1.1); /* Slight scale effect */
-  }
-  
-  /* Responsive Adjustments */
-  /* Responsive Adjustments */
+   .ourstay {
+    font-size: 4.0rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative; /* Required for the pseudo-element */
+}
+
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    background: white;
+    padding: 20px;
+}
+
+/* Amenities */
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #762981;
+}
+
+.amenities span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    color: #000000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.amenities span:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    color: #126eca;
+}
+
+.amenities i {
+    font-size: 1.2em;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.amenities span:hover i {
+    color: #0056b3;
+}
+
+/* Slider Wrapper */
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 1.25rem;
+    align-items: center;
+}
+
+/* Slide Styles */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    transform: scale(0.98);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.carousel-item:hover {
+    transform: scale(1.02);
+}
+
+/* Section Styling */
+.room-showcase {
+    padding: 4rem 1rem;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    margin: 1.5rem 0;
+}
+
+/* Item Showcase */
+.item-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1.5rem 1rem;
+    align-items: flex-start;
+    -webkit-overflow-scrolling: touch;
+}
+
+.item-card {
+    flex: 0 0 calc(33.33% - 2rem);
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Hide Scrollbar */
+.item-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Item Image */
+.item-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.item-image:hover {
+    transform: scale(1.1);
+}
+
+/* Item Details */
+.item-details {
+    padding: 1.25rem;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: #495057;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Book Button */
+.book-now-btn {
+    background: linear-gradient(45deg, #762981, #e6a654);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 95, 109, 0.2);
+    align-self: center;
+    margin-top: 1.25rem;
+}
+
+.book-now-btn:hover {
+    background: linear-gradient(45deg, #762981, #6F2374);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(255, 95, 109, 0.3);
+}
+
+/* Left and Right Navigation Buttons */
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.carousel-container::before {
+    left: 1rem;
+}
+
+.carousel-container::after {
+    right: 1rem;
+}
+
+.carousel-container::before:hover,
+.carousel-container::after:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .item-card {
-        flex: 0 0 calc(50% - 10px); /* 2 cards per row */
+        flex: 0 0 calc(50% - 1rem);
     }
 
     .item-image {
-        height: 150px;
-    }
-}
-
-@media screen and (max-width: 490px) { /* Adjustments for 490px screen */
-    .item-card {
-        flex: 0 0 calc(100% - 10px); /* 1 card per row */
+        height: 180px;
     }
 
-    .item-image {
-        height: 120px; /* Reduce image height for smaller screens */
-    }
-
-    /* Adjust carousel container padding */
-    .carousel-container {
-        padding: 0 10px; /* Reduce padding for smaller screens */
-    }
-
-    /* Adjust book now button */
     .book-now-btn {
-        padding: 10px 20px; /* Smaller button size */
-        font-size: 1em; /* Slightly smaller font */
-    }
-
-    /* Adjust carousel navigation buttons */
-    .carousel-container::before, .carousel-container::after {
-        width: 30px; /* Smaller navigation buttons */
-        height: 30px;
-        font-size: 1.2em; /* Smaller font size for arrows */
-    }
-
-    /* Adjust item details padding */
-    .item-details {
-        padding: 15px; /* Less padding for smaller screens */
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
     }
 }
 
-  </style>
+@media screen and (max-width: 480px) {
+    .item-card {
+        flex: 0 0 calc(100% - 1rem);
+    }
+
+    .item-image {
+        height: 140px;
+    }
+
+    .book-now-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+</style>
+<div id="booking-modal" class="booking-modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+    <h2>Book Your Stay</h2>
+    <p class="subheading">Fill in the details to confirm your booking</p>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="checkin">Check-In Date</label>
+        <input type="date" id="checkin" name="checkin" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="checkout">Check-Out Date</label>
+        <input type="date" id="checkout" name="checkout" required>
+      </div>
+
+      <div class="form-group">
+        <label for="person-count">Number of Persons</label>
+        <input type="number" id="person-count" name="person-count" min="1" max="10" placeholder="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="contact" placeholder="9876543210" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="room-type">Room Type</label>
+        <select id="room-type" name="room-type" required>
+          <option value="">Select Room Type</option>
+          <option value="4000">Deluxe - ₹4000/night</option>
+          <option value="6000">Super Deluxe - ₹6000/night</option>
+          <option value="5000">Suite - ₹5000/night</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="total-amount">Total Amount</label>
+        <input type="text" id="total-amount" name="total-amount" readonly value="₹ 0">
+      </div>
+
+      <button type="submit" class="submit-btn">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+<style>
+  :root {
+    --primary-color: #762981;
+    --accent-color: #0061f2;
+    --background-overlay: rgba(0, 0, 0, 0.3);
+    --neutral-light: #f7f7f7;
+    --neutral-dark: #333;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Lora', serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-bold: 700;
+    --modal-radius: 30px;
+    --input-radius: 12px;
+    --btn-radius: 35px;
+    --btn-gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    --shadow-elevation: 0 8px 25px rgba(0, 99, 242, 0.1);
+    --focus-shadow: 0 0 12px var(--primary-color);
+  }
+
+  body {
+    font-family: var(--font-primary);
+  }
+
+  .booking-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-overlay);
+    backdrop-filter: blur(30px);
+    z-index: 1000;
+    animation: fadeIn 0.8s ease-out, scaleIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;  /* Reduced padding */
+    width: 90%;
+    max-width: 600px;  /* Reduced width */
+    height: 80vh;  /* Slightly reduced height */
+    overflow-y: auto;
+    margin: auto;
+    border-radius: var(--modal-radius);
+    background: white;
+    box-shadow: var(--shadow-elevation);
+    scrollbar-width: none;
+    animation: slideIn 0.7s ease-out;
+  }
+
+  .modal-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modal-content h2 {
+    font-family: var(--font-secondary);
+    font-size: 2.4rem;  /* Reduced font size */
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;  /* Reduced margin */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .subheading {
+    font-family: var(--font-primary);
+    font-weight: var(--font-bold);
+    color: var(--neutral-dark);
+    text-align: center;
+    font-size: 1rem;  /* Reduced font size */
+    margin-bottom: 1.5rem;  /* Reduced margin */
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+  }
+
+  .subheading:hover {
+    opacity: 1;
+    color: var(--primary-color);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;  /* Reduced font size */
+    color: var(--neutral-dark);
+    cursor: pointer;
+    background: var(--neutral-light);
+    border-radius: 50%;
+    width: 60px;  /* Reduced size */
+    height: 60px;  /* Reduced size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  .close-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 99, 242, 0.3);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  /* Reduced gap */
+    margin-bottom: 1.2rem;  /* Reduced bottom margin */
+  }
+
+  label {
+    font-size: 0.9rem;  /* Reduced label size */
+    color: var(--neutral-dark);
+    font-weight: var(--font-regular);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;  /* Reduced padding */
+    font-size: 1rem;  /* Reduced font size */
+    border: 1px solid #ddd;
+    border-radius: var(--input-radius);
+    background: #f9f9f9;
+    color: var(--neutral-dark);
+    transition: all 0.3s ease;
+  }
+
+  input:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: var(--focus-shadow);
+  }
+
+  .submit-btn {
+    padding: 14px;  /* Reduced padding */
+    background: var(--btn-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--btn-radius);
+    font-size: 1rem;  /* Reduced font size */
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.5rem;  /* Reduced margin */
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 99, 242, 0.15);
+  }
+
+  @media (max-width: 480px) {
+    .modal-content {
+      padding: 25px;
+      width: 90%;
+      height: 90vh;
+    }
+
+    .modal-content h2 {
+      font-size: 1.8rem;
+    }
+
+    .subheading {
+      font-size: 0.9rem;
+    }
+
+    .submit-btn {
+      font-size: 0.9rem;
+    }
+
+    .close-btn {
+      font-size: 2.2rem;
+    }
+  }
+</style>
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+    const today = new Date().toISOString().split('T')[0];
+    const checkinInput = document.getElementById('checkin');
+    const checkoutInput = document.getElementById('checkout');
+    const totalAmountInput = document.getElementById('total-amount');
+    const roomTypeInput = document.getElementById('room-type');
+    const confirmPayButton = document.getElementById('confirm-pay-btn');
+
+    // Set minimum check-in date
+    checkinInput.setAttribute('min', today);
+
+    // Update checkout date and total amount
+    checkinInput.addEventListener('change', function () {
+        checkoutInput.setAttribute('min', this.value);
+        updateTotalAmount();
+    });
+    checkoutInput.addEventListener('change', updateTotalAmount);
+    roomTypeInput.addEventListener('change', updateTotalAmount);
+
+    // Update total amount dynamically
+    function updateTotalAmount() {
+        const checkinDate = new Date(checkinInput.value);
+        const checkoutDate = new Date(checkoutInput.value);
+        const roomType = roomTypeInput.options[roomTypeInput.selectedIndex].text;
+
+        if (isNaN(checkinDate.getTime()) || isNaN(checkoutDate.getTime())) {
+            totalAmountInput.value = '';
+            confirmPayButton.textContent = 'Confirm Booking';
+            return;
+        }
+
+        const dayCount = (checkoutDate - checkinDate) / (1000 * 60 * 60 * 24);
+        if (dayCount <= 0) {
+            totalAmountInput.value = 'Invalid Dates';
+            confirmPayButton.textContent = 'Confirm Booking';
+            return;
+        }
+
+        const roomRates = {
+            'Deluxe - ₹4000/night': 4000,
+            'Super Deluxe - ₹6000/night': 6000,
+            'Suite - ₹5000/night': 5000,
+        };
+
+        const baseRate = roomRates[roomType] || 0;
+        const amount = dayCount * baseRate;
+
+        totalAmountInput.value = `₹ ${amount.toLocaleString()}`;
+        confirmPayButton.textContent = `Confirm and Pay ₹${amount.toLocaleString()}`;
+    }
+
+    // Form submission and payment integration
+    document.getElementById('booking-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const bookingDetails = {
+            name: formData.get('name'),
+            checkin: formData.get('checkin'),
+            checkout: formData.get('checkout'),
+            contact: formData.get('contact'),
+            email: formData.get('email'),
+            roomType: formData.get('room-type'),
+            totalAmount: formData.get('total-amount').replace('₹ ', '').replace(/,/g, ''),
+        };
+
+        if (bookingDetails.totalAmount === 'Invalid Dates' || !bookingDetails.totalAmount) {
+            alert('Please select valid dates.');
+            return;
+        }
+
+        startPaymentProcess(bookingDetails);
+    });
+
+    function startPaymentProcess(bookingDetails) {
+        const options = {
+            key: 'rzp_test_tmp4Vd4Skkx2xk', // Replace with your Razorpay API key
+            amount: bookingDetails.totalAmount * 100, // Convert to paisa
+            currency: 'INR',
+            name: 'Hotel Booking',
+            description: `Booking for ${bookingDetails.name}`,
+            handler: function (response) {
+                console.log('Payment successful:', response);
+                bookingDetails.paymentId = response.razorpay_payment_id;
+                alert(`Thank you, ${bookingDetails.name}! Your booking is confirmed. Payment ID: ${response.razorpay_payment_id}`);
+                completeBooking(bookingDetails);
+            },
+            prefill: {
+                name: bookingDetails.name,
+                email: bookingDetails.email,
+                contact: bookingDetails.contact,
+            },
+            theme: {
+                color: '#007BFF',
+            },
+        };
+
+        try {
+            const razorpay = new Razorpay(options);
+            razorpay.open();
+        } catch (error) {
+            console.error('Error opening Razorpay:', error);
+        }
+    }
+
+    function completeBooking(bookingDetails) {
+        fetch('/verify-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(bookingDetails),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.message === 'Booking completed successfully!') {
+                    alert('Booking confirmed and hotel notified.');
+                    document.getElementById('booking-form').reset();
+                    totalAmountInput.value = '';
+                    confirmPayButton.textContent = 'Confirm Booking';
+                } else {
+                    alert('There was an issue completing your booking. Please try again.');
+                }
+            })
+            .catch((error) => console.error('Error:', error));
+    }
+});
+
+// Functions for modal open/close
+function openBookingForm() {
+    document.getElementById('booking-modal').style.display = 'flex';
+}
+
+function closeBookingForm() {
+    document.getElementById('booking-modal').style.display = 'none';
+}
+
+  </script>
   
     <!-- END section -->
     <section class="section testimonial-section">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-8">
-            <h2 class="heading" data-aos="fade-up">Testimonial</h2>
+            <h2 class="heading" data-aos="fade-up" >Testimonial</h2>
           </div>
         </div>
         <div class="row">
@@ -1125,7 +1573,7 @@
 }
 
 .links .footer-link-list a:hover {
-  color: #ff4081;
+  color: #762981;
   transform: translateX(5px);
 }
 
@@ -1160,7 +1608,7 @@
 
 .newsletter-input:focus {
   outline: none;
-  border-color: #ff4081;
+  border-color: #762981;
 }
 
 .newsletter-btn {
@@ -1168,7 +1616,7 @@
   align-items: center;
   justify-content: center;
   padding: 12px 25px;
-  background-color: #ff4081;
+  background-color: #762981;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -1178,7 +1626,7 @@
 }
 
 .newsletter-btn:hover {
-  background-color: #e91e63;
+  background-color: #762981;
   transform: scale(1.1);
 }
 
@@ -1206,7 +1654,7 @@
 
 .footer-bottom .footer-left a,
 .footer-bottom .footer-right a {
-  color: #ff4081;
+  color: #762981;
   text-decoration: none;
 }
 
@@ -1217,7 +1665,7 @@
 }
 
 .footer-bottom .footer-right a:hover {
-  color: #e91e63;
+  color: #762981;
   transform: scale(1.1);
 }
 

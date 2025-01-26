@@ -1,0 +1,1741 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SR Hotels</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400|Playfair+Display:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+      <header class="site-header">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Large screen logo image -->
+          <div class="col-4 site-logo d-none d-md-block" data-aos="fade">
+            <a href="index.html">
+              <img src="Logo Transparent.png" alt="SR Hotels" class="site-logo-img">
+            </a>
+          </div>
+    
+          <!-- Small screen text logo -->
+          <div class="col-4 site-logo d-md-none" data-aos="fade">
+            <a href="index.html"><em>SR Hotels</em></a>
+          </div>
+    
+          <div class="col-8">
+            <div class="site-menu-toggle js-site-menu-toggle" data-aos="fade">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+    
+            <div class="site-navbar js-site-navbar">
+              <nav role="navigation">
+                <div class="container">
+                  <div class="row full-height align-items-center">
+                    <div class="col-md-6">
+                      <ul class="list-unstyled menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="hotellist.html">Hotels</a></li>
+                        <li><a href="resort.html">Resort</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 extra-info">
+                      <div class="row">
+                        <div class="col-md-6 mb-5">
+                          <h3>Contact Info</h3>
+                          <p>SR Resorts & Hotels<br>123 Beachside Road, Suite 101<br>Goa, India 403001</p>
+                          <p>info@srhotels.in</p>
+                          <p>Phone: +91-9876543210</p>
+                        </div>
+                        <div class="col-md-6">
+                          <h3>Connect With Us</h3>
+                          <ul class="list-unstyled">
+                            <li><a href="https://twitter.com/srresorts">Twitter</a></li>
+                            <li><a href="https://facebook.com/srresorts">Facebook</a></li>
+                            <li><a href="https://instagram.com/srresorts">Instagram</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<style>
+  .site-logo {
+  padding-left: 50px;
+}
+
+.site-logo img {
+  width: 150px;
+  max-width: 110px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 490px) {
+  .site-logo img {
+    display: none; /* Hide the image logo on small screens */
+  }
+
+  .site-logo a {
+    font-size: 32px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    font-family: "Playfair+Display", times, serif;
+    white-space: nowrap; /* Prevents the text from breaking into two lines */
+  }
+}
+
+</style>  
+    
+    <!-- END head -->
+    <section class="hero-section overlay" style="background-image: url('DJI_20240716090449_0077_D-3-scaled.jpg');">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-heading">Welcome to <em>SR</em> Hotels</h1>
+            <p class="hero-subheading">Discover our world-class hotel &amp; restaurant resort.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <style>
+      .hero-section {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: slide-bg 12s infinite alternate ease-in-out;
+      }
+    
+      @keyframes slide-bg {
+        0% { background-position: center top; }
+        50% { background-position: center center; }
+        100% { background-position: center bottom; }
+      }
+    
+      .hero-container {
+        width: 100%;
+        padding: 0 15px;
+        max-width: 1140px;
+        margin: auto;
+        text-align: center;
+      }
+    
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .hero-heading {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        display: inline-block;
+        letter-spacing: 2px; /* Add some space between letters */
+      }
+    
+      .hero-heading span {
+        display: inline-block;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+      }
+    
+      .hero-heading span:hover {
+        transform: translateY(-8px) scale(1.3); /* Enhanced zoom and upward movement */
+        opacity: 1;
+      }
+    
+      .hero-heading em {
+        color: #f71900;
+      }
+    
+      .hero-subheading {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+    
+      /* Wrap each letter of the heading */
+      .hero-heading span {
+        display: inline-block;
+        opacity: 1; /* Keep opacity always visible */
+        transform: translateY(0) scale(1);
+      }
+    
+      /* Hover effect */
+      .hero-heading span:hover {
+        transform: translateY(-8px) scale(1.3); /* Zoom in and slide up */
+        opacity: 1;
+      }
+    
+      @media (max-width: 768px) {
+        .hero-heading {
+          font-size: 2.5rem;
+        }
+    
+        .hero-subheading {
+          font-size: 1rem;
+        }
+    
+        .hero-btn {
+          font-size: 0.95rem;
+          padding: 10px 20px;
+        }
+      }
+    
+      @media (max-width: 490px) {
+        .hero-section {
+          animation: slide-bg-mobile 10s infinite alternate ease-in-out;
+        }
+    
+        @keyframes slide-bg-mobile {
+          0% { background-position: center top; }
+          50% { background-position: center 25%; }
+          100% { background-position: center bottom; }
+        }
+    
+        .hero-heading {
+          font-size: 1.8rem;
+        }
+    
+        .hero-subheading {
+          font-size: 0.8rem;
+        }
+    
+        .hero-btn {
+          font-size: 0.85rem;
+          padding: 8px 14px;
+        }
+      }
+    </style>
+    
+    <script>
+      // Wrap each letter of the heading in a span tag using JavaScript
+      document.addEventListener('DOMContentLoaded', () => {
+        const heading = document.querySelector('.hero-heading');
+        const text = heading.innerText;
+        heading.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
+      });
+    </script>
+    
+    
+    
+    <section class="experience-section">
+      <div class="experience-container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="experience-heading">Explore Premium Experiences</h2>
+            <p class="experience-description">
+              Immerse yourself in an exceptional world of luxury, designed to offer an unforgettable escape. From culinary masterpieces to moments of tranquility, discover experiences crafted for the discerning traveler.
+            </p>
+          </div>
+        </div>
+        <div class="experience-grid-wrapper">
+          <div class="experience-grid">
+            <div class="experience-item">
+              <div class="experience-img-container">
+                <img src="Gourmet Dining.avif" alt="Gourmet Dining" class="experience-img">
+              </div>
+              <h3>Gourmet Dining</h3>
+              <p>Indulge in a culinary adventure with exquisite dishes crafted by world-renowned chefs. Each bite is a testament to the artistry and flavors of global cuisine.</p>
+            </div>
+            <div class="experience-item">
+              <div class="experience-img-container">
+                <img src="https://hospitalityinsights.ehl.edu/hubfs/Blog-EHL-Insights/Blog-Header-EHL-Insights/wealth%20wellness.jpeg" alt="Relaxing Spa" class="experience-img">
+              </div>
+              <h3>Spa & Wellness</h3>
+              <p>Recharge your mind and body with treatments designed to refresh and rejuvenate. Our luxurious spa offers a sanctuary for those seeking tranquility and well-being.</p>
+            </div>
+            <div class="experience-item">
+              <div class="experience-img-container">
+                <img src="https://plus.unsplash.com/premium_photo-1661876306620-f2f2989f8f8b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bHV4dXJ5JTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Luxurious Rooms" class="experience-img">
+              </div>
+              <h3>Luxurious Rooms</h3>
+              <p>Relax in rooms that offer comfort and style, featuring premium amenities and spacious layouts. Every detail is crafted to ensure your stay is nothing short of exceptional.</p>
+            </div>
+            <div class="experience-item">
+              <div class="experience-img-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYauBvMic2IizOtLwGjhuheC2vuMM5WneelQ&s" alt="Business Facilities" class="experience-img">
+              </div>
+              <h3>Business & Events</h3>
+              <p>Take care of business in style with our world-class conference facilities. Whether it's a board meeting or a large corporate event, we provide the perfect venue for success.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <style>
+      /* Importing Google Fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+      
+      /* General Section Styling */
+      .experience-section {
+        background-color: #762981;
+        padding: 100px 50px;
+        position: relative;
+        animation: fadeIn 1.5s ease-out;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      /* Experience Heading */
+      .experience-heading {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 4rem;
+        margin-bottom: 30px;
+        color: #000000;
+        font-weight: bold;
+        text-transform: uppercase;
+        animation: slideIn 1s ease-out;
+      }
+      
+      /* Experience Description */
+      .experience-description {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin: 0 auto 40px;
+        color: #000000;
+        line-height: 1.8;
+        max-width: 800px;
+        animation: fadeIn 2s ease-out;
+      }
+      
+      /* Experience Grid Wrapper for Scrolling */
+      .experience-grid-wrapper {
+        overflow-x: auto;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        position: relative;
+      }
+      
+      /* Modern Experience Grid Styling */
+      .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        align-items: stretch;
+        position: relative;
+      }
+      
+      /* Experience Item */
+      .experience-item {
+        background: #fff;
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease, filter 0.3s ease;
+        opacity: 0.9;
+        animation: slideUp 1s ease-out;
+        position: relative;
+      }
+      
+      /* Hover Effects */
+      .experience-item:hover {
+        transform: translateY(-15px) scale(1.05);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        opacity: 1;
+        filter: brightness(1.1);
+      }
+      
+      /* Image Container for Hover Zoom Effect */
+      .experience-img-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      
+      /* Image Styling */
+      .experience-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      /* Hover Zoom Effect for Images */
+      .experience-item:hover .experience-img {
+        transform: scale(1.1);
+      }
+      
+      /* Heading inside Experience Item */
+      .experience-item h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: #333;
+        font-weight: 700;
+        margin-top: 20px;
+        transition: color 0.3s ease;
+      }
+      
+      /* Change Color on Hover */
+      .experience-item:hover h3 {
+        color: #ff5733;
+      }
+      
+      /* Description inside Experience Item */
+      .experience-item p {
+        font-family: 'Roboto', sans-serif;
+        color: #777;
+        font-size: 1.1rem;
+        margin-top: 15px;
+        line-height: 1.6;
+        transition: color 0.3s ease;
+      }
+      
+      /* Change Color on Hover */
+      .experience-item:hover p {
+        color: #333;
+      }
+      
+      /* Responsive Design Adjustments */
+      @media (max-width: 1200px) {
+        .experience-heading {
+          font-size: 3.2rem;
+        }
+        .experience-description {
+          font-size: 1.3rem;
+        }
+        .experience-item {
+          flex: 0 0 30%;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .experience-heading {
+          font-size: 2.5rem;
+        }
+        .experience-description {
+          font-size: 1.2rem;
+        }
+        .experience-item {
+          flex: 0 0 45%;
+        }
+      }
+      
+      @media (max-width: 490px) {
+        .experience-heading {
+          font-size: 2.2rem;
+        }
+        .experience-description {
+          font-size: 1.1rem;
+          line-height: 1.4;
+        }
+        .experience-item {
+          flex: 0 0 80%;
+          padding: 10px;
+          width: 100%;
+        }
+      }
+      
+      /* Animation Keyframes */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes slideUp {
+        from {
+          transform: translateY(40px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+    
+    
+
+    <!-- END section -->
+
+    <section class="section gallery-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="section-heading" data-aos="fade-up">A Gorgeous Place to Enjoy Your Life</h2>
+            <p class="section-description" data-aos="fade-up" data-aos-delay="100">
+              Experience unparalleled hospitality at SR Hotels, where luxury meets comfort. Our world-class amenities, exceptional service, and elegant rooms create the perfect environment for a memorable stay. Whether you're traveling for business or leisure, indulge in the finest dining, relax in serene settings, and enjoy our commitment to making your visit extraordinary.
+            </p>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-12">
+            <div class="image-slider owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+              <div class="slider-item">
+                <img src="homeimage/DJI_20240716090449_0077_D-3-600x540.jpg" alt="Hotel Image" class="img-fluid">
+              </div>
+              <div class="slider-item">
+                <img src="homeimage/JCV_0108-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
+              </div>
+              <div class="slider-item">
+                <img src="homeimage/JCV_0115-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
+              </div>
+              <div class="slider-item">
+                <img src="homeimage/JCV_9889-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
+              </div>
+              <div class="slider-item">
+                <img src="homeimage/JCV_9897-600x540.jpg" alt="Hotel Image" class="img-fluid">
+              </div>
+              <div class="slider-item">
+                <img src="homeimage/JCV_9921-2-600x540.jpg" alt="Hotel Image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <style>
+      /* General section styles */
+      .gallery-section {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+      }
+    
+      .section-heading {
+        font-size: 42px;
+        font-weight: 700;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+      }
+    
+      .section-description {
+        font-size: 18px;
+        color: #777;
+        line-height: 1.8;
+        margin-top: 10px;
+      }
+    
+      /* Slider styling */
+      .image-slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+    
+      .slider-item {
+        margin: 0 15px;
+        transition: transform 0.4s ease, box-shadow 0.3s ease-in-out;
+      }
+    
+      .slider-item img {
+        width: 100%;
+        max-width: 1100px; /* Max width for large screens */
+        height: 400px;
+        object-fit: cover; /* Ensures proper scaling without distortion */
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease, box-shadow 0.3s ease-in-out;
+      }
+    
+      .slider-item img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+    
+      /* Owl Carousel custom styles */
+      .owl-carousel .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+    
+      .owl-carousel .owl-nav .owl-prev, 
+      .owl-carousel .owl-nav .owl-next {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 50%;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+      }
+    
+      .owl-carousel .owl-nav .owl-prev:hover, 
+      .owl-carousel .owl-nav .owl-next:hover {
+        background-color: #00d5ff;
+      }
+    
+      .owl-carousel .owl-dots {
+        text-align: center;
+        margin-top: 20px;
+      }
+    
+      .owl-carousel .owl-dot {
+        background-color: #000;
+        margin: 0 8px;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        transition: background-color 0.3s ease;
+      }
+    
+      .owl-carousel .owl-dot.active {
+        background-color: #00d5ff;
+      }
+    
+      /* Responsive styles for small screens */
+      @media (max-width: 490px) {
+        .section-heading {
+          font-size: 28px;
+        }
+    
+        .section-description {
+          font-size: 14px;
+        }
+    
+        .image-slider .slider-item img {
+          height: 250px; /* Adjusted for small screens */
+          object-fit: cover; /* Ensures no distortion on small screens */
+        }
+    
+        .owl-carousel .owl-nav {
+          position: absolute;
+          top: 40%;
+          width: 100%;
+        }
+      }
+    </style>
+    
+    <script>
+      // Initialize Owl Carousel with infinite loop and slide animation
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          animateIn: 'slideInUp',
+          animateOut: 'slideOutDown',
+          nav: true,
+          dots: true,
+          navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"]
+        });
+      });
+    </script>
+     
+    <!-- END section -->
+    
+    <section class="room-showcase" data-aos="fade-up" >
+      <h1 class="header_stat">Our Stay</h1>
+      <div class="item-carousel">
+          <!-- Item cards -->
+          <div class="item-card" data-aos="fade-right">
+              <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+              <div class="item-details">
+                  <h3>Deluxe</h3>
+                  <p>
+                      Rooms are cozy and pleasant, providing comfort and a restful stay.
+                  </p>
+                  <div class="amenities">
+                      <span>🛜 Wi-Fi</span>
+                      <span>🍽️ Dinner</span>
+                      <span>🧹 Housekeeping</span>
+                      <span>🚗 Parking</span>
+                  </div>
+                  <button class="book-now-btn" data-room="Deluxe" onclick="openBookingForm(this)">Book Now</button>
+              </div>
+          </div>
+          <div class="item-card" data-aos="fade-up">
+              <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+              <div class="item-details">
+                  <h3>Deluxe</h3>
+                  <p>
+                      Rooms are cozy and pleasant, providing comfort and a restful stay.
+                  </p>
+                  <div class="amenities">
+                      <span>🛜 Wi-Fi</span>
+                      <span>🍽️ Dinner</span>
+                      <span>🧹 Housekeeping</span>
+                      <span>🚗 Parking</span>
+                  </div>
+                  <button class="book-now-btn" data-room="Deluxe" onclick="openBookingForm(this)">Book Now</button>
+              </div>
+          </div>
+          <div class="item-card" data-aos="fade-left">
+              <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+              <div class="item-details">
+                  <h3>Deluxe</h3>
+                  <p>
+                      Rooms are cozy and pleasant, providing comfort and a restful stay.
+                  </p>
+                  <div class="amenities">
+                      <span>🛜 Wi-Fi</span>
+                      <span>🍽️ Dinner</span>
+                      <span>🧹 Housekeeping</span>
+                      <span>🚗 Parking</span>
+                  </div>
+                  <button class="book-now-btn" data-room="Deluxe" onclick="openBookingForm(this)">Book Now</button>
+              </div>
+          </div>
+          <div class="item-card">
+            <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+            <div class="item-details">
+                <h3>Deluxe</h3>
+                <p>
+                    Rooms are cozy and pleasant, providing comfort and a restful stay.
+                </p>
+                <div class="amenities">
+                    <span>🛜 Wi-Fi</span>
+                    <span>🍽️ Dinner</span>
+                    <span>🧹 Housekeeping</span>
+                    <span>🚗 Parking</span>
+                </div>
+                <button class="book-now-btn" data-room="Deluxe" onclick="openBookingForm(this)">Book Now</button>
+            </div>
+        </div>
+        <div class="item-card">
+          <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+          <div class="item-details">
+              <h3>Deluxe</h3>
+              <p>
+                  Rooms are cozy and pleasant, providing comfort and a restful stay.
+              </p>
+              <div class="amenities">
+                  <span>🛜 Wi-Fi</span>
+                  <span>🍽️ Dinner</span>
+                  <span>🧹 Housekeeping</span>
+                  <span>🚗 Parking</span>
+              </div>
+                              <button class="book-now-btn" data-room="Deluxe" onclick="openBookingForm(this)">Book Now</button>
+
+          </div>
+      </div>
+      </div>
+      
+    
+  </section>
+  
+  
+  <style>
+    .ourstay {
+    font-size: 4.0rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative; /* Required for the pseudo-element */
+}
+
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    background: white;
+    padding: 20px;
+}
+
+/* Amenities */
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.amenities span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    color: #000000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.amenities span:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    color: #126eca;
+}
+
+.amenities i {
+    font-size: 1.2em;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.amenities span:hover i {
+    color: #0056b3;
+}
+
+/* Slider Wrapper */
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 1.25rem;
+    align-items: center;
+}
+
+/* Slide Styles */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    transform: scale(0.98);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.carousel-item:hover {
+    transform: scale(1.02);
+}
+
+/* Section Styling */
+.room-showcase {
+    padding: 4rem 1rem;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    margin: 1.5rem 0;
+}
+
+/* Item Showcase */
+.item-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1.5rem 1rem;
+    align-items: flex-start;
+    -webkit-overflow-scrolling: touch;
+}
+
+.item-card {
+    flex: 0 0 calc(33.33% - 2rem);
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Hide Scrollbar */
+.item-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Item Image */
+.item-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.item-image:hover {
+    transform: scale(1.1);
+}
+
+/* Item Details */
+.item-details {
+    padding: 1.25rem;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: #495057;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Book Button */
+.book-now-btn {
+    background: linear-gradient(45deg, #762981, #e6a654);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 95, 109, 0.2);
+    align-self: center;
+    margin-top: 1.25rem;
+}
+
+.book-now-btn:hover {
+    background: linear-gradient(45deg, #d4505a, #e6a654);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(255, 95, 109, 0.3);
+}
+
+/* Left and Right Navigation Buttons */
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.carousel-container::before {
+    left: 1rem;
+}
+
+.carousel-container::after {
+    right: 1rem;
+}
+
+.carousel-container::before:hover,
+.carousel-container::after:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .item-card {
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+    .item-image {
+        height: 180px;
+    }
+
+    .book-now-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .item-card {
+        flex: 0 0 calc(100% - 1rem);
+    }
+
+    .item-image {
+        height: 140px;
+    }
+
+    .book-now-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+</style>
+<div id="booking-modal" class="booking-modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+    <h2>Book Your Stay</h2>
+    <p class="subheading">Fill in the details to confirm your booking</p>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="checkin">Check-In Date</label>
+        <input type="date" id="checkin" name="checkin" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="checkout">Check-Out Date</label>
+        <input type="date" id="checkout" name="checkout" required>
+      </div>
+
+      <div class="form-group">
+        <label for="person-count">Number of Persons</label>
+        <input type="number" id="person-count" name="person-count" min="1" max="10" placeholder="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="contact" placeholder="9876543210" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="room-type">Room Type</label>
+        <select id="room-type" name="room-type" required>
+          <option value="">Select Room Type</option>
+          <option value="4000">Deluxe - ₹4000/night</option>
+          <option value="6000">Super Deluxe - ₹6000/night</option>
+          <option value="5000">Suite - ₹5000/night</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="total-amount">Total Amount</label>
+        <input type="text" id="total-amount" name="total-amount" readonly value="₹ 0">
+      </div>
+
+      <button type="submit" class="submit-btn">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+<style>
+  :root {
+    --primary-color: #762981;
+    --accent-color: #0061f2;
+    --background-overlay: rgba(0, 0, 0, 0.3);
+    --neutral-light: #f7f7f7;
+    --neutral-dark: #333;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Lora', serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-bold: 700;
+    --modal-radius: 30px;
+    --input-radius: 12px;
+    --btn-radius: 35px;
+    --btn-gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    --shadow-elevation: 0 8px 25px rgba(0, 99, 242, 0.1);
+    --focus-shadow: 0 0 12px var(--primary-color);
+  }
+
+  body {
+    font-family: var(--font-primary);
+  }
+
+  .booking-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-overlay);
+    backdrop-filter: blur(30px);
+    z-index: 1000;
+    animation: fadeIn 0.8s ease-out, scaleIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;  /* Reduced padding */
+    width: 90%;
+    max-width: 600px;  /* Reduced width */
+    height: 80vh;  /* Slightly reduced height */
+    overflow-y: auto;
+    margin: auto;
+    border-radius: var(--modal-radius);
+    background: white;
+    box-shadow: var(--shadow-elevation);
+    scrollbar-width: none;
+    animation: slideIn 0.7s ease-out;
+  }
+
+  .modal-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modal-content h2 {
+    font-family: var(--font-secondary);
+    font-size: 2.4rem;  /* Reduced font size */
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;  /* Reduced margin */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .subheading {
+    font-family: var(--font-primary);
+    font-weight: var(--font-bold);
+    color: var(--neutral-dark);
+    text-align: center;
+    font-size: 1rem;  /* Reduced font size */
+    margin-bottom: 1.5rem;  /* Reduced margin */
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+  }
+
+  .subheading:hover {
+    opacity: 1;
+    color: var(--primary-color);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;  /* Reduced font size */
+    color: var(--neutral-dark);
+    cursor: pointer;
+    background: var(--neutral-light);
+    border-radius: 50%;
+    width: 60px;  /* Reduced size */
+    height: 60px;  /* Reduced size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  .close-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 99, 242, 0.3);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  /* Reduced gap */
+    margin-bottom: 1.2rem;  /* Reduced bottom margin */
+  }
+
+  label {
+    font-size: 0.9rem;  /* Reduced label size */
+    color: var(--neutral-dark);
+    font-weight: var(--font-regular);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;  /* Reduced padding */
+    font-size: 1rem;  /* Reduced font size */
+    border: 1px solid #ddd;
+    border-radius: var(--input-radius);
+    background: #f9f9f9;
+    color: var(--neutral-dark);
+    transition: all 0.3s ease;
+  }
+
+  input:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: var(--focus-shadow);
+  }
+
+  .submit-btn {
+    padding: 14px;  /* Reduced padding */
+    background: var(--btn-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--btn-radius);
+    font-size: 1rem;  /* Reduced font size */
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.5rem;  /* Reduced margin */
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 99, 242, 0.15);
+  }
+
+  @media (max-width: 480px) {
+    .modal-content {
+      padding: 25px;
+      width: 90%;
+      height: 90vh;
+    }
+
+    .modal-content h2 {
+      font-size: 1.8rem;
+    }
+
+    .subheading {
+      font-size: 0.9rem;
+    }
+
+    .submit-btn {
+      font-size: 0.9rem;
+    }
+
+    .close-btn {
+      font-size: 2.2rem;
+    }
+  }
+</style>
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+    const today = new Date().toISOString().split('T')[0];
+    const checkinInput = document.getElementById('checkin');
+    const checkoutInput = document.getElementById('checkout');
+    const totalAmountInput = document.getElementById('total-amount');
+    const roomTypeInput = document.getElementById('room-type');
+    const confirmPayButton = document.getElementById('confirm-pay-btn');
+
+    // Set minimum check-in date
+    checkinInput.setAttribute('min', today);
+
+    // Update checkout date and total amount
+    checkinInput.addEventListener('change', function () {
+        checkoutInput.setAttribute('min', this.value);
+        updateTotalAmount();
+    });
+    checkoutInput.addEventListener('change', updateTotalAmount);
+    roomTypeInput.addEventListener('change', updateTotalAmount);
+
+    // Update total amount dynamically
+    function updateTotalAmount() {
+        const checkinDate = new Date(checkinInput.value);
+        const checkoutDate = new Date(checkoutInput.value);
+        const roomType = roomTypeInput.options[roomTypeInput.selectedIndex].text;
+
+        if (isNaN(checkinDate.getTime()) || isNaN(checkoutDate.getTime())) {
+            totalAmountInput.value = '';
+            confirmPayButton.textContent = 'Confirm Booking';
+            return;
+        }
+
+        const dayCount = (checkoutDate - checkinDate) / (1000 * 60 * 60 * 24);
+        if (dayCount <= 0) {
+            totalAmountInput.value = 'Invalid Dates';
+            confirmPayButton.textContent = 'Confirm Booking';
+            return;
+        }
+
+        const roomRates = {
+            'Deluxe - ₹4000/night': 4000,
+            'Super Deluxe - ₹6000/night': 6000,
+            'Suite - ₹5000/night': 5000,
+        };
+
+        const baseRate = roomRates[roomType] || 0;
+        const amount = dayCount * baseRate;
+
+        totalAmountInput.value = `₹ ${amount.toLocaleString()}`;
+        confirmPayButton.textContent = `Confirm and Pay ₹${amount.toLocaleString()}`;
+    }
+
+    // Form submission and payment integration
+    document.getElementById('booking-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const bookingDetails = {
+            name: formData.get('name'),
+            checkin: formData.get('checkin'),
+            checkout: formData.get('checkout'),
+            contact: formData.get('contact'),
+            email: formData.get('email'),
+            roomType: formData.get('room-type'),
+            totalAmount: formData.get('total-amount').replace('₹ ', '').replace(/,/g, ''),
+        };
+
+        if (bookingDetails.totalAmount === 'Invalid Dates' || !bookingDetails.totalAmount) {
+            alert('Please select valid dates.');
+            return;
+        }
+
+        startPaymentProcess(bookingDetails);
+    });
+
+    function startPaymentProcess(bookingDetails) {
+        const options = {
+            key: 'rzp_test_tmp4Vd4Skkx2xk', // Replace with your Razorpay API key
+            amount: bookingDetails.totalAmount * 100, // Convert to paisa
+            currency: 'INR',
+            name: 'Hotel Booking',
+            description: `Booking for ${bookingDetails.name}`,
+            handler: function (response) {
+                console.log('Payment successful:', response);
+                bookingDetails.paymentId = response.razorpay_payment_id;
+                alert(`Thank you, ${bookingDetails.name}! Your booking is confirmed. Payment ID: ${response.razorpay_payment_id}`);
+                completeBooking(bookingDetails);
+            },
+            prefill: {
+                name: bookingDetails.name,
+                email: bookingDetails.email,
+                contact: bookingDetails.contact,
+            },
+            theme: {
+                color: '#007BFF',
+            },
+        };
+
+        try {
+            const razorpay = new Razorpay(options);
+            razorpay.open();
+        } catch (error) {
+            console.error('Error opening Razorpay:', error);
+        }
+    }
+
+    function completeBooking(bookingDetails) {
+        fetch('/verify-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(bookingDetails),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.message === 'Booking completed successfully!') {
+                    alert('Booking confirmed and hotel notified.');
+                    document.getElementById('booking-form').reset();
+                    totalAmountInput.value = '';
+                    confirmPayButton.textContent = 'Confirm Booking';
+                } else {
+                    alert('There was an issue completing your booking. Please try again.');
+                }
+            })
+            .catch((error) => console.error('Error:', error));
+    }
+});
+
+// Functions for modal open/close
+function openBookingForm() {
+    document.getElementById('booking-modal').style.display = 'flex';
+}
+
+function closeBookingForm() {
+    document.getElementById('booking-modal').style.display = 'none';
+}
+
+  </script>
+    <!-- END section -->
+    <section class="section testimonial-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-8">
+            <h2 class="heading" data-aos="fade-up">Testimonial</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial text-center">
+              <div class="author-image mb-3">
+                <!-- Font Awesome Icon for user -->
+                <i class="fas fa-user fa-4x"></i>
+              </div>
+              <blockquote>
+                <p>&ldquo;SR Group was the perfect place for a romantic getaway. The ambiance was intimate and relaxing, and the service was impeccable. We especially enjoyed the delicious food and the beautiful views from our room.&rdquo;</p>
+              </blockquote>
+              <p class="author-name"><em>&mdash; Rakesh Roy</em></p>
+            </div>
+          </div>
+          <!-- END col -->
+    
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial text-center">
+              <div class="author-image mb-3">
+                <!-- Font Awesome Icon for user -->
+                <i class="fas fa-user fa-4x"></i>
+              </div>
+              <blockquote>
+                <p>&ldquo;I was pleasantly surprised by the quality of the accommodations and amenities at SR Group for the price. The location was also convenient, and the staff was very helpful. I would definitely recommend this hotel to anyone looking for a great value.&rdquo;</p>
+              </blockquote>
+              <p class="author-name"><em>&mdash; Jinesh Patel</em></p>
+            </div>
+          </div>
+          <!-- END col -->
+    
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial text-center">
+              <div class="author-image mb-3">
+                <!-- Font Awesome Icon for user -->
+                <i class="fas fa-user fa-4x"></i>
+              </div>
+              <blockquote>
+                <p>&ldquo;SR Group was the perfect place for a romantic getaway. The ambiance was intimate and relaxing, and the service was impeccable. We especially enjoyed the delicious food and the beautiful views from our room.&rdquo;</p>
+              </blockquote>
+              <p class="author-name"><em>&mdash; Priya Sharma</em></p>
+            </div>
+          </div>
+          <!-- END col -->
+        </div>
+      </div>
+    </section>
+    
+    <footer class="footer-section">
+  <div class="footer-container">
+    <div class="footer-row">
+      <div class="footer-column links">
+        <ul class="footer-link-list">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Rooms</a></li>
+        </ul>
+      </div>
+      <div class="footer-column links">
+        <ul class="footer-link-list">
+          <li><a href="#">Our Location</a></li>
+          <li><a href="#">The Hosts</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Restaurant</a></li>
+        </ul>
+      </div>
+      <div class="footer-column newsletter">
+        <p>Stay updated with our latest news</p>
+        <form action="#" class="newsletter-form">
+          <div class="form-group">
+            <input type="email" class="newsletter-input" placeholder="Your email...">
+            <button type="submit" class="newsletter-btn">
+              <span class="fa fa-paper-plane"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-row footer-bottom">
+      <p class="footer-left">
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+        <i class="fa fa-heart-o" aria-hidden="true"></i> by
+        <a href="https://rohan-chaudhary-kappa.vercel.app/" target="_blank">Rohan Chaudhary</a>
+      </p>
+      <p class="footer-right">
+  <a href="https://www.tripadvisor.com/Profile/SRHotels" class="social-icon" target="_blank">
+    <span class="fa fa-tripadvisor"></span>
+  </a>
+  <a href="https://www.facebook.com/SRHotels" class="social-icon" target="_blank">
+    <span class="fa fa-facebook"></span>
+  </a>
+  <a href="https://www.twitter.com/SRHotels" class="social-icon" target="_blank">
+    <span class="fa fa-twitter"></span>
+  </a>
+</p>
+
+    </div>
+  </div>
+</footer>
+
+<style>
+/* Footer General Styles */
+.footer-section {
+  background-color: #212121;
+  color: #ddd;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Footer Columns */
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Links Section */
+.links .footer-link-list {
+  list-style: none;
+  padding: 0;
+  opacity: 0;
+  animation: fadeInLinks 1s forwards;
+}
+
+@keyframes fadeInLinks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.links .footer-link-list li {
+  margin-bottom: 12px;
+}
+
+.links .footer-link-list a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.links .footer-link-list a:hover {
+  color: #762981;
+  transform: translateX(5px);
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  animation: fadeInNewsletter 1.5s forwards;
+}
+
+@keyframes fadeInNewsletter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: #ddd;
+  font-size: 1.1rem;
+  transition: border 0.3s ease;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: #762981;
+}
+
+.newsletter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+  background-color: #762981;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: #762981;
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #555;
+  padding-top: 20px;
+  font-size: 1rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeInFooter 2s forwards;
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer-bottom .footer-left a,
+.footer-bottom .footer-right a {
+  color: #762981;
+  text-decoration: none;
+}
+
+.footer-bottom .footer-right a {
+  margin-left: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-bottom .footer-right a:hover {
+  color: #762981;
+  transform: scale(1.1);
+}
+
+/* Social Icons */
+.footer-bottom .footer-right a span {
+  transition: transform 0.3s ease;
+}
+
+.footer-bottom .footer-right a:hover span {
+  transform: rotate(360deg);
+}
+
+/* Parallax Background */
+.footer-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  opacity: 0.2;
+  z-index: -1;
+  animation: backgroundGradient 10s ease-in-out infinite;
+}
+
+@keyframes backgroundGradient {
+  0% {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+  }
+  100% {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-bottom .footer-right a {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+    min-width: 100%;
+  }
+}
+</style>
+
+
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- <script src="js/jquery.waypoints.min.js"></script> -->
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

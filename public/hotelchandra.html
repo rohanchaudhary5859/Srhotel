@@ -1,0 +1,2034 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hotel Chandra</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400|Playfair+Display:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+  <body>
+    
+     <header class="site-header">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Large screen logo image -->
+          <div class="col-4 site-logo d-none d-md-block" data-aos="fade">
+            <a href="index.html">
+              <img src="Logo Transparent.png" alt="SR Hotels" class="site-logo-img">
+            </a>
+          </div>
+    
+          <!-- Small screen text logo -->
+          <div class="col-4 site-logo d-md-none" data-aos="fade">
+            <a href="index.html"><em>SR Hotels</em></a>
+          </div>
+    
+          <div class="col-8">
+            <div class="site-menu-toggle js-site-menu-toggle" data-aos="fade">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+    
+            <div class="site-navbar js-site-navbar">
+              <nav role="navigation">
+                <div class="container">
+                  <div class="row full-height align-items-center">
+                    <div class="col-md-6">
+                      <ul class="list-unstyled menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="hotellist.html">Hotels</a></li>
+                        <li><a href="resort.html">Resort</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 extra-info">
+                      <div class="row">
+                        <div class="col-md-6 mb-5">
+                          <h3>Contact Info</h3>
+                          <p>SR Resorts & Hotels<br>123 Beachside Road, Suite 101<br>Goa, India 403001</p>
+                          <p>info@srhotels.in</p>
+                          <p>Phone: +91-9876543210</p>
+                        </div>
+                        <div class="col-md-6">
+                          <h3>Connect With Us</h3>
+                          <ul class="list-unstyled">
+                            <li><a href="https://twitter.com/srresorts">Twitter</a></li>
+                            <li><a href="https://facebook.com/srresorts">Facebook</a></li>
+                            <li><a href="https://instagram.com/srresorts">Instagram</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<style>
+  .site-logo {
+  padding-left: 50px;
+}
+
+.site-logo img {
+  width: 150px;
+  max-width: 110px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 490px) {
+  .site-logo img {
+    display: none; /* Hide the image logo on small screens */
+  }
+
+  .site-logo a {
+    font-size: 32px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    font-family: "Playfair+Display", times, serif;
+    white-space: nowrap; /* Prevents the text from breaking into two lines */
+  }
+}
+
+</style>  
+    <!-- END head -->
+
+   <!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay"></div> <!-- Overlay div for light/dark effect -->
+  <div class="hero-content">
+    <h1>Hotel Chandra <span class="highlight">Palace</span></h1>
+  </div>
+</section>
+
+<style>
+  /* Hero Section Styles */
+   /* Hero Section Styles */
+    .hero-section {
+      background-image: url('background.jpg'); /* Replace with actual image URL */
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1; /* Ensure it's below the toggle menu */
+    }
+  
+    /* Overlay for dark/light effect */
+    .hero-overlay {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+      z-index: 1; /* Stays under hero content */
+    }
+  
+    .hero-content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      z-index: 2; /* Ensures the text is above the overlay */
+    }
+  
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      margin: 0;
+    }
+  
+    .hero-content .highlight {
+      color: #762981; /* Pink color for 'Palace' */
+    }
+  
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero-section {
+        height: 350px;
+      }
+  
+      .hero-content h1 {
+        font-size: 2.5rem; /* Adjust font size */
+      }
+    }
+  
+    @media (max-width: 490px) {
+      .hero-section {
+        height: 300px; /* Reduce height on smaller screens */
+      }
+  
+      .hero-content h1 {
+        font-size: 2rem; /* Adjust font size */
+      }
+    }
+</style>
+
+<!-- Welcome Section -->
+<section class="welcome-section">
+  <div class="container">
+    <!-- Image on the Left -->
+    <div class="welcome-image">
+      <img src="IMG_4889-1024x683.jpg" alt="Hotel Reception">
+    </div>
+
+    <!-- Content on the Right -->
+    <div class="welcome-content">
+      <h2>Welcome to Hotel</h2>
+<h1>Experience the Unmatched Elegance of Hotel Chandra Palace.</h1>
+<p>
+  Situated in the vibrant city of Ahmedabad, Hotel Chandra Palace combines a legacy of heritage with modern sophistication. 
+  Our hotel offers an exquisite blend of comfort and style, making it the ideal destination for business and leisure guests alike.
+</p>
+<p>Where Heritage Meets Luxury in Ahmedabad</p>
+      <div class="features">
+        <div class="feature-item">
+          <span>&#10003;</span> Best Amenities
+        </div>
+        <div class="feature-item">
+          <span>&#10003;</span> Luxury Rooms
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  /* Welcome Section Styles */
+.welcome-section {
+  background: #fdf9f3; /* Light cream background */
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+/* Flexbox Container */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Image Styles */
+.welcome-image {
+  flex: 1;
+}
+
+.welcome-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Styles */
+.welcome-content {
+  flex: 1;
+  max-width: 600px;
+  animation: fadeIn 1s ease-in-out;
+  text-align: left; /* Align text to the left */
+}
+
+.welcome-content h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #762981;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.welcome-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.welcome-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #333;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background-color: #ffe6f1; /* Light pink background on hover */
+}
+
+.feature-item span {
+  font-size: 1.5rem;
+  color: #762981; /* Pink checkmark */
+  margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome-image img {
+    max-width: 100%;
+  }
+
+  .features {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section {
+    padding: 20px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;   /* Center align elements */
+    text-align: center;    /* Align text in the center */
+    gap: 20px;             /* Adjust gap for better spacing */
+  }
+
+  .welcome-content {
+    padding: 0 15px; /* Add padding to ensure text doesn't touch screen edges */
+  }
+
+  .welcome-content h1 {
+    font-size: 1.8rem; /* Reduce heading size for smaller screens */
+    line-height: 2rem; /* Improve readability */
+    margin-bottom: 15px;
+  }
+
+  .welcome-content h2 {
+    font-size: 1.3rem; /* Smaller secondary heading size */
+    margin-bottom: 10px;
+  }
+
+  .welcome-content p {
+    font-size: 0.9rem; /* Adjust text size for readability */
+    line-height: 1.5;  /* Tighter line spacing */
+    margin-bottom: 15px;
+  }
+
+  .welcome-image img {
+    max-width: 90%; /* Ensure image scales to fit the screen */
+    border-radius: 8px; /* Maintain rounded corners */
+    margin-bottom: 15px; /* Add spacing below the image */
+  }
+
+  .features {
+    flex-direction: column; /* Stack features vertically */
+    gap: 15px;             /* Adjust gap for better spacing */
+  }
+
+  .feature-item {
+    font-size: 0.95rem; /* Slightly smaller text size for features */
+    padding: 8px 12px; /* Adjust padding */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for a cleaner look */
+  }
+
+  .feature-item span {
+    font-size: 1.3rem; /* Reduce icon size */
+  }
+}
+
+
+</style>
+  <section class="room-showcase">
+    <h1 class="ourstay" >Our Stay</h1>
+    <div class="item-carousel">
+        <!-- Item cards -->
+        <div class="item-card">
+          <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+          <div class="item-details">
+              <h3>Deluxe</h3>
+              <p>Rooms are cozy and pleasant, providing comfort and a restful stay.</p>
+              <div class="amenities">
+                <span>🛜 Wi-Fi</span>
+                <span>🍽️ Dinner</span>
+                <span>🧹 Housekeeping</span>
+                <span>🚗 Parking</span>
+            </div>
+            <button class="book-now-btn" data-room="Deluxe" onclick="openBookingForm(this)">Book Now</button>
+          </div>
+      </div>
+      
+        <div class="item-card">
+            <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+            <div class="item-details">
+                <h3>Deluxe</h3>
+                <p>
+                    Rooms are cozy and pleasant, providing comfort and a restful stay.
+                </p>
+                <div class="amenities">
+                    <span>🛜 Wi-Fi</span>
+                    <span>🍽️ Dinner</span>
+                    <span>🧹 Housekeeping</span>
+                    <span>🚗 Parking</span>
+                </div>
+                <button class="book-now-btn" data-room="Deluxe" onclick="openBookingForm(this)">Book Now</button>
+            </div>
+        </div>
+        <div class="item-card">
+            <img src="9ac53e746f1111ed8bf50a58a9feac02-1.jpg" alt="Deluxe Room" class="item-image">
+            <div class="item-details">
+                <h3>Deluxe</h3>
+                <p>
+                    Rooms are cozy and pleasant, providing comfort and a restful stay.
+                </p>
+                <div class="amenities">
+                    <span>🛜 Wi-Fi</span>
+                    <span>🍽️ Dinner</span>
+                    <span>🧹 Housekeeping</span>
+                    <span>🚗 Parking</span>
+                </div>
+                <button class="book-now-btn" data-room="Deluxe" onclick="openBookingForm(this)">Book Now</button>
+            </div>
+        </div>
+    </div>
+  
+</section>
+
+<style>
+  .ourstay {
+    font-size: 4.0rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative; /* Required for the pseudo-element */
+}
+
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    background: white;
+    padding: 20px;
+}
+
+/* Amenities */
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.amenities span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    color: #000000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.amenities span:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    color: #126eca;
+}
+
+.amenities i {
+    font-size: 1.2em;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.amenities span:hover i {
+    color: #0056b3;
+}
+
+/* Slider Wrapper */
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 1.25rem;
+    align-items: center;
+}
+
+/* Slide Styles */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    transform: scale(0.98);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.carousel-item:hover {
+    transform: scale(1.02);
+}
+
+/* Section Styling */
+.room-showcase {
+    padding: 4rem 1rem;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    margin: 1.5rem 0;
+}
+
+/* Item Showcase */
+.item-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1.5rem 1rem;
+    align-items: flex-start;
+    -webkit-overflow-scrolling: touch;
+}
+
+.item-card {
+    flex: 0 0 calc(33.33% - 2rem);
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Hide Scrollbar */
+.item-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Item Image */
+.item-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.item-image:hover {
+    transform: scale(1.1);
+}
+
+/* Item Details */
+.item-details {
+    padding: 1.25rem;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: #495057;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Book Button */
+.book-now-btn {
+    background: linear-gradient(45deg, #762981, #e6a654);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 95, 109, 0.2);
+    align-self: center;
+    margin-top: 1.25rem;
+}
+
+.book-now-btn:hover {
+    background: linear-gradient(45deg, #d4505a, #e6a654);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(255, 95, 109, 0.3);
+}
+
+/* Left and Right Navigation Buttons */
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.carousel-container::before {
+    left: 1rem;
+}
+
+.carousel-container::after {
+    right: 1rem;
+}
+
+.carousel-container::before:hover,
+.carousel-container::after:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .item-card {
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+    .item-image {
+        height: 180px;
+    }
+
+    .book-now-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .item-card {
+        flex: 0 0 calc(100% - 1rem);
+    }
+
+    .item-image {
+        height: 140px;
+    }
+
+    .book-now-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+</style>
+
+<div id="booking-modal" class="booking-modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+    <h2>Book Your Stay</h2>
+    <p class="subheading">Fill in the details to confirm your booking</p>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="checkin">Check-In Date</label>
+        <input type="date" id="checkin" name="checkin" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="checkout">Check-Out Date</label>
+        <input type="date" id="checkout" name="checkout" required>
+      </div>
+
+      <div class="form-group">
+        <label for="person-count">Number of Persons</label>
+        <input type="number" id="person-count" name="person-count" min="1" max="10" placeholder="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="contact" placeholder="9876543210" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="room-type">Room Type</label>
+        <select id="room-type" name="room-type" required>
+          <option value="">Select Room Type</option>
+          <option value="4000">Deluxe - ₹4000/night</option>
+          <option value="6000">Super Deluxe - ₹6000/night</option>
+          <option value="5000">Suite - ₹5000/night</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="total-amount">Total Amount</label>
+        <input type="text" id="total-amount" name="total-amount" readonly value="₹ 0">
+      </div>
+
+      <button type="submit" class="submit-btn">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+<style>
+  :root {
+    --primary-color: #762981;
+    --accent-color: #0061f2;
+    --background-overlay: rgba(0, 0, 0, 0.3);
+    --neutral-light: #f7f7f7;
+    --neutral-dark: #333;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Lora', serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-bold: 700;
+    --modal-radius: 30px;
+    --input-radius: 12px;
+    --btn-radius: 35px;
+    --btn-gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    --shadow-elevation: 0 8px 25px rgba(0, 99, 242, 0.1);
+    --focus-shadow: 0 0 12px var(--primary-color);
+  }
+
+  body {
+    font-family: var(--font-primary);
+  }
+
+  .booking-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-overlay);
+    backdrop-filter: blur(30px);
+    z-index: 1000;
+    animation: fadeIn 0.8s ease-out, scaleIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;  /* Reduced padding */
+    width: 90%;
+    max-width: 600px;  /* Reduced width */
+    height: 80vh;  /* Slightly reduced height */
+    overflow-y: auto;
+    margin: auto;
+    border-radius: var(--modal-radius);
+    background: white;
+    box-shadow: var(--shadow-elevation);
+    scrollbar-width: none;
+    animation: slideIn 0.7s ease-out;
+  }
+
+  .modal-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modal-content h2 {
+    font-family: var(--font-secondary);
+    font-size: 2.4rem;  /* Reduced font size */
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;  /* Reduced margin */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .subheading {
+    font-family: var(--font-primary);
+    font-weight: var(--font-bold);
+    color: var(--neutral-dark);
+    text-align: center;
+    font-size: 1rem;  /* Reduced font size */
+    margin-bottom: 1.5rem;  /* Reduced margin */
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+  }
+
+  .subheading:hover {
+    opacity: 1;
+    color: var(--primary-color);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;  /* Reduced font size */
+    color: var(--neutral-dark);
+    cursor: pointer;
+    background: var(--neutral-light);
+    border-radius: 50%;
+    width: 60px;  /* Reduced size */
+    height: 60px;  /* Reduced size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  .close-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 99, 242, 0.3);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  /* Reduced gap */
+    margin-bottom: 1.2rem;  /* Reduced bottom margin */
+  }
+
+  label {
+    font-size: 0.9rem;  /* Reduced label size */
+    color: var(--neutral-dark);
+    font-weight: var(--font-regular);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;  /* Reduced padding */
+    font-size: 1rem;  /* Reduced font size */
+    border: 1px solid #ddd;
+    border-radius: var(--input-radius);
+    background: #f9f9f9;
+    color: var(--neutral-dark);
+    transition: all 0.3s ease;
+  }
+
+  input:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: var(--focus-shadow);
+  }
+
+  .submit-btn {
+    padding: 14px;  /* Reduced padding */
+    background: var(--btn-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--btn-radius);
+    font-size: 1rem;  /* Reduced font size */
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.5rem;  /* Reduced margin */
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 99, 242, 0.15);
+  }
+
+  @media (max-width: 480px) {
+    .modal-content {
+      padding: 25px;
+      width: 90%;
+      height: 90vh;
+    }
+
+    .modal-content h2 {
+      font-size: 1.8rem;
+    }
+
+    .subheading {
+      font-size: 0.9rem;
+    }
+
+    .submit-btn {
+      font-size: 0.9rem;
+    }
+
+    .close-btn {
+      font-size: 2.2rem;
+    }
+  }
+</style>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+    const today = new Date().toISOString().split('T')[0];
+    const checkinInput = document.getElementById('checkin');
+    const checkoutInput = document.getElementById('checkout');
+    const totalAmountInput = document.getElementById('total-amount');
+    const roomTypeInput = document.getElementById('room-type');
+    const confirmPayButton = document.getElementById('confirm-pay-btn');
+
+    // Set minimum check-in date
+    checkinInput.setAttribute('min', today);
+
+    // Update checkout date and total amount
+    checkinInput.addEventListener('change', function () {
+        checkoutInput.setAttribute('min', this.value);
+        updateTotalAmount();
+    });
+    checkoutInput.addEventListener('change', updateTotalAmount);
+    roomTypeInput.addEventListener('change', updateTotalAmount);
+
+    // Update total amount dynamically
+    function updateTotalAmount() {
+        const checkinDate = new Date(checkinInput.value);
+        const checkoutDate = new Date(checkoutInput.value);
+        const roomType = roomTypeInput.options[roomTypeInput.selectedIndex].text;
+
+        if (isNaN(checkinDate.getTime()) || isNaN(checkoutDate.getTime())) {
+            totalAmountInput.value = '';
+            confirmPayButton.textContent = 'Confirm Booking';
+            return;
+        }
+
+        const dayCount = (checkoutDate - checkinDate) / (1000 * 60 * 60 * 24);
+        if (dayCount <= 0) {
+            totalAmountInput.value = 'Invalid Dates';
+            confirmPayButton.textContent = 'Confirm Booking';
+            return;
+        }
+
+        const roomRates = {
+            'Deluxe - ₹4000/night': 4000,
+            'Super Deluxe - ₹6000/night': 6000,
+            'Suite - ₹5000/night': 5000,
+        };
+
+        const baseRate = roomRates[roomType] || 0;
+        const amount = dayCount * baseRate;
+
+        totalAmountInput.value = `₹ ${amount.toLocaleString()}`;
+        confirmPayButton.textContent = `Confirm and Pay ₹${amount.toLocaleString()}`;
+    }
+
+    // Form submission and payment integration
+    document.getElementById('booking-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const bookingDetails = {
+            name: formData.get('name'),
+            checkin: formData.get('checkin'),
+            checkout: formData.get('checkout'),
+            contact: formData.get('contact'),
+            email: formData.get('email'),
+            roomType: formData.get('room-type'),
+            totalAmount: formData.get('total-amount').replace('₹ ', '').replace(/,/g, ''),
+        };
+
+        if (bookingDetails.totalAmount === 'Invalid Dates' || !bookingDetails.totalAmount) {
+            alert('Please select valid dates.');
+            return;
+        }
+
+        startPaymentProcess(bookingDetails);
+    });
+
+    function startPaymentProcess(bookingDetails) {
+        const options = {
+            key: 'rzp_test_tmp4Vd4Skkx2xk', // Replace with your Razorpay API key
+            amount: bookingDetails.totalAmount * 100, // Convert to paisa
+            currency: 'INR',
+            name: 'Hotel Booking',
+            description: `Booking for ${bookingDetails.name}`,
+            handler: function (response) {
+                console.log('Payment successful:', response);
+                bookingDetails.paymentId = response.razorpay_payment_id;
+                alert(`Thank you, ${bookingDetails.name}! Your booking is confirmed. Payment ID: ${response.razorpay_payment_id}`);
+                completeBooking(bookingDetails);
+            },
+            prefill: {
+                name: bookingDetails.name,
+                email: bookingDetails.email,
+                contact: bookingDetails.contact,
+            },
+            theme: {
+                color: '#007BFF',
+            },
+        };
+
+        try {
+            const razorpay = new Razorpay(options);
+            razorpay.open();
+        } catch (error) {
+            console.error('Error opening Razorpay:', error);
+        }
+    }
+
+    function completeBooking(bookingDetails) {
+        fetch('/verify-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(bookingDetails),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.message === 'Booking completed successfully!') {
+                    alert('Booking confirmed and hotel notified.');
+                    document.getElementById('booking-form').reset();
+                    totalAmountInput.value = '';
+                    confirmPayButton.textContent = 'Confirm Booking';
+                } else {
+                    alert('There was an issue completing your booking. Please try again.');
+                }
+            })
+            .catch((error) => console.error('Error:', error));
+    }
+});
+
+// Functions for modal open/close
+function openBookingForm() {
+    document.getElementById('booking-modal').style.display = 'flex';
+}
+
+function closeBookingForm() {
+    document.getElementById('booking-modal').style.display = 'none';
+}
+
+  </script>
+
+<!-- Partners Section -->
+<section class="partners">
+  <h2>Together Strong</h2>
+  <h3>Our Partners</h3>
+  <div class="slider">
+    <div class="slide-track">
+      <!-- Logos: Add as many as needed -->
+      <div class="slide"><img src="oye.png" alt="OYO"></div>
+      <div class="slide"><img src="trip-1-2.png" alt="TripAdvisor"></div>
+      <div class="slide"><img src="trivago-3-3.png" alt="Trivago"></div>
+      <div class="slide"><img src="goib-3-1.png" alt="Goibibo"></div>
+      <div class="slide"><img src="easy-1-1.png" alt="Ease My Trip"></div>
+      <!-- Duplicate logos for infinite loop -->
+      <div class="slide"><img src="oye.png" alt="OYO"></div>
+      <div class="slide"><img src="trip-1-2.png" alt="TripAdvisor"></div>
+      <div class="slide"><img src="trivago-3-3.png" alt="Trivago"></div>
+      <div class="slide"><img src="goib-3-1.png" alt="Goibibo"></div>
+      <div class="slide"><img src="easy-1-1.png" alt="Ease My Trip"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Partner Section */
+.partners {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Styling for h2 under .partners */
+.partners h2 {
+  font-size: 2.75rem;
+  margin-bottom: 10px;
+  color: #000000; /* Slightly darker for a more modern look */
+  font-family: 'Poppins', sans-serif; /* Example font-family change */
+  font-weight: 600; /* Bold weight for better emphasis */
+  letter-spacing: 1px; /* Adds spacing between letters for a modern feel */
+  line-height: 1.2; /* Tight line height for a more compact appearance */
+}
+
+/* Styling for h3 under .partners */
+.partners h3 {
+  font-size: 1.9rem;
+  color: #000000; /* Slightly lighter color for a softer look */
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif; /* Another example of font-family change */
+  font-weight: 400; /* Regular weight for a clean, easy-to-read look */
+  letter-spacing: 0.5px; /* Adds a slight letter spacing */
+  line-height: 1.5; /* Increased line height for readability */
+}
+
+
+/* Slider Section */
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slide-track {
+  display: flex;
+  animation: scroll 15s linear infinite; /* Scroll effect */
+  width: calc(250px * 10); /* Adjust for number of logos */
+}
+
+.slide {
+  width: 250px; /* Fixed size for each slide */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.slide img {
+  width: 120px; /* Adjust logo size */
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth zoom-in effect */
+}
+
+.slide img:hover {
+  transform: scale(1.1); /* Zoom-in effect on hover */
+}
+
+/* Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1250px); /* Move logos by their width */
+  }
+}
+</style>
+
+<section class="place-section">
+  <div class="container">
+      <div class="place-item">
+          <div class="place-info">
+              <div class="place-header">
+                  <div class="sub-title">Exploring Places</div>
+                  <h2 class="title">Nearby Places</h2>
+              </div>
+              <div class="place-list">
+                  <div class="place-card">
+                      <img src="https://srhotels.in/wp-content/uploads/2024/08/nal-sarovar-bird-sanctuary-ahmedabad-entry-fee-timings-holidays-reviews-header.jpg" alt="Nalsarovar Bird Sanctuary">
+                      <h3>Nalsarovar Bird Sanctuary</h3>
+                      <p>Nalsarovar Bird Sanctuary is a beautiful wetland area located near Ahmedabad. It's a popular spot for birdwatching, attracting migratory birds during the winter season.</p>
+                  </div>
+                  <div class="place-card">
+                      <img src="https://srhotels.in/wp-content/uploads/2024/08/akshardham-temple-ahmedabad-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Baps Akshardham Temple">
+                      <h3>BAPS Akshardham Temple</h3>
+                      <p>BAPS Akshardham Temple is a magnificent Hindu temple complex known for its stunning architecture, sculptures, and gardens. It's a popular tourist destination in Gandhinagar.</p>
+                  </div>
+                  <div class="place-card">
+                      <img src="https://srhotels.in/wp-content/uploads/2024/08/adalaj-stepwell-vav-ahmedabad-2.jpg" alt="Adalaj Stepwell">
+                      <h3>Adalaj Stepwell</h3>
+                      <p>Adalaj Stepwell is a historic and beautifully carved structure in Ahmedabad, depicting scenes from mythology and daily life.</p>
+                  </div>
+                  <div class="place-card">
+                      <img src="https://srhotels.in/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-29-at-15.36.09_0c93b3d8.jpg" alt="Kankaria Lake">
+                      <h3>Kankaria Lake</h3>
+                      <p>Kankaria Lake is an artificial lake in Ahmedabad, offering boating, amusement rides, and picnics with stunning views of the city.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<style>
+  /* Importing a new font family */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+  /* General section styling */
+.place-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Place item layout */
+.place-item {
+    width: 100%;
+    text-align: center;
+}
+
+.place-info .sub-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Apply Playfair Display font for subtitle */
+}
+
+.place-info .title {
+    font-size: 2rem;
+   
+    color:#762981;
+    margin-bottom: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Apply Playfair Display font for title */
+}
+
+/* Place list */
+.place-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.place-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.place-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.place-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font to place card titles */
+}
+
+.place-card p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font to card descriptions */
+}
+
+/* Hover effect for place cards */
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .place-list {
+        justify-content: space-around;
+    }
+    .place-card {
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .place-info .title {
+        font-size: 1.8rem;
+    }
+
+    .place-info .sub-title {
+        font-size: 3.5rem;
+    }
+
+    .place-list {
+        justify-content: center;
+    }
+
+    .place-card {
+        width: 45%;
+    }
+
+    .place-card img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 490px) {
+    .place-info .title {
+        font-size: 1.6rem;
+    }
+
+    .place-info .sub-title {
+        font-size: 3rem;
+    }
+
+    .place-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .place-card img {
+        height: 150px;
+    }
+
+    .place-card h3 {
+        font-size: 18px;
+    }
+
+    .place-card p {
+        font-size: 12px;
+    }
+}
+</style>
+<section class="gallery-section">
+  <h2 class="gallery-title">Featured Rooms</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="IMG_4875-600x540.jpg" alt="Room 1"></div>
+    <div class="gallery-item"><img src="IMG_4879-600x540.jpg" alt="Room 2"></div>
+    <div class="gallery-item"><img src="IMG_4883-600x540.jpg" alt="Room 3"></div>
+    <div class="gallery-item"><img src="IMG_4885-600x540.jpg" alt="Room 4"></div>
+    <div class="gallery-item"><img src="IMG_4889-1-600x540.jpg" alt="Room 5"></div>
+    <div class="gallery-item"><img src="IMG_4893-600x540.jpg" alt="Room 6"></div>
+    <div class="gallery-item"><img src="IMG_4896-600x540.jpg" alt="Room 7"></div>
+    <div class="gallery-item"><img src="IMG_4912-600x540.jpg" alt="Room 8"></div>
+  </div>
+</section>
+
+<style>
+.gallery-section {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #ffffff; /* Clean white background */
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.gallery-title {
+  font-size: 4rem; /* Larger font size for stronger visual presence */
+  color: #762981; /* Vibrant primary blue */
+  margin-bottom: 50px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800; /* Bold and strong title */
+  letter-spacing: 3px; /* More spaced out for modern aesthetic */
+  position: relative;
+  display: inline-block;
+  text-shadow: 2px 2px 8px rgba(58, 142, 246, 0.2); /* Soft shadow to enhance the title */
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-title::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 5px;
+  background: linear-gradient(to right, #762981, #ff6f61); /* Gradient underline */
+  margin: 20px auto 0;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for title */
+.gallery-title:hover {
+  color: #ff6f61; /* Smooth transition to red */
+  text-shadow: 2px 2px 15px rgba(58, 142, 246, 0.5); /* Stronger text shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.gallery-title:hover::after {
+  width: 160px; /* Expand the underline on hover */
+}
+
+/* Grid Styling */
+.gallery-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row on large screens */
+  justify-items: center;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 20px; /* Slightly more rounded edges */
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+  background-color: #ffffff; /* Clean, white background for items */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f1f1f1; /* Subtle light border */
+  cursor: pointer;
+  will-change: transform, box-shadow; /* Optimize performance */
+}
+
+.gallery-item:hover {
+  transform: translateY(-12px) scale(1.08); /* Slight lift and scaling on hover */
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2); /* Larger shadow for more depth */
+  filter: brightness(1.1); /* Slight brightness increase */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Smooth zoom-in effect on hover */
+  opacity: 0.85; /* Slight fade effect */
+}
+
+/* Icon Overlay */
+.gallery-item-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 15px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-icons {
+  opacity: 1; /* Fade in the icons when hovered */
+}
+
+.gallery-item-icons a {
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(45deg, #762981, #ff6f61); /* Gradient effect */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Deeper shadow for hover interaction */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item-icons a:hover {
+  transform: scale(1.2); /* Slightly larger on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.gallery-item-icons a i {
+  color: #ffffff;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.gallery-item-icons a:hover i {
+  color: #333333; /* Icon color change on hover */
+}
+
+/* Gradient Hover Effect */
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)); /* Subtle gradient overlay */
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::before {
+  opacity: 1; /* Subtle gradient appears on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .gallery-title {
+    font-size: 3rem; /* Adjust title size for mid-size screens */
+  }
+
+  .gallery-grid {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 2.6rem; /* Slightly smaller title for smaller screens */
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-title {
+    font-size: 2.2rem; /* Smaller title for very small screens */
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
+    gap: 15px;
+  }
+}
+
+</style>
+
+<section class="connect-section">
+  <h1>Reach Out</h1>
+  <h3>Let's Connect</h3>
+  <div class="container">
+    <!-- Left Section: Map -->
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d234836.15063024577!2d72.499747!3d23.122164000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e824231e6f8cf%3A0x46fe0b258b2a2c8a!2sHotel%20Chandra%20Palace!5e0!3m2!1sen!2sin!4v1735038690300!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+
+    <!-- Right Section: Contact Info Cards -->
+    <div class="contact-info">
+      <!-- Phone -->
+      <div class="contact-card">
+        <div class="icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <div class="details">
+          <p>+91 96014 73204</p>
+        </div>
+      </div>
+    
+      <!-- Email -->
+      <div class="contact-card">
+        <div class="icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="details">
+          <p>info@srgroup.com</p>
+        </div>
+      </div>
+    
+      <!-- Location -->
+      <div class="contact-card">
+        <div class="icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="details">
+          <p>2nd Floor, Swastik Complex,<br>
+             Chandkheda, Near Satyamev Hospital,<br>
+             Ahmedabad, Gujarat 382424</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+  /* General Section Styling */
+  .connect-section {
+    background-color: #f7f8fa;
+    padding: 50px 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+
+  .connect-section h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #762981, #762981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+
+  .connect-section h3 {
+    font-size: 1.50rem;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Map Container Styling */
+  .map-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  /* Contact Info Styling */
+  .contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.8s ease-in-out;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: #fef9f6;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .contact-card:hover {
+    background: linear-gradient(90deg, #ffeef3, #ffeff5);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    color: #762981;
+    background: #ffeef3;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .details p {
+    margin: 0;
+    font-size: 1.10rem;
+    color: #333;
+    font-weight: 600;
+  }
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .map-container {
+      width: 100%;
+    }
+
+    .contact-info {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 490px) {
+    .details p {
+      font-size: 1rem;
+    }
+
+    .map-container iframe {
+      height: 300px;
+    }
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+<footer class="footer-section">
+  <div class="footer-container">
+    <div class="footer-row">
+      <div class="footer-column links">
+        <ul class="footer-link-list">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Rooms</a></li>
+        </ul>
+      </div>
+      <div class="footer-column links">
+        <ul class="footer-link-list">
+          <li><a href="#">Our Location</a></li>
+          <li><a href="#">The Hosts</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Restaurant</a></li>
+        </ul>
+      </div>
+      <div class="footer-column newsletter">
+        <p>Stay updated with our latest news</p>
+        <form action="#" class="newsletter-form">
+          <div class="form-group">
+            <input type="email" class="newsletter-input" placeholder="Your email...">
+            <button type="submit" class="newsletter-btn">
+              <span class="fa fa-paper-plane"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-row footer-bottom">
+      <p class="footer-left">
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+        <i class="fa fa-heart-o" aria-hidden="true"></i> by
+        <a href="https://rohan-chaudhary-kappa.vercel.app/" target="_blank">Rohan Chaudhary</a>
+      </p>
+      <p class="footer-right">
+  <a href="https://www.tripadvisor.com/Profile/SRHotels" class="social-icon" target="_blank">
+    <span class="fa fa-tripadvisor"></span>
+  </a>
+  <a href="https://www.facebook.com/SRHotels" class="social-icon" target="_blank">
+    <span class="fa fa-facebook"></span>
+  </a>
+  <a href="https://www.twitter.com/SRHotels" class="social-icon" target="_blank">
+    <span class="fa fa-twitter"></span>
+  </a>
+</p>
+
+    </div>
+  </div>
+</footer>
+
+<style>
+/* Footer General Styles */
+.footer-section {
+  background-color: #212121;
+  color: #ddd;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Footer Columns */
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Links Section */
+.links .footer-link-list {
+  list-style: none;
+  padding: 0;
+  opacity: 0;
+  animation: fadeInLinks 1s forwards;
+}
+
+@keyframes fadeInLinks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.links .footer-link-list li {
+  margin-bottom: 12px;
+}
+
+.links .footer-link-list a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.links .footer-link-list a:hover {
+  color: #762981;
+  transform: translateX(5px);
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  animation: fadeInNewsletter 1.5s forwards;
+}
+
+@keyframes fadeInNewsletter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: #ddd;
+  font-size: 1.1rem;
+  transition: border 0.3s ease;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: #762981;
+}
+
+.newsletter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+  background-color: #762981;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: #762981;
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #555;
+  padding-top: 20px;
+  font-size: 1rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeInFooter 2s forwards;
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer-bottom .footer-left a,
+.footer-bottom .footer-right a {
+  color: #762981;
+  text-decoration: none;
+}
+
+.footer-bottom .footer-right a {
+  margin-left: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-bottom .footer-right a:hover {
+  color: #762981;
+  transform: scale(1.1);
+}
+
+/* Social Icons */
+.footer-bottom .footer-right a span {
+  transition: transform 0.3s ease;
+}
+
+.footer-bottom .footer-right a:hover span {
+  transform: rotate(360deg);
+}
+
+/* Parallax Background */
+.footer-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  opacity: 0.2;
+  z-index: -1;
+  animation: backgroundGradient 10s ease-in-out infinite;
+}
+
+@keyframes backgroundGradient {
+  0% {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+  }
+  100% {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-bottom .footer-right a {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+    min-width: 100%;
+  }
+}
+</style>
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

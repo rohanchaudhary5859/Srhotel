@@ -682,21 +682,21 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
   <div class="modal-content">
     <span class="close-btn" onclick="closeBookingForm()">&times;</span>
     <h2>Book Your Stay</h2>
+    <p class="subheading">Fill in the details to confirm your booking</p>
     <form id="booking-form">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Enter your full name" required>
       </div>
 
-      <div class="form-group row">
-        <div class="form-item">
-          <label for="checkin">Check-In Date</label>
-          <input type="date" id="checkin" name="checkin" required>
-        </div>
-        <div class="form-item">
-          <label for="checkout">Check-Out Date</label>
-          <input type="date" id="checkout" name="checkout" required>
-        </div>
+      <div class="form-group">
+        <label for="checkin">Check-In Date</label>
+        <input type="date" id="checkin" name="checkin" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="checkout">Check-Out Date</label>
+        <input type="date" id="checkout" name="checkout" required>
       </div>
 
       <div class="form-group">
@@ -706,12 +706,12 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 
       <div class="form-group">
         <label for="contact">Contact Number</label>
-        <input type="tel" id="contact" name="contact" placeholder="e.g. 9876543210" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
+        <input type="tel" id="contact" name="contact" placeholder="9876543210" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
       </div>
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
       </div>
 
       <div class="form-group">
@@ -735,274 +735,201 @@ document.querySelector('.navbar-toggle').addEventListener('click', function () {
 </div>
 
 <style>
-/* Root Variables with Modern Color Palette */
-:root {
-  --primary-color: #0061f2; /* Vibrant Blue */
-  --accent-color: #ff4b5c; /* Soft Coral Red */
-  --neutral-light: #f7f7f7; /* Light Gray */
-  --neutral-dark: #333333; /* Dark Gray */
-  --background-overlay: rgba(0, 0, 0, 0.3); /* Soft overlay for modal */
-  --hover-shadow: rgba(0, 99, 242, 0.3); /* Soft hover shadow */
-  --font-primary: 'Inter', sans-serif;
-  --font-secondary: 'Lora', serif;
-  --font-light: 300;
-  --font-regular: 400;
-  --font-bold: 700;
-  --card-shadow: rgba(0, 0, 0, 0.1);
-  --modal-radius: 25px; /* Slightly larger radius for a more rounded look */
-  --btn-radius: 35px; /* More rounded buttons */
-  --input-radius: 20px; /* Slightly more rounded input fields */
-  --btn-gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  --modal-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(240, 240, 240, 0.4));
-  --glass-blur: rgba(255, 255, 255, 0.1); /* Subtle Glassmorphism */
-  --shadow-elevation: 0 8px 30px rgba(0, 99, 242, 0.15);
-  --focus-shadow: 0 0 15px var(--primary-color);
-  background-color: white;
-}
+  :root {
+    --primary-color: #ff4b5c;
+    --accent-color: #0061f2;
+    --background-overlay: rgba(0, 0, 0, 0.3);
+    --neutral-light: #f7f7f7;
+    --neutral-dark: #333;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Lora', serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-bold: 700;
+    --modal-radius: 30px;
+    --input-radius: 12px;
+    --btn-radius: 35px;
+    --btn-gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    --shadow-elevation: 0 8px 25px rgba(0, 99, 242, 0.1);
+    --focus-shadow: 0 0 12px var(--primary-color);
+  }
 
+  body {
+    font-family: var(--font-primary);
+  }
 
-/* Modal Background with Glassmorphism */
-.booking-modal {
-  display: none;  /* Initially hidden */
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--background-overlay);
-  backdrop-filter: blur(30px);
-  z-index: 1000;
-  animation: fadeIn 0.8s ease-out;
-}
+  .booking-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-overlay);
+    backdrop-filter: blur(30px);
+    z-index: 1000;
+    animation: fadeIn 0.8s ease-out, scaleIn 0.6s ease-out;
+  }
 
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 
-/* Modal Fade In Animation */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+  @keyframes scaleIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+  }
 
-
-
-/* Modal Slide In Animation */
-@keyframes slideIn {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* Modal Title */
-/* Modal Content */
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
-  border-radius: var(--modal-radius);
-  background: white;  /* Change background to white */
-  box-shadow: var(--shadow-elevation);
-  max-height: 90vh;
-  overflow-y: auto;
-  animation: slideIn 0.7s ease-out;
-}
-
-/* Modal Title */
-.modal-content h2 {
-  font-family: var(--font-secondary);
-  font-size: 2.5rem;
-  font-weight: var(--font-bold);
-  color: #b50000;  /* Dark black text color */
-  text-align: center;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 1.4;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-/* Modal Title Hover Effect */
-.modal-content h2:hover {
-  opacity: 1;
-  color: var(--accent-color);
-}
-
-
-/* Close Button */
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 2.5rem;
-  color: var(--neutral-dark);
-  cursor: pointer;
-  background: var(--neutral-light);
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-/* Close Button Hover */
-.close-btn:hover {
-  background: var(--primary-color);
-  color: white;
-  transform: scale(1.1);
-  box-shadow: 0 8px 30px var(--hover-shadow);
-}
-
-/* Form Styles */
-.form-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 2rem;
-}
-
-.form-item {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  font-size: 1.20rem;
-  margin-bottom: 0.5rem;
-  color: var(--neutral-dark);
-  font-weight: var(--font-regular);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0.85;
-  transition: opacity 0.3s ease;
-}
-
-/* Label Hover Effect */
-label:hover {
-  opacity: 1;
-  color: var(--primary-color);
-}
-
-/* Input and Select Styles */
-input, select {
-  width: 100%;
-  padding: 18px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: var(--input-radius);
-  background: #fff; /* White background for inputs */
-  color: var(--neutral-dark);
-  transition: all 0.3s ease;
-  margin-bottom: 1.3rem;
-  font-family: inherit;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for inputs */
-}
-
-/* Input and Select Focus Effect */
-input:focus, select:focus {
-  border-color: var(--primary-color);
-  outline: none;
-  box-shadow: var(--focus-shadow);
-}
-
-/* Submit Button with Gradient */
-.submit-btn {
-  padding: 18px;
-  background: var(--btn-gradient);
-  color: white;
-  border: none;
-  border-radius: var(--btn-radius);
-  font-size: 1.3rem;
-  font-weight: var(--font-bold);
-  cursor: pointer;
-  transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  width: 100%;
-  margin-top: 2.5rem;
-  text-transform: uppercase;
-  box-shadow: 0 12px 35px rgba(0, 99, 242, 0.1);
-}
-
-/* Submit Button Hover Effect */
-.submit-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 99, 242, 0.2);
-  background: linear-gradient(135deg, var(--accent-color), var(--primary-color)); /* Hover with gradient */
-}
-
-.submit-btn:focus {
-  outline: none;
-  box-shadow: 0 0 12px var(--primary-color);
-}
-
-/* Neumorphism Style for Input Fields */
-input, select {
-  background: #e0e5ec; /* Neumorphism background */
-  border-radius: var(--input-radius);
-  box-shadow: inset 8px 8px 18px #a3b1c6, inset -8px -8px 18px #ffffff; /* Inner shadows for neumorphism */
-}
-
-input:focus, select:focus {
-  box-shadow: inset 0 0 12px rgba(0, 99, 242, 0.3), 0 0 12px rgba(0, 99, 242, 0.4); /* Enhanced Focus Effect */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
   .modal-content {
-    padding: 30px;
-    width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;  /* Reduced padding */
+    width: 90%;
+    max-width: 600px;  /* Reduced width */
+    height: 80vh;  /* Slightly reduced height */
+    overflow-y: auto;
+    margin: auto;
+    border-radius: var(--modal-radius);
+    background: white;
+    box-shadow: var(--shadow-elevation);
+    scrollbar-width: none;
+    animation: slideIn 0.7s ease-out;
+  }
+
+  .modal-content::-webkit-scrollbar {
+    display: none;
   }
 
   .modal-content h2 {
-    font-size: 2.2rem;
+    font-family: var(--font-secondary);
+    font-size: 2.4rem;  /* Reduced font size */
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;  /* Reduced margin */
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
-  .form-group {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .subheading {
+    font-family: var(--font-primary);
+    font-weight: var(--font-bold);
+    color: var(--neutral-dark);
+    text-align: center;
+    font-size: 1rem;  /* Reduced font size */
+    margin-bottom: 1.5rem;  /* Reduced margin */
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
   }
 
-  .submit-btn {
-    font-size: 1.2rem;
-    padding: 16px;
-  }
-
-  .close-btn {
-    font-size: 2rem;
-    width: 45px;
-    height: 45px;
-    top: 10px;
-    right: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .modal-content {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .modal-content h2 {
-    font-size: 1.8rem;
-  }
-
-  .form-group {
-    gap: 15px;
-  }
-
-  .submit-btn {
-    padding: 14px;
-    font-size: 1rem;
+  .subheading:hover {
+    opacity: 1;
+    color: var(--primary-color);
   }
 
   .close-btn {
-    font-size: 1.6rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;  /* Reduced font size */
+    color: var(--neutral-dark);
+    cursor: pointer;
+    background: var(--neutral-light);
+    border-radius: 50%;
+    width: 60px;  /* Reduced size */
+    height: 60px;  /* Reduced size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
   }
-}
 
+  .close-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 99, 242, 0.3);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  /* Reduced gap */
+    margin-bottom: 1.2rem;  /* Reduced bottom margin */
+  }
+
+  label {
+    font-size: 0.9rem;  /* Reduced label size */
+    color: var(--neutral-dark);
+    font-weight: var(--font-regular);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;  /* Reduced padding */
+    font-size: 1rem;  /* Reduced font size */
+    border: 1px solid #ddd;
+    border-radius: var(--input-radius);
+    background: #f9f9f9;
+    color: var(--neutral-dark);
+    transition: all 0.3s ease;
+  }
+
+  input:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: var(--focus-shadow);
+  }
+
+  .submit-btn {
+    padding: 14px;  /* Reduced padding */
+    background: var(--btn-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--btn-radius);
+    font-size: 1rem;  /* Reduced font size */
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.5rem;  /* Reduced margin */
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 99, 242, 0.15);
+  }
+
+  @media (max-width: 480px) {
+    .modal-content {
+      padding: 25px;
+      width: 90%;
+      height: 90vh;
+    }
+
+    .modal-content h2 {
+      font-size: 1.8rem;
+    }
+
+    .subheading {
+      font-size: 0.9rem;
+    }
+
+    .submit-btn {
+      font-size: 0.9rem;
+    }
+
+    .close-btn {
+      font-size: 2.2rem;
+    }
+  }
 </style>
 
 <script>

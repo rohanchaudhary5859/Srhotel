@@ -25,20 +25,28 @@
   </head>
   <body>
     
-    <header class="site-header">
+     <header class="site-header">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-4 site-logo" data-aos="fade"><a href="index.html"><em>SR Hotels</em></a></div>
+          <!-- Large screen logo image -->
+          <div class="col-4 site-logo d-none d-md-block" data-aos="fade">
+            <a href="index.html">
+              <img src="Logo Transparent.png" alt="SR Hotels" class="site-logo-img">
+            </a>
+          </div>
+    
+          <!-- Small screen text logo -->
+          <div class="col-4 site-logo d-md-none" data-aos="fade">
+            <a href="index.html"><em>SR Hotels</em></a>
+          </div>
+    
           <div class="col-8">
-
-
-            <div class="site-menu-toggle js-site-menu-toggle"  data-aos="fade">
+            <div class="site-menu-toggle js-site-menu-toggle" data-aos="fade">
               <span></span>
               <span></span>
               <span></span>
             </div>
-            <!-- END menu-toggle -->
-
+    
             <div class="site-navbar js-site-navbar">
               <nav role="navigation">
                 <div class="container">
@@ -47,31 +55,28 @@
                       <ul class="list-unstyled menu">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="hotellist.html">Hotels</a></li>
-                        <li><a href="resort.html"> Resort</a></li>
+                        <li><a href="resort.html">Resort</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="Testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                       </ul>
                     </div>
                     <div class="col-md-6 extra-info">
-  <div class="row">
-    <div class="col-md-6 mb-5">
-      <h3>Contact Info</h3>
-      <p>SR Resorts & Hotels<br>123 Beachside Road, Suite 101<br>Goa, India 403001</p>
-      <p>info@srhotels.in</p>
-      <p>Phone: +91-9876543210</p>
-    </div>
-    <div class="col-md-6">
-      <h3>Connect With Us</h3>
-      <ul class="list-unstyled">
-        <li><a href="https://twitter.com/srresorts">Twitter</a></li>
-        <li><a href="https://facebook.com/srresorts">Facebook</a></li>
-        <li><a href="https://instagram.com/srresorts">Instagram</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
+                      <div class="row">
+                        <div class="col-md-6 mb-5">
+                          <h3>Contact Info</h3>
+                          <p>SR Resorts & Hotels<br>123 Beachside Road, Suite 101<br>Goa, India 403001</p>
+                          <p>info@srhotels.in</p>
+                          <p>Phone: +91-9876543210</p>
+                        </div>
+                        <div class="col-md-6">
+                          <h3>Connect With Us</h3>
+                          <ul class="list-unstyled">
+                            <li><a href="https://twitter.com/srresorts">Twitter</a></li>
+                            <li><a href="https://facebook.com/srresorts">Facebook</a></li>
+                            <li><a href="https://instagram.com/srresorts">Instagram</a></li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -82,6 +87,34 @@
         </div>
       </div>
     </header>
+<style>
+  .site-logo {
+  padding-left: 50px;
+}
+
+.site-logo img {
+  width: 150px;
+  max-width: 110px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 490px) {
+  .site-logo img {
+    display: none; /* Hide the image logo on small screens */
+  }
+
+  .site-logo a {
+    font-size: 32px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    font-family: "Playfair+Display", times, serif;
+    white-space: nowrap; /* Prevents the text from breaking into two lines */
+  }
+}
+
+</style>  
     <!-- END head -->
 
    <!-- Hero Section -->

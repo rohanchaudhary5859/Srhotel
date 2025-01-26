@@ -83,50 +83,187 @@
       </div>
     </header>
     <!-- END head -->
-
-    <section class="site-hero overlay" style="background-image: url(DJI_20240716090449_0077_D-3-scaled.jpg)">
-      <div class="container">
-        <div class="row site-hero-inner justify-content-center align-items-center">
-          <div class="col-md-10 text-center">
-            <h1 class="heading">Welcome to <em>SR</em> Hotels</h1>
-            <p class="sub-heading mb-5">Discover our world-class hotel &amp; restaurant resort.</p>
-            <p><a href="#" class="btn uppercase btn-primary">Explore The Beauty</a></p>
+    <section class="hero-section overlay" style="background-image: url('DJI_20240716090449_0077_D-3-scaled.jpg');">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-heading">Welcome to <em>SR</em> Hotels</h1>
+            <p class="hero-subheading">Discover our world-class hotel &amp; restaurant resort.</p>
           </div>
         </div>
       </div>
     </section>
     
+    <style>
+      .hero-section {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: slide-bg 12s infinite alternate ease-in-out;
+      }
+    
+      @keyframes slide-bg {
+        0% { background-position: center top; }
+        50% { background-position: center center; }
+        100% { background-position: center bottom; }
+      }
+    
+      .hero-container {
+        width: 100%;
+        padding: 0 15px;
+        max-width: 1140px;
+        margin: auto;
+        text-align: center;
+      }
+    
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .hero-heading {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        display: inline-block;
+        letter-spacing: 2px; /* Add some space between letters */
+      }
+    
+      .hero-heading span {
+        display: inline-block;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+      }
+    
+      .hero-heading span:hover {
+        transform: translateY(-8px) scale(1.3); /* Enhanced zoom and upward movement */
+        opacity: 1;
+      }
+    
+      .hero-heading em {
+        color: #f71900;
+      }
+    
+      .hero-subheading {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+    
+      /* Wrap each letter of the heading */
+      .hero-heading span {
+        display: inline-block;
+        opacity: 1; /* Keep opacity always visible */
+        transform: translateY(0) scale(1);
+      }
+    
+      /* Hover effect */
+      .hero-heading span:hover {
+        transform: translateY(-8px) scale(1.3); /* Zoom in and slide up */
+        opacity: 1;
+      }
+    
+      @media (max-width: 768px) {
+        .hero-heading {
+          font-size: 2.5rem;
+        }
+    
+        .hero-subheading {
+          font-size: 1rem;
+        }
+    
+        .hero-btn {
+          font-size: 0.95rem;
+          padding: 10px 20px;
+        }
+      }
+    
+      @media (max-width: 490px) {
+        .hero-section {
+          animation: slide-bg-mobile 10s infinite alternate ease-in-out;
+        }
+    
+        @keyframes slide-bg-mobile {
+          0% { background-position: center top; }
+          50% { background-position: center 25%; }
+          100% { background-position: center bottom; }
+        }
+    
+        .hero-heading {
+          font-size: 1.8rem;
+        }
+    
+        .hero-subheading {
+          font-size: 0.8rem;
+        }
+    
+        .hero-btn {
+          font-size: 0.85rem;
+          padding: 8px 14px;
+        }
+      }
+    </style>
+    
+    <script>
+      // Wrap each letter of the heading in a span tag using JavaScript
+      document.addEventListener('DOMContentLoaded', () => {
+        const heading = document.querySelector('.hero-heading');
+        const text = heading.innerText;
+        heading.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
+      });
+    </script>
+    
+    
+    
     <section class="experience-section">
       <div class="experience-container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="experience-heading">Discover New Experiences</h2>
+            <h2 class="experience-heading">Explore Premium Experiences</h2>
             <p class="experience-description">
-              Explore a variety of luxurious and indulgent experiences, from fine dining to relaxing getaways. Whether you're seeking gourmet food, a serene resort, or a cozy hotel room, we have something for every traveler.
+              Immerse yourself in an exceptional world of luxury, designed to offer an unforgettable escape. From culinary masterpieces to moments of tranquility, discover experiences crafted for the discerning traveler.
             </p>
           </div>
         </div>
         <div class="experience-grid-wrapper">
           <div class="experience-grid">
             <div class="experience-item">
-              <img src="img/img_1.jpg" alt="Food & Wines" class="experience-img">
-              <h3>Food &amp; Wines</h3>
-              <p>Indulge in gourmet dining and exquisite wines, creating unforgettable culinary memories.</p>
+              <div class="experience-img-container">
+                <img src="Gourmet Dining.avif" alt="Gourmet Dining" class="experience-img">
+              </div>
+              <h3>Gourmet Dining</h3>
+              <p>Indulge in a culinary adventure with exquisite dishes crafted by world-renowned chefs. Each bite is a testament to the artistry and flavors of global cuisine.</p>
             </div>
             <div class="experience-item">
-              <img src="img/img_2.jpg" alt="Resort & Spa" class="experience-img">
-              <h3>Resort &amp; Spa</h3>
-              <p>Relax and rejuvenate in luxurious resorts and soothing spas, offering a peaceful retreat.</p>
+              <div class="experience-img-container">
+                <img src="https://hospitalityinsights.ehl.edu/hubfs/Blog-EHL-Insights/Blog-Header-EHL-Insights/wealth%20wellness.jpeg" alt="Relaxing Spa" class="experience-img">
+              </div>
+              <h3>Spa & Wellness</h3>
+              <p>Recharge your mind and body with treatments designed to refresh and rejuvenate. Our luxurious spa offers a sanctuary for those seeking tranquility and well-being.</p>
             </div>
             <div class="experience-item">
-              <img src="img/img_4.jpg" alt="Hotel Rooms" class="experience-img">
-              <h3>Hotel Rooms</h3>
-              <p>Stay in comfortable and stylish hotel rooms, designed for a perfect night’s rest.</p>
+              <div class="experience-img-container">
+                <img src="https://plus.unsplash.com/premium_photo-1661876306620-f2f2989f8f8b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bHV4dXJ5JTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Luxurious Rooms" class="experience-img">
+              </div>
+              <h3>Luxurious Rooms</h3>
+              <p>Relax in rooms that offer comfort and style, featuring premium amenities and spacious layouts. Every detail is crafted to ensure your stay is nothing short of exceptional.</p>
             </div>
             <div class="experience-item">
-              <img src="img/img_5.jpg" alt="Yacht Club" class="experience-img">
-              <h3>Yacht Club</h3>
-              <p>Set sail on luxurious yachts, offering unparalleled views and unforgettable experiences on water.</p>
+              <div class="experience-img-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYauBvMic2IizOtLwGjhuheC2vuMM5WneelQ&s" alt="Business Facilities" class="experience-img">
+              </div>
+              <h3>Business & Events</h3>
+              <p>Take care of business in style with our world-class conference facilities. Whether it's a board meeting or a large corporate event, we provide the perfect venue for success.</p>
             </div>
           </div>
         </div>
@@ -134,173 +271,379 @@
     </section>
     
     <style>
-    /* General Section Styling */
-    .experience-section {
-
-      background: linear-gradient(135deg, #ffffff, #ffffff);
-      padding: 60px 40px;
-      position: relative;
-    }
-    
-    .experience-heading {
-      text-align: center;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: 3rem;
-      margin-bottom: 30px;
-      color: #ff0080;
-      font-weight: bold;
-    }
-    
-    .experience-description {
-      text-align: center;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: 1.3rem;
-      margin: 0 auto 40px;
-      color: #000000;
-      line-height: 1.8;
-      max-width: 800px;
-    }
-    
-    /* Experience Grid Wrapper for Scrolling */
-    .experience-grid-wrapper {
-      overflow-x: auto;
-      display: flex;
-      justify-content: center;
-      padding-bottom: 20px;
-    }
-    
-    /* Modern Experience Grid Styling */
-    .experience-grid {
-      display: flex;
-      gap: 20px;
-      flex-wrap: nowrap;
-      align-items: stretch;
-    }
-    
-    .experience-item {
-      flex: 0 0 23%;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .experience-item:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
-    
-    .experience-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-    
-    .experience-item h3 {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: 1.6rem;
-      color: #ff0080;
-      font-weight: 700;
-      margin-top: 15px;
-    }
-    
-    .experience-item p {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: #555;
-      font-size: 1rem;
-      margin-top: 12px;
-      line-height: 1.6;
-    }
-    
-    /* Responsive Design Adjustments */
-    @media (max-width: 1200px) {
+      /* Importing Google Fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+      
+      /* General Section Styling */
+      .experience-section {
+        background-color: #fff;
+        padding: 100px 50px;
+        position: relative;
+        animation: fadeIn 1.5s ease-out;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      /* Experience Heading */
       .experience-heading {
-        font-size: 2.6rem;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 4rem;
+        margin-bottom: 30px;
+        color: #000000;
+        font-weight: bold;
+        text-transform: uppercase;
+        animation: slideIn 1s ease-out;
       }
+      
+      /* Experience Description */
       .experience-description {
-        font-size: 1.2rem;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin: 0 auto 40px;
+        color: #000000;
+        line-height: 1.8;
+        max-width: 800px;
+        animation: fadeIn 2s ease-out;
       }
+      
+      /* Experience Grid Wrapper for Scrolling */
+      .experience-grid-wrapper {
+        overflow-x: auto;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        position: relative;
+      }
+      
+      /* Modern Experience Grid Styling */
+      .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        align-items: stretch;
+        position: relative;
+      }
+      
+      /* Experience Item */
       .experience-item {
-        flex: 0 0 30%;
+        background: #fff;
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease, filter 0.3s ease;
+        opacity: 0.9;
+        animation: slideUp 1s ease-out;
+        position: relative;
       }
-    }
-    
-    @media (max-width: 768px) {
-     
-      .experience-heading {
-        font-size: 2.0rem;
+      
+      /* Hover Effects */
+      .experience-item:hover {
+        transform: translateY(-15px) scale(1.05);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        opacity: 1;
+        filter: brightness(1.1);
       }
-      .experience-description {
+      
+      /* Image Container for Hover Zoom Effect */
+      .experience-img-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      
+      /* Image Styling */
+      .experience-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      /* Hover Zoom Effect for Images */
+      .experience-item:hover .experience-img {
+        transform: scale(1.1);
+      }
+      
+      /* Heading inside Experience Item */
+      .experience-item h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: #333;
+        font-weight: 700;
+        margin-top: 20px;
+        transition: color 0.3s ease;
+      }
+      
+      /* Change Color on Hover */
+      .experience-item:hover h3 {
+        color: #ff5733;
+      }
+      
+      /* Description inside Experience Item */
+      .experience-item p {
+        font-family: 'Roboto', sans-serif;
+        color: #777;
         font-size: 1.1rem;
+        margin-top: 15px;
+        line-height: 1.6;
+        transition: color 0.3s ease;
       }
-      .experience-item {
-        flex: 0 0 45%;
+      
+      /* Change Color on Hover */
+      .experience-item:hover p {
+        color: #333;
       }
-    }
-    
-    @media (max-width: 490px) {
-  .experience-heading {
-    font-size: 2.50rem;
-  }
-  .experience-description {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-  .experience-item {
-    flex: 0 0 80%; /* Reducing width to 80% instead of 90% */
-    padding: 5px;
-    width: 63px;
-  }
-}
-
+      
+      /* Responsive Design Adjustments */
+      @media (max-width: 1200px) {
+        .experience-heading {
+          font-size: 3.2rem;
+        }
+        .experience-description {
+          font-size: 1.3rem;
+        }
+        .experience-item {
+          flex: 0 0 30%;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .experience-heading {
+          font-size: 2.5rem;
+        }
+        .experience-description {
+          font-size: 1.2rem;
+        }
+        .experience-item {
+          flex: 0 0 45%;
+        }
+      }
+      
+      @media (max-width: 490px) {
+        .experience-heading {
+          font-size: 2.2rem;
+        }
+        .experience-description {
+          font-size: 1.1rem;
+          line-height: 1.4;
+        }
+        .experience-item {
+          flex: 0 0 80%;
+          padding: 10px;
+          width: 100%;
+        }
+      }
+      
+      /* Animation Keyframes */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes slideUp {
+        from {
+          transform: translateY(40px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
     </style>
     
     
 
-
     <!-- END section -->
 
-    <section class="section slider-section">
+    <section class="section gallery-section">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
-          <div class="col-md-8">
-            <h2 class="heading" data-aos="fade-up">A gorgeous place to enjoy your life.</h2>
-            <p class="lead" data-aos="fade-up" data-aos-delay="100">Experience unparalleled hospitality at SR Hotels, where luxury meets comfort. Our world-class amenities, exceptional service, and elegant rooms create the perfect environment for a memorable stay. Whether you're traveling for business or leisure, indulge in the finest dining, relax in serene settings, and enjoy our commitment to making your visit extraordinary.</p>
+          <div class="col-lg-8">
+            <h2 class="section-heading" data-aos="fade-up">A Gorgeous Place to Enjoy Your Life</h2>
+            <p class="section-description" data-aos="fade-up" data-aos-delay="100">
+              Experience unparalleled hospitality at SR Hotels, where luxury meets comfort. Our world-class amenities, exceptional service, and elegant rooms create the perfect environment for a memorable stay. Whether you're traveling for business or leisure, indulge in the finest dining, relax in serene settings, and enjoy our commitment to making your visit extraordinary.
+            </p>
           </div>
         </div>
+    
         <div class="row">
-          <div class="col-md-12">
-            <div class="home-slider major-caousel owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-12">
+            <div class="image-slider owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
               <div class="slider-item">
-                <img src="homeimage\DJI_20240716090449_0077_D-3-600x540.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="homeimage/DJI_20240716090449_0077_D-3-600x540.jpg" alt="Hotel Image" class="img-fluid">
               </div>
               <div class="slider-item">
-                <img src="homeimage\JCV_0108-1-600x540.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="homeimage/JCV_0108-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
               </div>
               <div class="slider-item">
-                <img src="homeimage\JCV_0115-1-600x540.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="homeimage/JCV_0115-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
               </div>
               <div class="slider-item">
-                <img src="homeimage\JCV_9889-1-600x540.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="homeimage/JCV_9889-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
               </div>
               <div class="slider-item">
-                <img src="homeimage\JCV_9897-600x540.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="homeimage/JCV_9897-600x540.jpg" alt="Hotel Image" class="img-fluid">
               </div>
               <div class="slider-item">
-                <img src="homeimage\JCV_9921-2-600x540.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="homeimage/JCV_9921-2-600x540.jpg" alt="Hotel Image" class="img-fluid">
               </div>
             </div>
-            <!-- END slider -->
           </div>
-
-          <div class="col-md-12 text-center"><a href="#" class="">View More Photos</a></div>
-        
         </div>
       </div>
     </section>
+    
+    <style>
+      /* General section styles */
+      .gallery-section {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+      }
+    
+      .section-heading {
+        font-size: 42px;
+        font-weight: 700;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+      }
+    
+      .section-description {
+        font-size: 18px;
+        color: #777;
+        line-height: 1.8;
+        margin-top: 10px;
+      }
+    
+      /* Slider styling */
+      .image-slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+    
+      .slider-item {
+        margin: 0 15px;
+        transition: transform 0.4s ease, box-shadow 0.3s ease-in-out;
+      }
+    
+      .slider-item img {
+        width: 100%;
+        max-width: 1100px; /* Max width for large screens */
+        height: 400px;
+        object-fit: cover; /* Ensures proper scaling without distortion */
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease, box-shadow 0.3s ease-in-out;
+      }
+    
+      .slider-item img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+    
+      /* Owl Carousel custom styles */
+      .owl-carousel .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+    
+      .owl-carousel .owl-nav .owl-prev, 
+      .owl-carousel .owl-nav .owl-next {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 50%;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+      }
+    
+      .owl-carousel .owl-nav .owl-prev:hover, 
+      .owl-carousel .owl-nav .owl-next:hover {
+        background-color: #00d5ff;
+      }
+    
+      .owl-carousel .owl-dots {
+        text-align: center;
+        margin-top: 20px;
+      }
+    
+      .owl-carousel .owl-dot {
+        background-color: #000;
+        margin: 0 8px;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        transition: background-color 0.3s ease;
+      }
+    
+      .owl-carousel .owl-dot.active {
+        background-color: #00d5ff;
+      }
+    
+      /* Responsive styles for small screens */
+      @media (max-width: 490px) {
+        .section-heading {
+          font-size: 28px;
+        }
+    
+        .section-description {
+          font-size: 14px;
+        }
+    
+        .image-slider .slider-item img {
+          height: 250px; /* Adjusted for small screens */
+          object-fit: cover; /* Ensures no distortion on small screens */
+        }
+    
+        .owl-carousel .owl-nav {
+          position: absolute;
+          top: 40%;
+          width: 100%;
+        }
+      }
+    </style>
+    
+    <script>
+      // Initialize Owl Carousel with infinite loop and slide animation
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          animateIn: 'slideInUp',
+          animateOut: 'slideOutDown',
+          nav: true,
+          dots: true,
+          navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"]
+        });
+      });
+    </script>
+     
     <!-- END section -->
     
     <section class="room-showcase" data-aos="fade-up" >

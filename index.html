@@ -270,36 +270,34 @@
             </p>
           </div>
         </div>
-        <div class="experience-grid-wrapper">
-          <div class="experience-grid">
-            <div class="experience-item">
-              <div class="experience-img-container">
-                <img src="Gourmet Dining.avif" alt="Gourmet Dining" class="experience-img">
-              </div>
-              <h3>Gourmet Dining</h3>
-              <p>Indulge in a culinary adventure with exquisite dishes crafted by world-renowned chefs. Each bite is a testament to the artistry and flavors of global cuisine.</p>
+        <div class="experience-grid">
+          <div class="experience-item">
+            <div class="experience-img-container">
+              <img src="Gourmet Dining.avif" alt="Gourmet Dining" class="experience-img">
             </div>
-            <div class="experience-item">
-              <div class="experience-img-container">
-                <img src="https://hospitalityinsights.ehl.edu/hubfs/Blog-EHL-Insights/Blog-Header-EHL-Insights/wealth%20wellness.jpeg" alt="Relaxing Spa" class="experience-img">
-              </div>
-              <h3>Spa & Wellness</h3>
-              <p>Recharge your mind and body with treatments designed to refresh and rejuvenate. Our luxurious spa offers a sanctuary for those seeking tranquility and well-being.</p>
+            <h3>Gourmet Dining</h3>
+            <p>Indulge in a culinary adventure with exquisite dishes crafted by world-renowned chefs. Each bite is a testament to the artistry and flavors of global cuisine.</p>
+          </div>
+          <div class="experience-item">
+            <div class="experience-img-container">
+              <img src="https://hospitalityinsights.ehl.edu/hubfs/Blog-EHL-Insights/Blog-Header-EHL-Insights/wealth%20wellness.jpeg" alt="Relaxing Spa" class="experience-img">
             </div>
-            <div class="experience-item">
-              <div class="experience-img-container">
-                <img src="https://plus.unsplash.com/premium_photo-1661876306620-f2f2989f8f8b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bHV4dXJ5JTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Luxurious Rooms" class="experience-img">
-              </div>
-              <h3>Luxurious Rooms</h3>
-              <p>Relax in rooms that offer comfort and style, featuring premium amenities and spacious layouts. Every detail is crafted to ensure your stay is nothing short of exceptional.</p>
+            <h3>Spa & Wellness</h3>
+            <p>Recharge your mind and body with treatments designed to refresh and rejuvenate. Our luxurious spa offers a sanctuary for those seeking tranquility and well-being.</p>
+          </div>
+          <div class="experience-item">
+            <div class="experience-img-container">
+              <img src="https://plus.unsplash.com/premium_photo-1661876306620-f2f2989f8f8b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bHV4dXJ5JTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Luxurious Rooms" class="experience-img">
             </div>
-            <div class="experience-item">
-              <div class="experience-img-container">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYauBvMic2IizOtLwGjhuheC2vuMM5WneelQ&s" alt="Business Facilities" class="experience-img">
-              </div>
-              <h3>Business & Events</h3>
-              <p>Take care of business in style with our world-class conference facilities. Whether it's a board meeting or a large corporate event, we provide the perfect venue for success.</p>
+            <h3>Luxurious Rooms</h3>
+            <p>Relax in rooms that offer comfort and style, featuring premium amenities and spacious layouts. Every detail is crafted to ensure your stay is nothing short of exceptional.</p>
+          </div>
+          <div class="experience-item">
+            <div class="experience-img-container">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYauBvMic2IizOtLwGjhuheC2vuMM5WneelQ&s" alt="Business Facilities" class="experience-img">
             </div>
+            <h3>Business & Events</h3>
+            <p>Take care of business in style with our world-class conference facilities. Whether it's a board meeting or a large corporate event, we provide the perfect venue for success.</p>
           </div>
         </div>
       </div>
@@ -312,9 +310,7 @@
       /* General Section Styling */
       .experience-section {
         background-color: #fff;
-        padding: 100px 50px;
-        position: relative;
-        animation: fadeIn 1.5s ease-out;
+        padding: 50px 20px;
         font-family: 'Roboto', sans-serif;
       }
       
@@ -322,92 +318,73 @@
       .experience-heading {
         text-align: center;
         font-family: 'Playfair Display', serif;
-        font-size: 4rem;
-        margin-bottom: 30px;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
         color: #762981;
         font-weight: bold;
         text-transform: uppercase;
-        animation: slideIn 1s ease-out;
       }
       
       /* Experience Description */
       .experience-description {
         text-align: center;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.5rem;
-        margin: 0 auto 40px;
-        color: #000000;
-        line-height: 1.8;
-        max-width: 800px;
-        animation: fadeIn 2s ease-out;
+        font-size: 1.2rem;
+        margin: 0 auto 30px;
+        color: #000;
+        line-height: 1.6;
+        max-width: 700px;
       }
       
-      /* Experience Grid Wrapper for Scrolling */
-      .experience-grid-wrapper {
-        overflow-x: auto;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 20px;
-        position: relative;
-      }
-      
-      /* Modern Experience Grid Styling */
+      /* Experience Grid */
       .experience-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-        align-items: stretch;
-        position: relative;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
       }
       
       /* Experience Item */
       .experience-item {
         background: #fff;
-        border-radius: 12px;
-        padding: 25px;
+        border-radius: 10px;
+        padding: 15px;
         text-align: center;
-        transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease, filter 0.3s ease;
-        opacity: 0.9;
-        animation: slideUp 1s ease-out;
-        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
       
       /* Hover Effects */
       .experience-item:hover {
-        transform: translateY(-15px) scale(1.05);
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
-        opacity: 1;
-        filter: brightness(1.1);
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
       }
       
-      /* Image Container for Hover Zoom Effect */
+      /* Image Container */
       .experience-img-container {
-        position: relative;
         overflow: hidden;
         border-radius: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
       
       /* Image Styling */
-      .experience-item img {
+      .experience-img {
         width: 100%;
         height: auto;
-        border-radius: 10px;
         transition: transform 0.3s ease-in-out;
+        border-radius: 10px;
       }
       
       /* Hover Zoom Effect for Images */
       .experience-item:hover .experience-img {
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
       
       /* Heading inside Experience Item */
       .experience-item h3 {
         font-family: 'Playfair Display', serif;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         color: #333;
         font-weight: 700;
-        margin-top: 20px;
+        margin-top: 10px;
         transition: color 0.3s ease;
       }
       
@@ -418,126 +395,79 @@
       
       /* Description inside Experience Item */
       .experience-item p {
-        font-family: 'Roboto', sans-serif;
-        color: #777;
-        font-size: 1.1rem;
-        margin-top: 15px;
-        line-height: 1.6;
-        transition: color 0.3s ease;
-      }
-      
-      /* Change Color on Hover */
-      .experience-item:hover p {
-        color: #333;
+        font-size: 1rem;
+        color: #555;
+        margin-top: 10px;
+        line-height: 1.4;
       }
       
       /* Responsive Design Adjustments */
-      @media (max-width: 1200px) {
-        .experience-heading {
-          font-size: 3.2rem;
-        }
-        .experience-description {
-          font-size: 1.3rem;
-        }
-        .experience-item {
-          flex: 0 0 30%;
-        }
-      }
-      
       @media (max-width: 768px) {
         .experience-heading {
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
         .experience-description {
-          font-size: 1.2rem;
-        }
-        .experience-item {
-          flex: 0 0 45%;
+          font-size: 1rem;
         }
       }
       
       @media (max-width: 490px) {
         .experience-heading {
-          font-size: 2.2rem;
+          font-size: 1.8rem;
         }
         .experience-description {
-          font-size: 1.1rem;
+          font-size: 0.9rem;
           line-height: 1.4;
         }
         .experience-item {
-          flex: 0 0 80%;
           padding: 10px;
-          width: 100%;
-        }
-      }
-      
-      /* Animation Keyframes */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      
-      @keyframes slideIn {
-        from {
-          transform: translateX(-100%);
-        }
-        to {
-          transform: translateX(0);
-        }
-      }
-      
-      @keyframes slideUp {
-        from {
-          transform: translateY(40px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
         }
       }
     </style>
-    
-    
+
 
     <!-- END section -->
 
-    <section class="section gallery-section">
+    <section class="image-gallery">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-lg-8">
-            <h2 class="section-heading" data-aos="fade-up">A Gorgeous Place to Enjoy Your Life</h2>
-            <p class="section-description" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="gallery-title">A Gorgeous Place to Enjoy Your Life</h2>
+            <p class="gallery-description">
               Experience unparalleled hospitality at SR Hotels, where luxury meets comfort. Our world-class amenities, exceptional service, and elegant rooms create the perfect environment for a memorable stay. Whether you're traveling for business or leisure, indulge in the finest dining, relax in serene settings, and enjoy our commitment to making your visit extraordinary.
             </p>
           </div>
         </div>
     
-        <div class="row">
-          <div class="col-12">
-            <div class="image-slider owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
-              <div class="slider-item">
-                <img src="homeimage/DJI_20240716090449_0077_D-3-600x540.jpg" alt="Hotel Image" class="img-fluid">
-              </div>
-              <div class="slider-item">
-                <img src="homeimage/JCV_0108-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
-              </div>
-              <div class="slider-item">
-                <img src="homeimage/JCV_0115-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
-              </div>
-              <div class="slider-item">
-                <img src="homeimage/JCV_9889-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
-              </div>
-              <div class="slider-item">
-                <img src="homeimage/JCV_9897-600x540.jpg" alt="Hotel Image" class="img-fluid">
-              </div>
-              <div class="slider-item">
-                <img src="homeimage/JCV_9921-2-600x540.jpg" alt="Hotel Image" class="img-fluid">
-              </div>
+        <div class="gallery-container">
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img src="homeimage/DJI_20240716090449_0077_D-3-600x540.jpg" alt="Hotel Image" class="img-fluid">
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img src="homeimage/JCV_0108-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img src="homeimage/JCV_0115-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img src="homeimage/JCV_9889-1-600x540.jpg" alt="Hotel Image" class="img-fluid">
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img src="homeimage/JCV_9897-600x540.jpg" alt="Hotel Image" class="img-fluid">
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img src="homeimage/JCV_9921-2-600x540.jpg" alt="Hotel Image" class="img-fluid">
             </div>
           </div>
         </div>
@@ -545,140 +475,97 @@
     </section>
     
     <style>
-      /* General section styles */
-      .gallery-section {
-        padding: 80px 0;
+      /* General section styling */
+      .image-gallery {
+        padding: 80px 15px;
         background-color: #f9f9f9;
       }
     
-      .section-heading {
-        font-size: 42px;
+      .gallery-title {
+        font-size: 36px;
         font-weight: 700;
         color: #762981;
         text-transform: uppercase;
-        letter-spacing: 3px;
         margin-bottom: 20px;
+        transition: color 0.3s ease;
       }
     
-      .section-description {
-        font-size: 18px;
+      .gallery-description {
+        font-size: 16px;
         color: #000000;
-        line-height: 1.8;
-        margin-top: 10px;
+        line-height: 1.6;
+        margin: 0 auto;
+        max-width: 800px;
       }
     
-      /* Slider styling */
-      .image-slider {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+      /* Gallery grid layout */
+      .gallery-container {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        justify-items: center;
+        margin-top: 30px;
       }
     
-      .slider-item {
-        margin: 0 15px;
-        transition: transform 0.4s ease, box-shadow 0.3s ease-in-out;
-      }
-    
-      .slider-item img {
-        width: 100%;
-        max-width: 1100px; /* Max width for large screens */
-        height: 400px;
-        object-fit: cover; /* Ensures proper scaling without distortion */
+      .gallery-item {
+        overflow: hidden;
         border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        transition: transform 0.4s ease, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
     
-      .slider-item img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-      }
-    
-      /* Owl Carousel custom styles */
-      .owl-carousel .owl-nav {
-        position: absolute;
-        top: 50%;
+      .gallery-image img {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
       }
     
-      .owl-carousel .owl-nav .owl-prev, 
-      .owl-carousel .owl-nav .owl-next {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 50%;
-        font-size: 20px;
-        transition: background-color 0.3s ease;
+      /* Hover effect */
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       }
     
-      .owl-carousel .owl-nav .owl-prev:hover, 
-      .owl-carousel .owl-nav .owl-next:hover {
-        background-color: #00d5ff;
+      .gallery-item:hover .gallery-image img {
+        transform: scale(1.05);
       }
     
-      .owl-carousel .owl-dots {
-        text-align: center;
-        margin-top: 20px;
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .gallery-title {
+          font-size: 30px;
+        }
+    
+        .gallery-description {
+          font-size: 15px;
+        }
+    
+        .gallery-container {
+          grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        }
       }
     
-      .owl-carousel .owl-dot {
-        background-color: #000;
-        margin: 0 8px;
-        border-radius: 50%;
-        width: 12px;
-        height: 12px;
-        transition: background-color 0.3s ease;
-      }
-    
-      .owl-carousel .owl-dot.active {
-        background-color: #00d5ff;
-      }
-    
-      /* Responsive styles for small screens */
       @media (max-width: 490px) {
-        .section-heading {
-          font-size: 28px;
+        .gallery-container {
+          grid-template-columns: 1fr; /* 1 item per row */
         }
     
-        .section-description {
-          font-size: 14px;
+        .gallery-item img {
+          height: 300px; /* Increased image height for 490px screens */
         }
     
-        .image-slider .slider-item img {
-          height: 250px; /* Adjusted for small screens */
-          object-fit: cover; /* Ensures no distortion on small screens */
+        .gallery-title {
+          font-size: 32px; /* Larger font for the title */
         }
     
-        .owl-carousel .owl-nav {
-          position: absolute;
-          top: 40%;
-          width: 100%;
+        .gallery-description {
+          font-size: 18px; /* Larger font for description */
         }
       }
     </style>
     
-    <script>
-      // Initialize Owl Carousel with infinite loop and slide animation
-      $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-          items: 1,
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          autoplayHoverPause: true,
-          animateIn: 'slideInUp',
-          animateOut: 'slideOutDown',
-          nav: true,
-          dots: true,
-          navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"]
-        });
-      });
-    </script>
-     
     <!-- END section -->
     
     <section class="room-showcase" data-aos="fade-up" >
@@ -776,7 +663,9 @@
    .ourstay {
     font-size: 4.0rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: relative; /* Required for the pseudo-element */
+    position: relative; 
+    color: #762981;
+    /* Required for the pseudo-element */
 }
 
 /* Carousel Container */
